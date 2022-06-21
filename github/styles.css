@@ -1,0 +1,25 @@
+.second_div {
+    background-color: powderblue;
+}
+
+h4 {
+    color: blue;
+    border: 2px dotted red;
+    font-family: courier;
+    font-size: 160%;
+}
+
+p {
+    border: 2px solid powderblue;
+    border-left-color: blueviolet;
+    border-bottom-color: red;
+    border-right-color: blue;
+}
+
+.third_div {
+    border: 5px dotted;
+    border-left-color: blueviolet;
+    border-bottom-color: red;
+    border-right-color: blue;
+    border-top-color: green;
+}
