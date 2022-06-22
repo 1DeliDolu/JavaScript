@@ -7,6 +7,7 @@ h4 {
     border: 2px dotted red;
     font-family: courier;
     font-size: 160%;
+    margin: 50px;
 }
 
 p {
@@ -22,4 +23,5 @@ p {
     border-bottom-color: red;
     border-right-color: blue;
     border-top-color: green;
+    padding: 30px
 }
