@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Links</title>
+</head>
+<hr>
+
+<body>
+    <!--Links are found in nearly all web pages. Links allow users to click their way from page to page.-->
+    <div>
+        <h2>HTML Links - Hyperlinks</h2>
+        <pre>*HTML links are hyperlinks.
+
+            *You can click on a link and jump to another document.
+            
+            *When you move the mouse over a link, the mouse arrow will turn into a little hand.
+            *Note: A link does not have to be text. A link can be an image or any other HTML element!</pre>
+
+    </div>
+    <hr>
+    <div>
+        <h2>HTML Links - Syntax</h2>
+        <p>The HTML "a" tag defines a hyperlink. It has the following syntax:</p>
+        <pre>*The most important attribute of the "a" element is the href attribute, which indicates the link's destination.
+
+            *The link text is the part that will be visible to the reader.
+            
+            *Clicking on the link text, will send the reader to the specified URL address.</pre>
+        <p><a href="https://www.w3schools.com/">Visit W3Schools.com!</a></p>
+        <pre>*By default, links will appear as follows in all browsers:
+
+                *An unvisited link is underlined and blue
+                *A visited link is underlined and purple
+                *An active link is underlined and red</pre>
+    </div>
+    <hr>
+    <div>
+        <h2>HTML Links - The target Attribute</h2>
+        <pre>*By default, the linked page will be displayed in the current browser window. To change this, you must specify another target for the link.
+
+        *The target attribute specifies where to open the linked document.
+
+        *The target attribute can have one of the following values:
+
+        *_self - Default. Opens the document in the same window/tab as it was clicked
+        *_blank - Opens the document in a new window or tab
+        *_parent - Opens the document in the parent frame
+        *_top - Opens the document in the full body of the window
+        </pre>
+        <a href="https://www.w3schools.com/" target="_self">Visit W3Schools!</a>
+        <a href="https://www.w3schools.com/" target="_blank">Visit W3Schools!</a>
+        <a href="https://www.w3schools.com/" target="_parent">Visit W3Schools!</a>
+        <a href="https://www.w3schools.com/" target="_top">Visit W3Schools!</a>
+
+
+        <p>If target="_blank", the link will open in a new browser window or tab.</p>
+
+    </div>
+    <hr>
+    <div>
+        <h2>Absolute URLs vs. Relative URLs</h2>
+        <pre>
+            *Both examples above are using an absolute URL (a full web address) in the href attribute.
+
+            *A local link (a link to a page within the same website) is specified with a relative URL (without the "https://www" part):
+        </pre>
+        <h2>Absolute URLs</h2>
+        <p><a href="https://www.w3.org/">W3C</a></p>
+        <p><a href="https://www.google.com/">Google</a></p>
+
+        <h2>Relative URLs</h2>
+        <p><a href="html_images.asp">HTML Images</a></p>
+        <p><a href="/css/default.asp">CSS Tutorial</a></p>
+    </div>
+    <hr>
+    <div>
+        <h2>HTML Links - Use an Image as a Link</h2>
+        <p>To use an image as a link, just put the <img> tag inside the <a> tag:</p>
+        <a href="default.asp">
+        <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+        </a>
+    </div>
+    <hr>
+    <div>
+        <h2>Link to an Email Address</h2>
+        <p>Use mailto: inside the href attribute to create a link that opens the user's email program (to let them send a new email):</p>
+        <p>To create a link that opens in the user's email program (to let them send a new email), use mailto: inside the href attribute:</p>
+        <a href="mailto:someone@example.com">Send email</a>
+    </div>
+    <hr>
+    <div>
+        <h2>Button as a Link</h2>
+        <pre>*To use an HTML button as a link, you have to add some JavaScript code.
+
+            *JavaScript allows you to specify what happens at certain events, such as a click of a button:</pre>
+        <p>Click the button to go to the HTML tutorial.</p>
+
+        <button onclick="document.location='default.asp'">HTML Tutorial</button>
+    </div>
+    <hr>
+    <div>
+        <h2>Link Titles</h2>
+        <p>The title attribute specifies extra information about an element. The information is most often shown as a tooltip text when the mouse moves over the element.</p>
+        <a href="https://www.w3schools.com/html/" title="Go to W3Schools HTML section">Visit our HTML Tutorial</a>
+
+    </div>
+    <hr>
+    <div>
+        <h2>More on Absolute URLs and Relative URLs</h2>
+        <p>This example uses a full URL to link to a web page:</p>
+        <p><a href="https://www.w3schools.com/html/default.asp">HTML tutorial</a></p>
+        <h2>External Paths</h2>
+
+        <p>This example links to a page located in the html folder on the current web site:</p>
+
+        <p><a href="/html/default.asp">HTML tutorial</a></p>
+    </div>
+    <hr>
+    <div>
+        <h2>Chapter Summary</h2>
+        <pre>
+            Use the "a" element to define a link
+            Use the href attribute to define the link address
+            Use the target attribute to define where to open the linked document
+            Use the "img" element (inside "a") to use an image as a link
+            Use the mailto: scheme inside the href attribute to create a link that opens the user's email program
+        </pre>
+    </div>
+</body>
+
+</html>
