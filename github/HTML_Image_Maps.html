@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Image Maps</title>
+</head>
+
+<body>
+    <h1>HTML Image Maps</h1>
+    <p>With HTML image maps, you can create clickable areas on an image.</p>
+
+    <hr>
+    <div>
+        <h2>Image Maps</h2>
+        <pre>The HTML <b>"map"</b> tag defines an image map. An image map is an image with clickable areas. The areas are defined with one or more <b>"area"</b> tags.</pre> Try to click on the computer, phone, or the cup of coffee in the image below:</pre>
+        <img src="workplace.jpg" alt="Workplace" usemap="#workmap">
+        <map name="workmap">
+          <area shape="rect" coords="34,44,270,350" alt="Computer" href="computer.htm">
+          <area shape="rect" coords="290,172,333,250" alt="Phone" href="phone.htm">
+          <area shape="circle" coords="337,300,44" alt="Coffee" href="coffee.htm">
+        </map>
+    </div>
+</body>
+
+</html>
