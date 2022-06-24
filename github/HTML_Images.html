@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Images</title>
+    <!-- This style sets the width of all images to 100%: -->
+    <style>
+        img {
+            weight: 100;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>HTML Images</h1>
+    <hr>
+    <div>
+        <h2>HTML "img" Example</h2>
+        <img src="pic_trulli.jpg" alt="Italian Trulli">
+        <img src="img_girl.jpg" alt="Girl in a jacket">
+        <img src="img_chania.jpg" alt="Flowers in Chania">
+    </div>
+    <hr>
+    <div>
+        <h2>HTML Images Syntax</h2>
+        <!--<img src="url" alt="alternatetext">-->
+        <pre>
+            The HTML <b>"img"</b> tag is used to embed an image in a web page.
+            Images are not technically inserted into a web page; images are linked to web pages. The <b>"img"</b> tag creates a holding space for the referenced image.
+            The <b>"img"</b> tag is empty, it contains attributes only, and does not have a closing tag.
+            The <b>"img"</b> tag has two required attributes:
+            *src - Specifies the path to the image
+            *alt - Specifies an alternate text for the image
+        </pre>
+    </div>
+    <hr>
+    <div>
+        <h2>The src Attribute</h2>
+        <p>The required src attribute specifies the path (URL) to the image. Note: When a web page loads, it is the browser, at that moment, that gets the image from a web server and inserts it into the page. Therefore, make sure that the image actually
+            stays in the same spot in relation to the web page, otherwise your visitors will get a broken link icon. The broken link icon and the alt text are shown if the browser cannot find the image.</p>
+    </div>
+    <hr>
+    <div>
+        <h2>The alt Attribute</h2>
+        <p>The required alt attribute provides an alternate text for an image, if the user for some reason cannot view it (because of slow connection, an error in the src attribute, or if the user uses a screen reader). The value of the alt attribute should
+            describe the image:</p>
+        <img src="img_chania.jpg" alt="Flowers in Chania">
+        <p>If a browser cannot find an image, it will display the value of the alt attribute:</p>
+        <p>If a browser cannot find the image, it will display the alternate text:</p>
+        <img src="wrongname.gif" alt="Flowers in Chania">
+    </div>
+    <hr>
+    <div>
+        <h2>Image Size - Width and Height</h2>
+        <p>You can use the style attribute to specify the width and height of an image.</p>
+        <img src="img_girl.jpg" alt="Girl in a jacket" style="width:500px;height:600px;">
+        <p>Alternatively, you can use the width and height attributes:</p>
+        <img src="img_girl.jpg" alt="Girl in a jacket" width="500" height="600">
+        <p>The width and height attributes always define the width and height of the image in pixels.</p>
+
+    </div>
+    <hr>
+    <div>
+        <h2>Width and Height, or Style?</h2>
+
+        <pre>The width, height, and style attributes are all valid in HTML.
+        However, we suggest using the style attribute. It prevents styles sheets from changing the size of images:
+        The first image uses the width attribute (set to 128 pixels), but the style in the head section overrides it, and sets the width to 100%.</pre>
+
+        <img src="html5.gif" alt="HTML5 Icon" width="128" height="128">
+
+        <p>The second image uses the style attribute to set the width to 128 pixels, this will not be overridden by the style in the head section:</p>
+
+        <img src="html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+    </div>
+    <hr>
+    <div>
+        <h2>Images in Another Folder</h2>
+        <p>If you have your images in a sub-folder, you must include the folder name in the src attribute:</p>
+        <img src="/images/html5.gif" alt="HTML5 Icon" style="width:128px;height:128px;">
+
+    </div>
+    <hr>
+    <div>
+        <h2>Images on Another Server/Website</h2>
+        <!--Some web sites point to an image on another server.
+
+To point to an image on another server, you must specify an absolute (full) URL in the src attribute:-->
+        <img src="https://www.w3schools.com/images/w3schools_green.jpg" alt="W3Schools.com">
+
+    </div>
+    <hr>
+    <div>
+        <h2>Animated Images</h2>
+        <img src="programming.gif" alt="Computer Man" style="width:48px;height:48px;">
+
+    </div>
+    <hr>
+    <div>
+        <h2>Image as a Link</h2>
+        <p>o use an image as a link, put the <img> tag inside the <a> tag:</p>
+            <a href="default.asp">
+                <img src="smiley.gif" alt="HTML tutorial" style="width:42px;height:42px;">
+              </a>
+    </div>
+    <hr>
+    <div>
+        <h2>Image Floating</h2>
+        <p>Use the CSS float property to let the image float to the right or to the left of a text:</p>
+        <p><img src="smiley.gif" alt="Smiley face" style="float:right;width:42px;height:42px;"> The image will float to the right of the text.</p>
+
+        <p><img src="smiley.gif" alt="Smiley face" style="float:left;width:42px;height:42px;"> The image will float to the left of the text.</p>
+
+    </div>
+    <h2>Chapter Summary</h2>
+    <pre>
+        Use the HTML <b>img</b> element to define an image
+        Use the HTML src attribute to define the URL of the image
+        Use the HTML alt attribute to define an alternate text for an image, if it cannot be displayed
+        Use the HTML width and height attributes or the CSS width and height properties to define the size of the image
+        Use the CSS float property to let the image float to the left or to the right
+    </pre>
+</body>
+
+</html>
