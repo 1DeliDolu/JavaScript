@@ -1,0 +1,40 @@
+header{
+    background-image: url(https://intro-webdesign.com/CSS/assignment-2/images/flywheel.jpg);
+}
+
+header h1 {
+    text-align: center;
+    color: #F2F2F2;
+}
+body {
+	background-color: #F2F2F2;
+	margin: 1%;
+	padding:1%;
+}
+
+nav a{
+	box-sizing:border-box;
+	display:inline-block;
+	height:60px;
+	color: #000000;
+	background-color: rgba(234, 123, 111, 0.2);
+	text-decoration: none;
+	margin:1% 5% 1% 0;
+	padding:1% 5%;
+	border-radius: 5px;
+}
+aside img  {
+	background: #2db34a;
+    height: 80px;
+    height: 80px;
+	
+	
+}
+
+
+
+nav a:hover{
+	color:#000000;
+	border-radius: 0;
+
+}
