@@ -3,101 +3,45 @@
   box-sizing: border-box;
 
 }
-body{
-  background-color: antiquewhite;
+header {
+  background-color: #808080;
+  margin: 30px;
 }
-.menu a{
-  background-color: #e5e5e5;
-  padding: 8px;
-  margin-top: 7px;
-  display: block;
-  width: 100%;
-  color: black;
-
-}
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-  
-}
-.right {
-  background-color: #e5e5e5;
-  float: right;
-  width: 70%;
-  padding: 15px;
-  margin-top: 7px;
-  text-align: left;
-  border: 1px solid rebeccapurple;
-}
-header{
-    background-color: gray;
-    background-color: yellow; 
-    list-style-type: none;
-    text-align: center;
-    margin-right: 20px;
-    padding: 0;
-    background-image: url("http://intro-webdesign.com/CSS/assignment-2/images/flywheel.jpg");
-}
-header>h1{
-    color: white;
-    text-align:center;
-    padding: 5px;
-    font-size: 40px;
-    text-transform: uppercase;
-}
-nav>a{
-  display: inline-block;
-  font-size: 20px;
-  margin: 10px 10px;
-  padding: 10px 10px;
+h1 {
+  font-size: 40px;
+  color: #ffffff;
   text-align: center;
-  background-color: #e5e5e5;
-  text-decoration: none;
+  text-transform: uppercase;
+  padding: 5px;
   
-  
-  
- 
-} 
-aside.left{
-  display: inline-block;
+}
+nav > a{
+  padding: 5px;
+  color: #000000;
+  background-color: #d3d3d3;
+}
+main{
+  float: left;
   width: 25%;
+  background-color: #56812a;
 }
-a>img {
-    background-color: #e5e5e5;
-    margin-top: 1px;
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: 2px;
+aside.left{
+display: inline-block;
+width: 80%;
 }
-section {
-    background-color: gray; 
-    margin: 30px;
-    padding: 0px;
-    font-size: 20px;
+section{
+background-color: gray;
+margin: 30px;
 }
-  section>h2 {
-    color: blue;
-    text-transform: uppercase;
-    
+h2 {
+text-transform: uppercase;
+color: #0000ff;
+padding: 5px;
 }
-
-
-li>a {
-    background-color: lightgray;
-    color: black;
-    
+p>a {
+background-color: hsl(0, 0%, 83%);
 }
-table tr td{
-  border: 1px solid;
-  text-align: left;
+li>a{
+background-color: #d3d3d3;
+color: #000000;
 }
-  
-  main>h2{
-    color: blue;
-  }
-  p>a{
-    background-color: lightgrey;
-    color: black;
-  }
