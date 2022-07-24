@@ -33,6 +33,7 @@ header{
     margin-right: 20px;
     padding: 0;
     background-image: url("http://intro-webdesign.com/CSS/assignment-2/images/flywheel.jpg");
+    background-size: cover;
 }
 header>h1{
     color: #ffffff;
@@ -89,15 +90,17 @@ section {
   border-collapse: collapse;
   width: 89%;
   margin: 5% ;
+  
 }
 
 #customers td, #customers th {
   border: 3px solid rgb(24, 187, 124);
   padding: 8px;
-}
+  }
 
 #customers tr{
   background-color: #02faaf;
+  text-align: center;
 }
 #customers tr:hover {
   background-color: #ddd;
@@ -105,7 +108,7 @@ section {
 #customers th {
   padding-top: 12px;
   padding-bottom: 12px;
-  text-align: left;
+  text-align: center;
   background-color: hsl(76, 95%, 34%);
   color: white;
   
