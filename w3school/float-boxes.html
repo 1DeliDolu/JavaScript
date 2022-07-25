@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Grid box sizing</title>
+    <link rel="stylesheet" href="float-boxing.css" />
+  </head>
+  <body>
+    <div class="clearfix">
+      <div class="box" style="background-color: #bbb">
+        <p>Some text inside the box</p>
+      </div>
+      <div class="box" style="background-color: #ccc">
+        <p>Some text inside the box</p>
+      </div>
+      <div class="box" style="background-color: #ddd">
+        <p>Some text inside the box</p>
+      </div>
+    </div>
+    <p>
+      <strong>Note:</strong> Here , we use the clearfix hack to care of the
+      layoat flow. We also use the box-sizing property to make sure that box
+      doesn't break due to extra padding. Try to remove this code see the
+      effeckt
+    </p>
+  </body>
+</html>
