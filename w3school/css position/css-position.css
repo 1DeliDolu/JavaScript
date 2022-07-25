@@ -1,0 +1,24 @@
+* {box-sizing: border-box;}
+        html {height: 2000px;}
+        body { margin: 0; }
+        .box {
+            padding: 10px;
+            border: 5px solid #6d5b95;
+            margin-bottom: 10px;
+        }
+        .navbar { 
+            background: #feb236; 
+          
+        }
+        .content { 
+            background: #d64161;
+            /* position: sticky;
+            top: 0; */
+         }
+        .footer { 
+            background: #ff7b25;
+         }
+         .sticky {
+             position: sticky;
+             top: 0;
+         }
