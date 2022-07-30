@@ -4,6 +4,9 @@ body {
     color: #ffffff;
     
   }
+  .header >h2,.header > p {
+    text-align: center;
+  }
   
   ul {
     list-style-type: none;
@@ -15,14 +18,16 @@ body {
     position: sticky;
     top: 0;
   }
-  
+  ul+h3, h3+p{
+    text-align: center;
+  }
   li {
     float: left;
   }
   
   li a {
     display: block;
-    color: white;
+    color: rgb(172, 24, 24);
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
