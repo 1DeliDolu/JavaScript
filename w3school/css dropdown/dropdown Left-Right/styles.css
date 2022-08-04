@@ -1,0 +1,69 @@
+
+h2.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 20px;
+    padding: 5px;
+    background-color: #cae8ca;
+    border: 2px solid #4CAF50;
+    text-align: center;
+}
+p{
+    margin: 5px;
+    padding-left: 5px;
+    
+}
+
+
+/* drop buton diye bir sinif tanimladik*/
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    margin: 20px;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+  }
+  /* dropdown diye bir sinif belirledik*/
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  /*dropdown-content diye bir sinif belirledik display özelligini none yaptik. Position ise absolute atadik gölge verdik*/
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  /* dropdown ve a elemanlarini belirli özellikler tanimladik*/
+  
+  .dropdown-content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+  /* dropdown-content icindeki a elemanlar hover olunca arka plan rengi beyaz oluyor*/
+  
+  .dropdown-content a:hover {background-color: #f1f1f1;}
+
+  
+  /* dropdown eleman hover olunca dropdown-content sinifi displayi block olucak*/
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Dropdown hover olunca dropbtn sinifi arka plan rengi degisiyor */
+  
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
