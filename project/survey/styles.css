@@ -1,0 +1,142 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    background-color: #1b1b32;
+      color: #f5f6f7;
+    font-family: Tahoma;
+      font-size: 16px;
+  }
+  
+  p {
+    margin: 1em auto;
+    text-align: center;
+  }
+  
+  form {
+    width: 60vw;
+      max-width: 500px;
+      min-width: 300px;
+      margin: 0 auto;
+    padding-bottom: 2em;
+  }
+  
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+    border-bottom: 3px solid #3b3b4f;
+  }
+  
+  fieldset:last-of-type {
+    border-bottom: none;
+  }
+  
+  label {
+    display: block;
+      margin: 0.5rem 0;
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0 0 0;
+      width: 100%;
+    min-height: 2em;
+  }
+  
+  input, textarea {
+    background-color: #0a0a23;
+    border: 1px solid #0a0a23;
+    color: #ffffff;
+  }
+  
+  .inline {
+    width: unset;
+    margin: 0 0.5em 0 0;
+    vertical-align: middle;
+  }
+  
+  input[type="submit"] {
+    display: block;
+    width: 60%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    background-color: #3b3b4f;
+    border-color: white;
+    min-width: 300px;
+  }
+  
+  input[type="file"] {
+    padding: 1px 2px;
+  }
+  
+  body{
+    28px;
+  }
+  ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #333;
+    }
+    
+    li {
+      float: left;
+    }
+    
+    li a, .dropbtn {
+      display: inline-block;
+      color: white;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    
+    li a:hover, .dropdown:hover .dropbtn {
+      background-color: red;
+    }
+    
+    li.dropdown {
+      display: inline-block;
+    }
+    
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: #f9f9f9;
+      min-width: 160px;
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+      z-index: 1;
+    }
+    
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+      text-align: left;
+    }
+    
+    .dropdown-content a:hover {background-color: #f1f1f1;}
+    
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .sticky {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      padding: 5px;
+      background-color: #cae8ca;
+      border: 2px solid #4CAF50;
+      text-align: center;
+    }
+    .active {
+      background-color: #04AA6D;
+    }
+  h1{
+    text-align: center;
+    color: orange;
+  }
