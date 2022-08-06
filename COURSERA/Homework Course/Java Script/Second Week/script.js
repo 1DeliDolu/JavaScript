@@ -1,5 +1,7 @@
 /*Name this external file gallery.js*/
 
+document.getElementById('image').style.background= "url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/389177/bacon.jpg')"
+
 function upDate(previewPic){
     var img = previewPic.src
     document.getElementById('image').style.background = "url('" + img + "')"
