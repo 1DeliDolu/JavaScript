@@ -1,9 +1,12 @@
+nav{
+background-color: rgb(77, 63, 63);
+}
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+   
   }
   
   li {
@@ -80,10 +83,11 @@ ul {
     text-decoration: none;
     display: block;
     text-align: left;
+    background-color: #f9f9f9;
   }
   
   .dropdown-content1 a:hover {background-color: #f1f1f1;
-color: #f1f1f1;}
+color: #26a316;}
   
   .dropdown1:hover .dropdown-content1 {
     display: block;
