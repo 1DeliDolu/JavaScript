@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="referrer" content="origin-when-cross-origin">
+    <script>//<![CDATA[
+      var s = false;
+      function l() {
+        setTimeout(f, 10000);
+        if (document.referrer) {
+          try {
+            var pm = /(^|&|\?)px=([^&]*)(&|$)/i;
+            var px = window.location.href.match(pm);
+            var rs = document.referrer;
+            if (px != null) {
+              if (rs.match(pm))
+                rs = rs.replace(pm, "$1px=" + px[2] + "$3");
+              else if (rs.indexOf("?") != -1)
+                rs = rs + "&px=" + px[2];
+              else
+                rs = rs + "?px=" + px[2];
+            }
+            history.replaceState({}, "Bing", rs);
+            window.addEventListener("pageshow", function(e) { if (e.persisted || (typeof window.performance != "undefined" && window.performance.navigation.type === 2)) window.location.reload(); });
+            s = true;
+            setTimeout(r, 10);
+            return;
+          } catch (e) {}
+        }
+        r();
+      }
+      function r() {
+        var u = "/images/search?q=papier+background+gif&id=DCDC5894BCA6BACB7B7F3908FB03646622D1A4DF&FORM=IQFRBA";
+        if (s)
+          window.location.href = u;
+        else
+          window.location.replace(u);
+      }
+      function f() {
+        document.getElementById("fb").style.display = "block";
+      }
+      //]]>
+    </script>
+  </head>
+  <body onload="l()">
+    <div id="fb" style="display: none">
+      Please <a href="https://www.bing.com/ck/a?!&&p=a8d21c74b653e5efJmltdHM9MTY2MDE1MzI4NSZpZ3VpZD0wZmE3NDk5Ni04NDY4LTRiMDQtOGMzMi01YzRjYTM1MWNmZTUmaW5zaWQ9NTQwNw&ptn=3&hsh=3&fclid=a78bf8aa-18d3-11ed-a69a-01c6ef5b5863&u=a1L2ltYWdlcy9zZWFyY2g_cT1wYXBpZXIrYmFja2dyb3VuZCtnaWYmaWQ9RENEQzU4OTRCQ0E2QkFDQjdCN0YzOTA4RkIwMzY0NjYyMkQxQTRERiZGT1JNPUlRRlJCQQ&ntb=F">click here</a> if the page does not redirect automatically ...
+    </div>
+  </body>
+</html>
