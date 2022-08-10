@@ -1,0 +1,15 @@
+#borderimg1{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.jpg) 50 round;
+}
+#borderimg2{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.jpg) 20% round;
+}
+#borderimg3{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.jpg) 30% round;
+}

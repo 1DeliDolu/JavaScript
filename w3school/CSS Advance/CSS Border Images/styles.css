@@ -1,0 +1,5 @@
+#borderimg{
+    border: 10px solid transparent;
+    padding: 15px;
+    border-image: url(border.jpg) 30 round;
+}
