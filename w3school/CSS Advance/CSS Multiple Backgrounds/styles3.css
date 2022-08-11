@@ -1,0 +1,25 @@
+.div1 {
+    border: 1px solid black;
+    height: 120px;
+    width: 150px;
+    background: url(flo.gif);
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+  
+  .div2 {
+    border: 1px solid black;
+    height: 120px;
+    width: 150px;
+    background: url(flo.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .div3 {
+    border: 1px solid black;
+    height: 120px;
+    width: 150px;
+    background: url(flo.gif);
+    background-repeat: no-repeat;
+  }
