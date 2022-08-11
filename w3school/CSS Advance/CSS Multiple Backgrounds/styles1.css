@@ -1,0 +1,5 @@
+#example{
+    background: url(paper.jpg) right bottom no-repeat, url(flover.gif) left top repeat;
+    padding: 15px;
+    color: orange;
+}
