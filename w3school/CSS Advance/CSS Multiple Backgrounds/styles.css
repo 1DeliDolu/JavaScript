@@ -1,0 +1,7 @@
+#example1{
+    background-image: url(paper.gif), url(flover.gif);
+    background-position: right bottom, left top;
+    background-repeat: no-repeat, repeat;
+    padding-left: 15px;
+    
+}
