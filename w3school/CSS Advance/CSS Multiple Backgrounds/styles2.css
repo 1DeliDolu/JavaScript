@@ -1,0 +1,15 @@
+#example1{
+    border: 1px solid black;
+    background-image: url(flo.gif);
+    background-size: 120px 80px;
+    background-repeat: no-repeat;
+    padding: 15px;
+    color: orange;
+}
+#example2{
+    border: 1px solid black;
+    background: url(flo.gif) ;
+    background-repeat: no-repeat;
+    padding: 15px;
+    color: orange;
+}
