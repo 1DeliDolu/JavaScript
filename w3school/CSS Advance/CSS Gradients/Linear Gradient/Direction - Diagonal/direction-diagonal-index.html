@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #grad1 {
+        height: 200px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to bottom right, red, yellow);
+      }
+      #grad2 {
+        height: 200px;
+        background-color: red; /* For browsers that do not support gradients */
+        background-image: linear-gradient(to top right, red, yellow);
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Linear Gradient - Diagonal</h1>
+    <p>
+      This linear gradient starts red at top left, transitioning to yellow (at
+      bottom right):
+    </p>
+
+    <div id="grad1"></div>
+    <hr />
+    <div id="grad2"></div>
+  </body>
+</html>
