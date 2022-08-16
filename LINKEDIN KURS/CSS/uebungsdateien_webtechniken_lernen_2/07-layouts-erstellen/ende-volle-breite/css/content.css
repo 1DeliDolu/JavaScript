@@ -1,0 +1,57 @@
+/* ================================
+
+content.css 
+
+- Links in main 
+- Inhalte in main    
+
+================================ */ 
+
+@media screen {
+
+  /** 
+    * Hyperlinks im Inhaltsbereich gestalten 
+    */
+  .site-content a:link {
+    color: #0B74B8; 
+  }
+  .site-content a:visited { 
+    color: #36aade; 
+  }
+
+  .site-content a:hover, 
+  .site-content a:focus {
+    color: #F5662E;
+  }
+  .site-content a:active {
+    color: #d90000; 
+  }
+
+  /* Grundlegende Gestaltung der Infoboxen aus Teil 1 */ 
+  .infoboxen {
+    background-color: #eee;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+  .infobox {
+    text-align: center; 
+    background-color: white; 
+    padding: 1rem;
+    margin: 1rem 0; 
+  }
+
+
+  /** 
+    * Gestaltung der Kundenstimmen   
+    * <blockquote> 
+    */
+  .kundenstimme {
+    background-color: #eee; 
+    text-align: center; 
+    padding: 1rem; 
+    border-left: 5px solid #0b74b8; 
+    margin: 1rem 0; 
+  }
+
+  
+} /* Ende @media */ 

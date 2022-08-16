@@ -1,0 +1,79 @@
+/* Stylesheet zur Gestaltung der Beispielsite */ 
+
+
+/* Grundlegende Gestaltung der Navigation und der Fußzeile */
+
+.site-nav,
+.site-footer {
+  background-color: #333; 
+  padding: 0.5em; 
+  margin: 1em 0; 
+}
+.site-nav-list {
+  padding: 0; 
+  margin: 0; 
+}
+.site-nav-list li {
+  display: inline; 
+  margin-right: 1em; 
+}
+.site-nav-list a,
+.site-footer a {
+  color: white; 
+  text-decoration: none; 
+}
+
+
+/* Abstände Logo und Slogan anpassen */ 
+.site-logo {
+  margin-bottom: 0; 
+}
+.site-slogan {
+  margin: 0; 
+}
+
+/* Grundlegende Gestaltung der Infoboxen */ 
+.infoboxen {
+  background-color: #eee; 
+  padding: 1em; 
+  margin-bottom: 1em; 
+}
+.infobox {
+  text-align: center; 
+  background-color: white; 
+  padding: 1em;
+  margin: 1em; 
+}
+
+/* Grundlegende Gestaltung der Kundenstimmen */ 
+.kundenstimme {
+  background-color: #eee; 
+  text-align: center; 
+  padding: 1em; 
+  margin: 1em 0; 
+}
+
+/* Grundlegende Gestaltung der Navigation */ 
+a.sie-sind-hier {
+  text-decoration: underline; 
+}
+
+/* Grundlegende Gestaltung Kontaktdaten und Kontaktformular */ 
+address {
+  font-style: normal; 
+}
+label {
+  display: block; 
+}
+form div {
+  margin-bottom: 1em; 
+}
+
+
+
+
+
+
+
+
+

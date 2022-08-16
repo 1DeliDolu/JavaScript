@@ -1,0 +1,37 @@
+    /** 
+      * Seite "Über uns"
+      * 
+      * Vorstellung des Teams
+      * 
+      */
+
+    .mitglieder {
+      list-style: none; 
+      padding: 0; 
+      margin: 0; 
+    }
+
+    .mitglied {
+      text-align: center; 
+      
+      border: 1px solid #999;
+      border-radius: 3px;
+      padding: 0.5rem; 
+      margin-bottom: 1rem; 
+    }
+
+    .mitglied h4 {
+      line-height: 1; 
+      color: #fff;
+      background-color: #0b74b8;
+      
+      padding: 1rem; 
+      /* der negative margin zieht die Überschrift bis an den Rand */
+      margin: -0.5rem -0.5rem 2rem -0.5rem;
+    }
+
+    .mitglied > i.fas {
+      display: block; 
+      color: #999; 
+      margin-bottom: 1rem; 
+    }

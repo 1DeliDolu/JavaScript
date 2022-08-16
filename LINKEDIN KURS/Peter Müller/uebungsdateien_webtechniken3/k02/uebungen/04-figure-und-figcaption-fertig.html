@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<!-- basiert auf dem Beispiel für figure/figcaption aus Teil 1 --> 
+<html lang="de">
+  
+  <head>
+  
+    <meta charset="utf-8">
+    
+    <title>figure und figcaption - Videokurs zu HTML + CSS</title>
+    <meta name="description" content="Auf dieser Seite sehen Sie, wie man mit figure und figcaption  Abbildungen beschriftet">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <style>
+        /* Basisgestaltung */ 
+        * { box-sizing: border-box; }
+        html {font-family: sans-serif; }
+
+        body {
+            min-width: 320px; 
+            max-width: 780px; 
+            margin: auto; 
+        }
+
+        /* Abstände Logo und Slogan anpassen */ 
+        .site-header {
+            margin-bottom: 2em; 
+        }
+        .site-logo {
+            margin-bottom: 0; 
+        }
+        .site-slogan {
+            margin: 0; 
+        }
+        .site-content {
+            line-height: 1.5; 
+        }
+
+        figure {
+            margin: 0; 
+        }
+        /* Beschriftung so breit wie das Bild */ 
+        figcaption {
+            width: 512px;         
+        }
+        
+        /* Abstand zwischen Bild und Beschriftung entfernen */ 
+        figure img {
+            display: block; 
+        }
+
+        
+      /** 
+        * Bildbeschriftung gestalten 
+        *
+        */ 
+      
+
+      figcaption {
+
+        /* Ausrichtung mit absolut + relativ für figure */ 
+        position: absolute; 
+        bottom: 0;
+        
+        /* Text lesbar, Hintergrund transparent */ 
+        color: white;
+        background: rgba(0,0,0,0.6); 
+        padding: 0.25rem;
+      }
+      
+      figure {
+        position: relative; 
+      }
+      
+  </style>  
+  </head>
+
+  <body>
+    
+    <header class="site-header">
+      
+      <h1 class="site-logo">
+        <img src="bilder/logo-html+css-222.gif"
+          srcset="bilder/logo-html+css-444.gif 2x,
+                  bilder/logo-html+css-666.gif 3x"
+             alt="HTML + CSS" 
+           width="222" 
+          height="33"></h1>
+      <p class="site-slogan">Webseiten erstellen und gestalten</p>
+      
+    </header>
+
+    <main class="site-content">
+      
+      <h2>Beschriftung gestalten</h2>
+      
+       <figure>
+        <img src="bilder/hamburg-oevelgoenne-elbe.jpg"
+             alt="Blick auf die Elbe (Oevelgönne, Hamburg)" 
+           width="512"
+           height="384">
+        <figcaption>Blick auf die Elbe</figcaption>
+      </figure>
+      
+      
+    </main>
+    
+  </body>
+</html>
+
+
+
+
+
+

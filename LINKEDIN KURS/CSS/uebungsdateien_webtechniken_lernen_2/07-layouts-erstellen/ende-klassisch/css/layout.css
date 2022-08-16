@@ -1,0 +1,72 @@
+/* ================================
+
+layout.css 
+
+- Gestaltung der Layoutbereiche 
+- Hauptnavigation in eigenem Stylesheet 
+- Inhaltsbereich in content.css 
+
+================================ */
+
+@media screen { 
+
+  /**
+    * Klassisches Layout mit begrenzter Breite    
+    */ 
+  
+  html {
+    background: #e7e7e7 url(hintergrund.jpg) fixed;  
+  }
+  
+  body {
+    background: white; 
+    min-width: 320px; 
+    max-width: 780px; /* maximale Breite frei wählbar */ 
+    margin: 0 auto; 
+  }
+  
+  /**
+    * Kopfbereich   
+    */ 
+
+  .site-header {
+    padding: 1rem 1rem 0 1rem;
+  }
+  
+  /* Abstände Logo und Slogan anpassen */ 
+  .site-logo {
+    margin-bottom: 0; 
+  }
+  .site-slogan {
+    margin: 0; 
+  }
+
+
+  /**
+    * Inhaltsbereich   
+    */ 
+
+  /* Zeilenabstand auf das anderthalbfache der Schriftgröße */
+  .site-content {
+    line-height: 1.5;
+    padding: 1rem; 
+  }
+
+
+  /**
+    * Fußbereich   
+    */ 
+
+  /* Grundlegende Gestaltung der Fußzeile aus Teil 1 (plus font-size kleiner) */
+  .site-footer {
+    font-size: smaller;
+    background-color: #333; 
+    padding: 1rem; /* em bezieht sich auf die Schriftgröße des Elements, rem auf die von <html> */
+    margin-top: 2rem; 
+  }
+  .site-footer a {
+    color: white; 
+    text-decoration: none; 
+  }
+
+} /* Ende @media */ 

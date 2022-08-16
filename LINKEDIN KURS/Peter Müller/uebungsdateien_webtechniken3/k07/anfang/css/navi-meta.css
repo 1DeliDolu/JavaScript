@@ -1,0 +1,62 @@
+/* ================================
+
+navi-meta.css 
+
+Meta-Navigation im Footer 
+
+================================ */
+
+@media screen {
+  
+  .meta-nav-list {
+    display: flex; 
+    list-style-type: none; 
+    padding: 0; 
+    margin: 0; 
+  }
+  
+  .meta-nav-list li {
+    margin-right: 1rem; 
+  }
+  
+  .meta-nav-list li:last-child {
+    margin-right: 0; 
+    margin-left: auto; 
+  }
+  
+  
+  /**
+  * Gestaltung der Links 
+  * fast identisch mit den Links in ul.site-nav-list 
+  */ 
+  .meta-nav-list a {
+    display: block; 
+    text-decoration: none; 
+
+    background: #333; 
+    color: white; 
+
+    line-height: 1; 
+    padding: 0.25rem;
+  }
+
+  .meta-nav-list .sie-sind-hier {
+    background-color: #666; 
+    color: white; 
+  }
+
+  .meta-nav-list a:hover, 
+  .meta-nav-list a:focus {
+    background-color: #666; 
+    color: white; 
+  }
+  
+ .meta-nav-list a:active {
+    background: #0b74b8; 
+    color: white; 
+  }    
+  
+  
+  
+  
+} /* Ende @media */ 

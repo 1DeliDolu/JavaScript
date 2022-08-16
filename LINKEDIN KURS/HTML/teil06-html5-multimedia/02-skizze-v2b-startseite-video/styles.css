@@ -1,0 +1,163 @@
+/* v2b HTML5 für Webdesigner - Skizze Startseite */ 
+
+header, nav, main, aside, footer {
+  display: block;
+}
+
+html {
+  font-size: 100%;
+  font-family: Verdana, sans-serif;
+}
+body {
+  width: 960px;
+  font-size: 0.875rem;
+  background: white url(grafiken/header_bg.png) 0 0 repeat-x;
+  margin: 1rem auto;
+}
+
+/* Layoutbereiche */ 
+header {
+  position: relative;
+  padding: 0 2rem 1rem 2rem;
+}
+header h1 {
+  padding: 0;
+  margin: 0.75rem 0;
+}
+header a {
+  color:white;
+  text-decoration: none;
+}
+nav { position: relative; }
+nav h2, main h2, footer h2 { display: none; }
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main {
+  min-height: 500px;
+  background: white;
+  padding: 2rem;
+}
+footer {
+  clear:both;
+  color: #aaa;
+  padding: 2rem;
+}
+
+/* Sitenavigation */ 
+nav#sitenav ul:first-of-type li {
+  color: white;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+nav#sitenav ul:last-of-type {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: black;
+  background: #aaa;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin: 0;
+}
+
+/* Metanavigation */ 
+nav#metanav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 12rem;
+}
+nav#metanav li {
+  display: inline-block;
+  font-size: 0.75rem; 
+  color: #ccc;
+  margin-right: 0.5rem;
+}
+nav#metanav li:first-of-type {
+  background: url(grafiken/international.png) left 0 no-repeat;
+  padding-left: 1rem;
+}
+nav#metanav li:last-of-type {
+  background: url(grafiken/icon_cart.gif) left 0 no-repeat;
+  padding-left: 1rem;
+}
+.hideme { position:absolute; left:-32768px; top:-32768px; width:0; height:0;}
+
+nav#metanav form {
+  position: absolute;
+  top: 0;
+  right: 2rem;
+}
+nav#metanav input#suchfeld {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 8rem;
+  height: 26px;
+  background: #eaeaea;
+  color: #242424;
+  padding-left: 0.5rem;
+  border:none;
+}
+nav#metanav input.suchbutton {
+  position:absolute;
+  top:0;
+  right:0;
+}
+
+
+/* Inhaltsbereich */ 
+main section {
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+section.feature-rotator {
+  height: 310px;
+  background: #aaa;
+} 
+section.small-features {
+  height: 155px;
+  background: #ccc;
+  color: #333;
+}
+section.categories {
+  height: 250px;
+  background: #333;
+  color: #ccc;
+}
+section.newproducts {
+  min-height: 650px;
+  width: 66%;
+  float:left;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: white;
+  color: #333;
+  border:1px solid #ccc;
+}  
+aside.news {
+  width: 33%;
+  float:right;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background: white;
+  color: #333;
+  border: 1px solid #ccc;
+}
+
+/* Videoplayer */ 
+section.videoplayer h3 { margin-top: 0;}
+
+video#html5video {
+  width: 640px;
+  background: white;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 5px solid #333;
+  border-radius: 0.5em;
+}
+
+/* eof */ 

@@ -1,0 +1,51 @@
+/* ================================
+
+navi-inline.css 
+
+Horizontale Navigation basierend auf display:inline  
+
+================================ */
+
+@media screen {
+
+  /**
+    * Navigationsbereich
+    */   
+  
+  .site-nav {
+    background-color: #333; 
+    padding: 0.5em; 
+    margin: 1em 0; 
+  }
+
+  
+  
+  /**
+    * Navigationsliste    
+    */   
+  .site-nav-list {
+    padding: 0; 
+    margin: 0; 
+  }
+  .site-nav-list li {
+    display: inline; 
+    margin-right: 1em; 
+  }
+  
+  
+  
+  /**
+    * Navigationslinks    
+    */   
+  .site-nav-list a {
+    color: white; 
+    text-decoration: none; 
+  }
+
+  a.sie-sind-hier {
+    text-decoration: underline; 
+  }
+
+  
+  
+} /* Ende @media */

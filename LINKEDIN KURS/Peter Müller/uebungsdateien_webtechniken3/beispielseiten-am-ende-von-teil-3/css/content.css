@@ -1,0 +1,204 @@
+/* ================================
+
+content.css 
+
+- Links in main 
+- Inhalte in main    
+
+================================ */ 
+
+@media screen {
+
+  /** 
+    * Hyperlinks im Inhaltsbereich  
+    */
+  .site-content a:link {
+    color: #0B74B8; 
+  }
+  .site-content a:visited { 
+    color: #36aade; 
+  }
+
+  .site-content a:hover, 
+  .site-content a:focus {
+    color: #F5662E;
+  }
+  .site-content a:active {
+    color: #d90000; 
+  }
+
+  /* Externe Hyperlinks mit einem Symbol kennzeichnen */ 
+  .site-content a[href^="http"]::after {
+    content: " \29c9"; 
+  }  
+
+  
+  /** 
+    * Infoboxen    
+    */
+  
+  .infoboxen {
+    background-color: #eee;
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+  }
+  
+  .infobox {
+    /* Infobox als Flex-Container */ 
+    display: flex; 
+    flex-flow: column;
+    
+    text-align: center; 
+    background-color: white; 
+    padding: 1rem;
+    margin: 1rem 0; 
+  }
+  
+  /* Hyperlinks am unteren Rand der Infobox platzieren */ 
+  .infobox p:last-child {
+    margin-top: auto; 
+  }
+
+  /** 
+    * Kundenstimmen mit <blockquote> 
+    */
+  .kundenstimme {
+    background-color: #eee; 
+    text-align: center; 
+    padding: 1rem; 
+    border-left: 5px solid #0b74b8; 
+    margin: 1rem 0; 
+  }
+
+  
+  
+  /** 
+    * Seite "News" 
+    * 
+    * Grundgestaltung der Beiträge und Linklisten 
+    * 
+    */ 
+
+  .news h3 {
+    padding-top: 0.5rem;
+    border-top: 1px solid #eee; 
+    margin-bottom: 0.25rem;
+  }
+
+  .beitragsliste h3 a {
+    color: #333; 
+  }
+
+  .beitragsliste article {
+    margin-bottom: 4rem;
+  }
+
+  .beitragsinfo {
+    color: #999; 
+  }    
+
+
+  
+  /** 
+    * Seite "Über uns"
+    * 
+    * Vorstellung des Teams
+    * responsiv per Grid - ohne Media Query 
+    * 
+    */
+
+  .mitglieder {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+    grid-gap: 1rem; 
+
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+  }
+
+  .mitglied {
+    text-align: center; 
+
+    border: 1px solid #999;
+    border-radius: 3px;
+    padding: 0.5rem; 
+    /* im Grid durch grid-gap ersetzt */ 
+    margin-bottom: 1rem; 
+  }
+
+  .mitglied h4 {
+    line-height: 1; 
+    color: #fff;
+    background-color: #0b74b8;
+
+    padding: 1rem; 
+    /* der negative margin zieht die Überschrift bis an den Rand */
+    margin: -0.5rem -0.5rem 2rem -0.5rem;
+  }
+
+  .mitglied > i.fas {
+    display: block; 
+    color: #999; 
+    margin-bottom: 1rem; 
+  }
+
+  
+
+  /** 
+    * Kontaktdaten    
+    */  
+  
+  .kontaktdaten {
+    background: #eee;
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }  
+  
+  /* Social Links bei den Kontaktdaten */ 
+  .social-links {
+    display: flex; 
+    list-style-type: none; 
+    padding: 0.5rem 0.5rem 0.5rem 0;
+    margin: 1rem 0; 
+  }
+
+  .social-links li {
+    display: inline-block; /* Fallback für alte Browser */ 
+    margin: 0 1rem 0 0;
+  }
+
+  .social-links a {
+    display: block; 
+  }
+
+  .social-links i.fab {
+    background: white;
+    line-height: 0.8;
+  }  
+  
+  
+} /* Ende @media */ 
+
+
+  
+/* Infoboxen nebeneinander per Grid */ 
+
+  @media screen and (min-width: 768px) {
+
+    .infoboxen > .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;      
+      grid-gap: 1rem;
+    }
+
+  } /* Ende der Media Query */ 
+
+@supports (display: grid) {
+
+  /* "Über uns - Das Team" - Abstand nach unten wird durch grid-gap definiert */ 
+  .mitglied {
+    margin-bottom: 0; 
+  }  
+
+} 

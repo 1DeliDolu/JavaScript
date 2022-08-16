@@ -1,0 +1,72 @@
+/* ================================
+
+formulare.css 
+
+Stylesheet für Formulare und ihre Elemente 
+
+================================ */
+
+@media screen {
+
+  /** 
+    * Für alle Formulare 
+    */
+  
+  label {
+    display: block; 
+    cursor: pointer; 
+  }
+
+  form div {
+    margin-bottom: 1em; 
+  }  
+  
+
+  /** 
+    * Kontaktformular - Eingabefelder  
+    */  
+  
+  .kontaktformular input[type="text"], 
+  .kontaktformular input[type="email"], 
+  .kontaktformular textarea {
+    width: 16rem;
+    padding: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+  }
+  
+  .kontaktformular textarea {
+    max-width: 100%; 
+    min-height: 8rem; 
+  }  
+
+
+  /** 
+    * Kontaktformular - Button   
+    */  
+  
+  .kontaktformular button {
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background: #0b74b8;
+    color: white;
+    
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+  }  
+  
+  .kontaktformular button:hover, 
+  .kontaktformular button:focus {
+    background: #f5662e; 
+  }
+
+  .kontaktformular button:active {
+    background: #d90000; 
+  }
+  
+  
+} /* Ende @media */ 

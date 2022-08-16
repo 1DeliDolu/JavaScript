@@ -1,0 +1,52 @@
+body {
+    background: lightgray;
+}
+
+h1,
+button {
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 5px 5px #111;
+    border-radius: 5px;
+    min-height: 15px;
+}
+
+h1,h2
+{
+    background: white;
+    color: blue;
+}
+
+#info,#ausgabe {
+    margin: auto;
+    padding: 5px;
+    box-shadow: 5px 5px #111;
+    border-radius: 5px;
+    width: 600px;
+    text-align: center;
+    min-height: 25px;
+}
+article {
+	display:block;
+	border:solid;
+	border-width: 1pt;
+}
+section {
+	background-color:lightgray;
+}
+header {
+	background-color:red;
+	color: white;
+}
+footer {
+	background-color:yellow;
+	color: red;
+}
+aside {
+	background-color:yellow;
+
+	display:block;
+	border:solid;
+	border-width: 5pt;
+	width:150px
+}

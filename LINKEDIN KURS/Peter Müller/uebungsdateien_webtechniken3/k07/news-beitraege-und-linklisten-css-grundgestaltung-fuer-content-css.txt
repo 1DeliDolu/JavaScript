@@ -1,0 +1,25 @@
+    /** 
+      * Seite "News" 
+      * 
+      * Grundgestaltung der Beiträge und Linklisten 
+      * 
+      */ 
+  
+    .news h3 {
+      padding-top: 0.5rem;
+      border-top: 1px solid #eee; 
+      margin-bottom: 0.25rem;
+    }
+
+    .beitragsliste h3 a {
+      color: #333; 
+    }
+
+    .beitragsliste article {
+      margin-bottom: 4rem;
+    }
+
+    .beitragsinfo {
+      color: #999; 
+    }
+  

@@ -1,0 +1,79 @@
+/* ================================
+
+navi-flex.css 
+
+Horizontale Navigation basierend auf display:flex  
+
+================================ */
+
+@media screen {
+
+  /**
+    * Basisformatierung 
+    */
+  
+  .site-nav { 
+    position: -webkit-sticky; 
+    position: sticky; 
+    top: 0; 
+    
+    background: #333; 
+    color: white; 
+    
+    box-shadow: 0 2px 6px rgba(51,51,51,0.3);
+    
+    padding: 0 1rem; /* 1rem li/re ist bündig mit den anderen Layoutbereichen */ 
+    margin: 1rem 0; 
+  }
+
+  
+  /** 
+    * Liste gestalten 
+    */
+  
+  .site-nav-list {
+    display: flex; 
+    flex-wrap: wrap; 
+    
+    padding: 0; 
+    margin: 0; 
+  }
+  
+  .site-nav-list li {
+    list-style: none; 
+  }
+  
+  
+  /**
+    * Links gestalten 
+    */  
+  
+  .site-nav-list a {
+    display: block;
+    text-decoration: none;
+    
+    min-width: 72px;
+    text-align: center;
+    background: #333;
+    color: white;
+    
+    padding: 0.5rem 0.25rem; /* mit 0.25rem li/re ist auch bei 320px kein Umbruch */ 
+  }
+  
+  .site-nav-list a.sie-sind-hier {
+    background: #666; 
+    color: white; 
+  }  
+  
+  .site-nav-list a:hover, 
+  .site-nav-list a:focus {
+    background: #666; 
+    color: white; 
+  }
+  
+  .site-nav-list a:active {
+    background: #0b74b8; 
+    color: white; 
+  }  
+  
+} /* Ende @media */   

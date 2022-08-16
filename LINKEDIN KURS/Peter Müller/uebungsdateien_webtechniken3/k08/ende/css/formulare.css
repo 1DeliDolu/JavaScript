@@ -1,0 +1,97 @@
+/* ================================
+
+formulare.css 
+
+Stylesheet für das Kontaktformular 
+
+Responsiv ohne Media Query per Flexbox: 
+1. form > div wird Flex-Container 
+2. label bekommt feste Breite mit flex: 0 0 7rem
+3. Eingabefelder sind flexibel mit flex: 1 
+4. Button ist flexibel mit flex: 1 
+
+================================ */
+
+@media screen {
+
+  /** 
+    * Kontaktformular 
+    */  
+  
+  form > div {
+    
+    /* Flex-Container */ 
+    display: flex; 
+    
+    /* Umbruch erlaubt, für die Fließrichtung bleibt der Standardwert row  */ 
+    flex-flow: wrap; 
+    
+    margin-bottom: 1em; 
+  }  
+  
+  label {
+    display: block; 
+    cursor: pointer; 
+    
+    /* Feste Breite, bei weniger als 7rem => Umbruch */ 
+    flex: 0 0 7rem; 
+  }
+
+
+  
+  .kontaktformular input[type="text"], 
+  .kontaktformular input[type="email"], 
+  .kontaktformular textarea {
+    /* Die Zauberformel für Flexibilität */ 
+    flex: 1; 
+    
+    font-size: inherit;
+    font-family: inherit;
+    
+    /* width wird wegen flex: 1 ignoriert (flex-basis: 0%) */ 
+    width: 16rem;
+    
+    padding: 0.25rem;
+    border: 1px solid #ddd;
+    border-radius: 0.25rem;
+    
+  }
+  
+  .kontaktformular textarea {
+    max-width: 100%; 
+    min-height: 8rem; 
+  }  
+
+
+  /** 
+    * Kontaktformular - Button   
+    */  
+  
+  .kontaktformular button {
+    /* Die Zauberformel für Flex-Items */ 
+    flex: 1; 
+    
+    font-size: inherit;
+    font-family: inherit;
+    letter-spacing: 1px;
+    cursor: pointer;
+    
+    background: #0b74b8;
+    color: white;
+    
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.25rem;
+  }  
+  
+  .kontaktformular button:hover, 
+  .kontaktformular button:focus {
+    background: #f5662e; 
+  }
+
+  .kontaktformular button:active {
+    background: #d90000; 
+  }
+  
+  
+} /* Ende @media */ 

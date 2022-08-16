@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> 
+  
+  <title>linear-gradient - Übungen - Videokurs zu HTML + CSS</title>
+  
+  <meta name="description" content="In diesem Videokurs lernen Sie das Erstellen und Gestalten von Webseiten mit HTML und CSS.">
+  
+  <style>
+    /* Basisgestaltung */ 
+    html {
+      font-family: sans-serif; 
+    }
+    body {
+      width: 50%; 
+      margin: 0 auto 2rem auto;
+    }
+    /* Abstände Logo und Slogan anpassen */ 
+    .site-header {
+      margin-bottom: 2em; 
+    }
+    .site-logo {
+      margin-bottom: 0; 
+    }
+    .site-slogan {
+      margin: 0; 
+    }
+    .site-content {
+      line-height: 1.5; 
+    }
+
+    div {
+      background: #a8caf3; 
+      width: 25rem; 
+      height: 10rem; 
+      padding: 0.5rem; 
+      margin-bottom: 3rem;
+    }
+    
+    /* Beispiel 1: Farbverlauf von oben nach unten (Standard) */
+    /*
+    .eins  { 
+      background-image: linear-gradient(#175ba2, #a8caf3); 
+    } 
+    */
+    
+    /* Beispiel 2: Farbverlauf von links nach rechts */
+    /*
+    .zwei  { 
+      background-image: linear-gradient(to right, #175ba2, #a8caf3);       
+    }    
+    */
+    
+    /* Beispiel 3: diagonaler farbverlauf von links oben nach rechts unten */    
+    /*
+    .drei  { 
+      background-image: linear-gradient(to right bottom, #175ba2, #a8caf3); 
+    }    
+    */ 
+    
+  </style>
+    
+</head>
+
+<body>
+
+  <header class="site-header">
+    
+    <h1 class="site-logo"> 
+      <img    src="bilder/logo-html+css-222.gif" 
+           srcset="bilder/logo-html+css-444.gif 2x, 
+                   bilder/logo-html+css-666.gif 3x"
+              alt="HTML + CSS" 
+            width="222" 
+           height="33">
+    </h1>  
+      
+    <p class="site-slogan">Webseiten erstellen und gestalten</p>
+  
+  </header>
+
+  <main class="site-content"> 
+    
+    <h2>Einfache, lineare Farbverläufe </h2>
+    
+    <div>
+      <p>Diese Box hat keinen Farbverlauf</p>
+    </div>
+    
+    
+    <h3>Beispiel Nr. 1</h3>
+    
+    <div class="eins">
+      <p>Diese Box hat einen Farbverlauf von oben nach unten.</p> 
+    </div>
+
+    
+    <h3>Beispiel Nr. 2</h3>
+    
+    <div class="zwei">
+      <p>Diese Box hat einen Farbverlauf von links nach rechts.</p> 
+    </div>
+
+    <h3>Beispiel Nr. 3</h3>
+    
+    <div class="drei">
+      <p>Diese Box hat einen diagonalen Farbverlauf von links oben nach rechts unten.</p> 
+    </div>
+    
+  </main> 
+  
+</body>  
+</html>

@@ -1,0 +1,96 @@
+/* v2b HTML5 für Webdesigner - Skizze Startseite - oldIE.css */ 
+
+body {
+  font-size: 14px; /* font-size: 0.875rem; */
+  margin: 16px auto; /* margin: 1rem auto; */
+}
+
+/* Layoutbereiche */ 
+header {
+  padding: 0 32px 16px 32px; /* padding: 0 2rem 1rem 2rem; */
+}
+header h1 {
+  margin: 12px 0; /*margin: 0.75rem 0;*/
+}
+
+main {
+  padding: 32px; /*  padding: 2rem;*/
+}
+footer {
+  padding: 32px; /*  padding: 2rem;*/
+}
+
+/* Sitenavigation, die Klassen im HTML sind nur für oldIE */ 
+
+
+/*nav#sitenav ul:first-of-type li */
+nav#sitenav ul.sitelinks li {
+  color: white;
+  display: inline-block;
+  *float: left; /* IE7 only, does not understand inline-block */ 
+  margin-right: 16px; /*margin-right: 1rem;*/
+  margin-bottom: 8px; /*margin-bottom: 0.5rem;*/
+}
+/*nav#sitenav ul:last-of-type*/ 
+nav#sitenav ul.login {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  *bottom: -20px; /* IE7 */
+  color: black;
+  background: #aaa;
+  padding: 8px; /*padding: 0.5rem;*/
+  border-radius: 4px; /*border-radius: 0.25rem;*/
+  margin: 0;
+}
+
+/* Metanavigation */ 
+nav#metanav {
+  padding-right: 192px;  /*padding-right: 12rem;*/
+}
+nav#metanav li {
+  *float: left; /* IE7 only, does not understand inline-block */
+  font-size: 12px;  /*font-size: 0.75rem; */
+  margin-right: 8px;  /*margin-right: 0.5rem;*/
+}
+/*nav#metanav li:first-of-type*/
+nav#metanav li.international {
+  background: url(grafiken/international.png) left 0 no-repeat;
+  padding-left: 16px;  /*padding-left: 1rem;*/
+}
+/*nav#metanav li:last-of-type*/ 
+nav#metanav li.cart {
+  background: url(grafiken/icon_cart.gif) left 0 no-repeat;
+  padding-left: 16px;  /*padding-left: 1rem;*/
+}
+
+nav#metanav form {
+  right: 32px;  /*right: 2rem;*/
+  *top: -15px; /* IE7 only */
+}
+nav#metanav input#suchfeld {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  width: 128px;  /*width: 8rem;*/
+  padding-left: 8px;  /*padding-left: 0.5rem;*/
+}
+
+/* IE7 only */ 
+main {
+  *clear: both;
+  *margin-top: 16px; 
+}
+
+/* Inhaltsbereich */ 
+main section {
+  padding: 16px;  /*padding: 1rem;*/
+  margin-bottom: 16px;  /*margin-bottom: 1rem;*/
+}
+
+/* Videoplayer */ 
+video#html5video {
+  padding: 8px;
+  border-radius: 8px;  /*border-radius: 0.5em;*/
+}
+
+/* eof */ 

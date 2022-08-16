@@ -1,0 +1,50 @@
+        <section class="team">
+
+          <h3>Das Team</h3>
+
+          <ul class="mitglieder">
+
+            <li class="mitglied">
+              <h4>Chefin</h4>
+              <i class="fas fa-user fa-4x"></i>
+              <p>Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</p><p>Nascetur ridiculus mus.</p>
+            </li> 
+
+            <li class="mitglied">
+                <h4>Chef</h4>
+                <i class="fas fa-user-tie fa-4x"></i>
+                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p> 
+                <p>Aenean commodo ligula eget dolor. </p>
+             </li>
+
+            <li class="mitglied">
+              <h4>Manager</h4>
+              <i class="fas fa-user-ninja fa-4x"></i>
+              <p>Pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
+              <p>In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. </p>
+            </li>
+
+            <li class="mitglied">
+              <h4>Techniker</h4>
+              <i class="fas fa-user-astronaut fa-4x"></i>
+              <p>Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.</p>
+              <p>Nulla consequat massa quis enim.</p>
+            </li>             
+
+            <li class="mitglied">
+              <h4>Producer</h4>
+              <i class="fas fa-user-plus fa-4x"></i>
+              <p>Integer tincidunt. Cras dapibus. </p>
+              <p>Vivamus elementum semper nisi.</p>
+            </li>
+
+            <li class="mitglied">
+              <h4>Trainer</h4>
+              <i class="fas fa-user-graduate fa-4x"></i>
+              <p>Webstandards. Das Regelwerk, auf dem Webseiten aufbauen.</p>
+              <p>HTML, CSS und JavaScript.</p>
+            </li>
+
+          </ul>
+
+        </section> 

@@ -1,0 +1,54 @@
+/* ================================
+
+layout.css 
+
+- Gestaltung der Layoutbereiche 
+- Hauptnavigation in eigenem Stylesheet 
+- Elemente im Inhaltsbereich in content.css 
+
+================================ */
+
+@media screen {
+
+  /**
+    * Kopfbereich   
+    */ 
+
+  /* Abstände Logo und Slogan anpassen */ 
+  .site-logo {
+    margin-bottom: 0; 
+  }
+  .site-slogan {
+    margin: 0; 
+  }
+
+
+  
+  /**
+    * Inhaltsbereich   
+    */ 
+  
+  /* Zeilenabstand auf das anderthalbfache der Schriftgröße */
+  .site-content {
+      line-height: 1.5;
+  }  
+  
+  
+  
+  /**
+    * Fußbereich   
+    */ 
+  
+  .site-footer {
+    font-size: smaller;
+    background-color: #333; 
+    padding: 0.5em; 
+    margin: 1em 0; 
+  }
+  
+  .site-footer a {
+    color: white; 
+    text-decoration: none; 
+  }
+
+} /* Ende @media */

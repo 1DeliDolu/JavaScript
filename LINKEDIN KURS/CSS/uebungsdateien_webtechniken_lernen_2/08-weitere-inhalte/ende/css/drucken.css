@@ -1,0 +1,22 @@
+/* ================================
+
+drucken.css 
+
+Druckversion für die Beispielseiten
+
+================================ */
+
+@media print {
+  
+  body {
+    font-family: Georgia, "Times New Roman", serif; 
+    font-size: 12pt; 
+  }
+  
+  .site-nav, 
+  .site-footer {
+    display: none; 
+  }
+  
+    
+} /* Ende @media */ 

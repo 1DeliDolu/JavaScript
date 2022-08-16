@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  <!-- Idee von Brad Frost - codepen.io/bradfrost/pen/YPgMNd -->
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <title>Farbpalette und CSS-Layout - Videokurs zu HTML + CSS</title>
+    <meta name="description" content="In diesem Kurs lernen Sie das Erstellen und Gestalten von Webseiten mit HTML und CSS">
+  
+  <style>
+    /* Basisgestaltung */ 
+    html {
+      font-family: sans-serif; 
+      color: #333; 
+    }
+    
+    body {
+      min-width: 320px; 
+      max-width: 960px; 
+      margin: auto; 
+    }
+
+    /* Abstände Logo und Slogan anpassen */ 
+    .site-header {
+      margin-bottom: 2em; 
+    }
+    .site-logo {
+      margin-bottom: 0; 
+    }
+    .site-slogan {
+      margin: 0; 
+    }
+    .site-content {
+      line-height: 1.5; 
+    }
+    h2 { 
+      margin-bottom: 0;
+    }
+    p {
+      margin-top: 0; 
+    }        
+    .site-header, 
+    .site-content {
+      padding-right: 1em;
+      padding-left: 1em; 
+    }
+ 
+    
+    /**
+      *  Basisgestaltung der Farbpalette 
+      * 
+      */ 
+
+     .palette { 
+      list-style: none; 
+      background: #eee;
+      padding: 1em; 
+      margin: 0; 
+    }
+    li {
+      background: #ddd;
+      padding: 0.5em;
+      border: 1px solid #ccc;
+      margin: 0 0 0.5em 0;
+    }
+    figure {
+      padding: 0; 
+      margin: 0; 
+    }
+    .farbton {
+      min-height: 60px;
+      margin-bottom: 0.5em;
+    } 
+
+    /**
+      * Nebeneinander per Float 
+      * 1. Anfangen mit Flow (00-farbpalette.html)
+      * 2. Listenelemente nach links floaten 
+      * 3. ul kollabiert (Fix mit overflow:hidden)
+      * 4. Breite manuell berechnen 
+      */ 
+
+    /* Gefloatete Elemente umschließen */ 
+    ul {
+      /* overflow: hidden; */ 
+    }
+    
+    li {
+      /* float: left; */ 
+      /* width: 10%; */ 
+      /* min-width: 100px; */ 
+      /* box-sizing: border-box; */ 
+      /* margin-right: 8px; */ 
+    }
+    
+  </style>    
+        
+  </head>
+
+  <body>
+    
+    <header class="site-header wrapper">
+      
+      <h1 class="site-logo">
+        <img   src="bilder/logo-html+css-222.gif"
+            srcset="bilder/logo-html+css-444.gif 2x,
+                    bilder/logo-html+css-666.gif 3x"
+               alt="HTML + CSS" 
+             width="222" 
+            height="33">
+      </h1>
+      <p class="site-slogan">Webseiten erstellen und gestalten</p>
+      
+    </header>
+    
+    
+    <main class="site-content">
+      
+      <h2>Nebeneinander mit Float und Clear</h2>
+      <p>Zum Testen im Entwicklertool die Kommentare um die Anweisungen entfernen.</p>      
+      
+      <ul class="palette">
+        <li>
+          <figure>
+            <div class="farbton" style="background: #f00;"></div>
+            <figcaption class="farbwert">#f00</figcaption>
+          </figure>
+        </li>
+        <li>
+         <figure>
+            <div class="farbton" style="background: #0f0;"></div>
+            <figcaption class="farbwert">#0f0</figcaption>
+          </figure>          
+        </li>
+        <li>
+         <figure>
+            <div class="farbton" style="background: #00f;"></div>
+            <figcaption class="farbwert">#00f</figcaption>
+          </figure>
+        </li>
+        <li>
+         <figure>
+            <div class="farbton" style="background: #ff0;"></div>
+            <figcaption class="farbwert">#ff0</figcaption>
+          </figure>
+        </li>
+        <li>
+         <figure>
+            <div class="farbton" style="background: #0ff;"></div>
+            <figcaption class="farbwert">#0ff</figcaption>
+          </figure>
+        </li>
+        <li>
+         <figure>
+            <div class="farbton" style="background: #f0f;"></div>
+            <figcaption class="farbwert">#f0f</figcaption>
+          </figure>
+        </li>
+        <li>
+         <figure>
+            <div class="farbton" style="background: #fff;"></div>
+            <figcaption class="farbwert">#fff</figcaption>
+          </figure>
+        </li>
+        <li>
+         <figure>
+            <div class="farbton" style="background: #000;"></div>
+            <figcaption class="farbwert">#000</figcaption>
+          </figure>
+        </li>
+      </ul>
+
+    </main>
+    
+    
+  </body>
+</html>
+
+
+
+
+
+

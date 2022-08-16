@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> 
+  
+  <title>border-radius - Übungen - Videokurs zu HTML + CSS</title>
+  
+  <meta name="description" content="In diesem Videokurs lernen Sie das Erstellen und Gestalten von Webseiten mit HTML und CSS.">
+  
+  <style>
+    /* Basisgestaltung */ 
+    html {
+      font-family: sans-serif; 
+    }
+    body {
+      width: 50%; 
+      margin: 0 auto 2rem auto;
+    }
+    /* Abstände Logo und Slogan anpassen */ 
+    .site-header {
+      margin-bottom: 2em; 
+    }
+    .site-logo {
+      margin-bottom: 0; 
+    }
+    .site-slogan {
+      margin: 0; 
+    }
+    .site-content {
+      line-height: 1.5; 
+    }
+
+    div {
+      background: #a8caf3; 
+      width: 25rem; 
+      height: 10rem; 
+      padding: 0.5rem; 
+      margin-bottom: 3rem;
+    }
+    
+    /* Beispiel 1: Mit border und border-radius */
+    /*
+    .eins  { 
+      border: 4px solid #175ba2; 
+      border-radius: 8px; 
+    } 
+    */
+    
+    /* Beispiel 2: Mit border-radius, aber ohne border */
+    /*
+    .zwei  { 
+      border-radius: 8px; 
+    }    
+    */ 
+    
+    /* Beispiel 3: Verschiedene Werte für border-radius */    
+    /*
+    .drei  { 
+      border-radius: 4px 48px 4px 48px; 
+    }    
+    */
+  </style>
+    
+</head>
+
+<body>
+
+  <header class="site-header">
+    
+    <h1 class="site-logo"> 
+      <img    src="bilder/logo-html+css-222.gif" 
+           srcset="bilder/logo-html+css-444.gif 2x, 
+                   bilder/logo-html+css-666.gif 3x"
+              alt="HTML + CSS" 
+            width="222" 
+           height="33">
+    </h1>  
+      
+    <p class="site-slogan">Webseiten erstellen und gestalten</p>
+  
+  </header>
+
+  <main class="site-content"> 
+    
+    <h2>Abgerundete Ecken mit »border-radius«</h2>
+    
+    <div>
+      <p>Diese Box hat keine abgerundeten Ecken</p>
+    </div>
+    
+    
+    <h3>Beispiel Nr. 1</h3>
+    
+    <div class="eins">
+      <p>Diese Box hat eine Rahmenlinie und gleichmäßig abgerundete Ecken.</p> 
+    </div>
+
+    
+    <h3>Beispiel Nr. 2</h3>
+    <div class="zwei">
+    <p>Diese Box hat keine Rahmenlinie und gleichmäßig abgerundete Ecken.</p> 
+    </div>
+
+    <h3>Beispiel Nr. 3</h3>
+    <div class="drei">
+    <p>Diese Box hat verschiedene abgerundete Ecken.</p> 
+    </div>
+    
+  </main> 
+  
+</body>  
+</html>

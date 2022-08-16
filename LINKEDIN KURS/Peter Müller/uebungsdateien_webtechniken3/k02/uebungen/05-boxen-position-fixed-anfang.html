@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+
+<html lang="de">
+
+<head>
+  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no"> 
+  
+  <title>position:fixed - Videokurs zu HTML + CSS</title>
+  
+  <meta name="description" content="In diesem Videokurs lernen Sie das Erstellen und Gestalten von Webseiten mit HTML und CSS.">
+  
+  <!-- Font Awesome für die Icons --> 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.2/css/all.css" integrity="sha384-/rXc/GQVaYpyDdyxK+ecHPVYJSN9bmVFBvjA/9eOB+pb3F2w2N6fc5qB9Ew5yIns" crossorigin="anonymous">
+  
+  <style>
+    /* Basisgestaltung */
+    * {
+      box-sizing: border-box; 
+    }
+    html {
+      font-family: sans-serif; 
+    }
+    
+    body {
+      padding: 1rem; 
+      max-width: 768px; 
+    }
+
+    /* Abstände Logo und Slogan anpassen */ 
+    .site-header {
+      margin-bottom: 2em; 
+    }
+    .site-header h1 {
+      margin-top: 0; 
+    }
+    .site-logo {
+      margin-bottom: 0; 
+    }
+    .site-slogan {
+      margin: 0; 
+    }
+    .site-content {
+      line-height: 1.5; 
+      margin-bottom: 3rem; 
+    }
+      
+    /** 
+      * Gestaltung der Social Media Leiste 
+      * 
+      */ 
+    
+    .icon-bar ul {
+      list-style: none; 
+      padding: 0; 
+      margin: 0; 
+    }
+
+    .icon-bar li {
+      display: inline-block; 
+    }
+
+    /* Die Links gestalten */
+    .icon-bar a {
+      display: block;
+      text-align: center;
+      color: white;
+      padding: 1em;
+    }
+
+    /* Farbwerte siehe https://brandcolors.net/ */ 
+    .icon-bar .linkedin {
+      background: #007bb5;
+      color: white;
+    }
+    
+    .icon-bar .twitter {
+      background: #55ACEE;
+      color: white;
+    }
+
+    .icon-bar .facebook {
+      background: #3B5998;
+      color: white;
+    }
+    
+    
+  </style>
+    
+</head>
+
+<body>
+
+  <header class="site-header">
+    
+    <h1 class="site-logo"> 
+      <img    src="bilder/logo-html+css-222.gif" 
+           srcset="bilder/logo-html+css-444.gif 2x, 
+                   bilder/logo-html+css-666.gif 3x"
+              alt="HTML + CSS" 
+            width="222" 
+           height="33">
+    </h1>  
+      
+    <p class="site-slogan">Webseiten erstellen und gestalten</p>
+      
+  </header>
+
+  <main class="site-content"> 
+    
+    <article>
+      
+      <h2>Lorem Ipsum unterwegs</h2>
+      
+      <p>Weit hinten, hinter den Wortbergen, fern der Länder Vokalien und Konsonantien, leben die Blindtexte. Abgeschieden wohnen sie in Buchstabhausen an der Küste des Semantik, eines großen Sprachozeans.</p>
+      
+      <p>Ein kleines Bächlein namens Duden fließt durch ihren Ort und versorgt sie mit den nötigen Regelialien. Es ist ein paradiesmatisches Land, in dem einem gebratene Satzteile in den Mund fliegen. Nicht einmal von der allmächtigen Interpunktion werden die Blindtexte beherrscht – ein geradezu unorthografisches Leben.</p>
+      
+      <h3>In die weite Welt hinaus</h3>
+    
+      <p>Eines Tages aber beschloss eine kleine Zeile Blindtext, ihr Name war <a href="https://de.wikipedia.org/wiki/Lorem_ipsum" target="_blank">Lorem Ipsum</a>, hinauszugehen in die weite Grammatik. Der große Oxmox riet ihr davon ab, da es dort wimmele von bösen Kommata, wilden Fragezeichen und hinterhältigen Semikola, doch das Blindtextchen ließ sich nicht beirren. Es packte seine sieben Versalien, schob sich sein Initial in den Gürtel und machte sich auf den Weg.</p>
+
+      <p>Als das Blindtextchen die ersten Hügel des Kursivgebirges erklommen hatte, warf es einen letzten Blick zurück auf die Skyline seiner Heimatstadt Buchstabhausen, die Headline von Alphabetdorf und die Subline seiner eigenen Straße, der Zeilengasse. Wehmütig lief ihm eine rhetorische Frage über die Wange, dann setzte es seinen Weg fort.</p>
+
+      <h3>Unterwegs und gefangen</h3>
+
+      <p>Unterwegs traf es eine Copy. Die Copy warnte das Blindtextchen, da, wo sie herkäme, wäre sie zigmal umgeschrieben worden, und alles, was von ihrem Ursprung noch übrig wäre, sei das Wort "und", und das Blindtextchen solle umkehren und wieder in sein eigenes, sicheres Land zurückkehren.</p> 
+
+      <p>Doch alles gute Zureden konnte es nicht überzeugen, und so dauerte es nicht lange, bis ihm ein paar heimtückische Werbetexter auflauerten, es mit Longe und Parole betrunken machten und es dann in ihre Agentur schleppten, wo sie es wieder und wieder in ihren Projekten einsetzten.</p>
+
+      <p>Und wenn es nicht geändert wurde, dann nutzen sie's noch heute.</p>
+      
+    </article>
+
+    
+    <article>
+      
+      <h2 lang="en">Responsive Web Design</h2>
+      
+      <p>Er hörte leise Schritte hinter sich. Das bedeutete nichts Gutes. Wer würde ihm schon folgen, spät in der Nacht und dazu noch in dieser engen Gasse mitten im übel beleumundeten Hafenviertel? Gerade jetzt, wo er das Ding seines Lebens gedreht hatte und mit der Beute verschwinden wollte!</p>
+
+      <p>Hatte einer seiner zahllosen Kollegen dieselbe Idee gehabt, ihn beobachtet und abgewartet, um ihn nun um die Früchte seiner Arbeit zu erleichtern? Oder gehörten die Schritte hinter ihm zu einem der unzähligen Gesetzeshüter dieser Stadt, und die stählerne Acht um seine Handgelenke würde gleich zuschnappen?</p>
+
+      <p>Er konnte die Aufforderung stehen zu bleiben schon hören. Gehetzt sah er sich um. Plötzlich erblickte er den schmalen Durchgang. Blitzartig drehte er sich nach rechts und verschwand zwischen den beiden Gebäuden. Beinahe wäre er dabei über den umgestürzten Mülleimer gefallen, der mitten im Weg lag. </p>
+
+      <p>Er versuchte, sich in der Dunkelheit seinen Weg zu ertasten und erstarrte: Anscheinend gab es keinen anderen Ausweg aus diesem kleinen Hof als den Durchgang, durch den er gekommen war. Die Schritte wurden lauter und lauter, er sah eine dunkle Gestalt um die Ecke biegen. Fieberhaft irrten seine Augen durch die nächtliche Dunkelheit und suchten einen Ausweg. Und dann sah er ihn: <span lang="en">Responsive Web Design</span>.</p>
+    
+    </article>
+    
+  </main> 
+  
+  <aside class="icon-bar">
+
+    <ul>
+      <li><a href="#" class="linkedin"><i class="fab fa-linkedin fa-2x"></i></a></li>
+      <li><a href="#" class="twitter"><i class="fab fa-twitter fa-2x"></i></a></li>
+      <li><a href="#" class="facebook"><i class="fab fa-facebook fa-2x"></i></a></li>
+    </ul>  
+
+  </aside>  
+  
+</body>  
+</html>

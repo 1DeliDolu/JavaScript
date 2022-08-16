@@ -1,0 +1,26 @@
+Dieser Ordner enthält die Beispielsite am Anfang von Teil 2 (DE_2081). 
+Stand: 2018-10-18  
+
+--- 
+Änderungen gegenüber Teil 1 (DE_1695, Kapitel 08 - Ordner /ende) 
+
+1. 
+Im <head>
+Auf allen Seiten steht Meta Viewport jetzt direkt unter Meta Charset. Dadurch ändert sich nichts, aber es ist der logischere Platz. 
+
+2. 
+kontakt.html 
+<button> 
+- class="button" entfernt (doofer Name für eine Klasse) 
+- value="abgeschickt" entfernt (bei nur einem Button ist das überflüssig)
+
+3. 
+style.css
+in Kommentaren "provisorische" ersetzt durch "grundlegende" 
+
+4. 
+style.css
+Selektor .site-nav-list für den Hintergrund durch .site-nav ersetzt. 
+
+
+--- eof --- 

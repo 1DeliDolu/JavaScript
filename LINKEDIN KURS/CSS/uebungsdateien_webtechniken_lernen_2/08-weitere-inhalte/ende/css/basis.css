@@ -1,0 +1,106 @@
+/* ================================
+
+basis.css 
+
+1. grundlegende Einstellungen 
+2. grundlegende Textgestaltung 
+3. Elementselektoren 
+
+================================ */ 
+
+@media screen { 
+
+  /**
+    * 1. Grundlegende Einstellungen   
+    */ 
+
+  html { 
+    /* Box-Modell umstellen auf border-box, Teil 1/2 */ 
+    box-sizing: border-box; 
+    
+    /* erzeugt inaktiven Rollbalken und verhindert so ein "Hüpfen" bei kurzen Webseiten */
+    overflow-y: scroll; 
+    
+    /* verhindert Zoom nach Wechsel von Porträt/Landscape in IE on Windows Phone and in iOS. */
+    -webkit-text-size-adjust: 100%; 
+    -ms-text-size-adjust: 100%;     
+  }
+  
+  /* Box-Modell umstellen auf border-box, Teil 2/2 */ 
+  *, *::before, *::after {
+    box-sizing: inherit; 
+  } 
+  
+  /* Für alte Browser wie den IE11 */ 
+  header, nav, main, footer, 
+  section, article, aside, 
+  figcaption, figure {
+    display: block; 
+  }   
+  
+  /* Vermeidung von "collapsing margins" */ 
+  h1, h2, h3, h4, h5, h6,
+  p, ul, ol, blockquote {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+
+  /* Elemente im visuellen Layout versteckt, aber für Screenreader vorhanden */ 
+  .visually-hidden {
+      position: absolute;
+
+      width: 1px; 
+      height: 1px;
+      padding: 0;
+      border: 0;
+      margin: -1px; 
+
+      clip: rect(0 0 0 0); 
+      overflow: hidden;
+      white-space: nowrap; 
+  }
+
+
+
+  /**
+    * 2. Grundlegende Textgestaltung  
+    */ 
+
+  body {
+    /* Variante 1: Einfach nur eine Schriftart ohne Serifen */
+    font-family: sans-serif; 
+
+    /* Variante 2: Schriftarten wünschen */
+    font-family: Helvetica, Arial, sans-serif; 
+
+    /* Variante 3: Webfonts - Schriftart mitliefern (in style.css mit @import geladen) */
+    font-family: 'Source Sans Pro', Arial, sans-serif; 
+
+    /* Schriftgröße explizit festlegen */ 
+    font-size: 1rem; 
+  }
+
+  /* Schriftgrößen für Überschriften */
+  h1 { font-size: 2.5rem; } 
+  h2 { font-size: 2rem; } 
+  h3 { font-size: 1.75rem; } 
+  h4 { font-size: 1.5rem; } 
+  h5 { font-size: 1.25rem; } 
+  h6 { font-size: 1rem; font-variant: small-caps; }
+
+
+
+  /**
+    * 3. Elementselektoren 
+    */ 
+
+
+  /* Grundlegende Gestaltung Adresse */ 
+  
+  address {
+    font-style: normal; 
+  }
+
+
+
+} /* Ende @media */ 

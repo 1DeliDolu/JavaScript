@@ -1,0 +1,85 @@
+/* v2b HTML5 für Webdesigner - Skizze Startseite */ 
+
+header, nav, main, aside, footer {
+  display: block;
+}
+
+html {
+  font-size: 100%;
+  font-family: Verdana, sans-serif;
+}
+body {
+  width: 960px;
+  font-size: 0.875rem;
+  background: white url(grafiken/header_bg.png) 0 0 repeat-x;
+  margin: 1rem auto;
+}
+
+/* Layoutbereiche */ 
+header {
+  position: relative;
+  padding: 0 2rem 1rem 2rem;
+}
+header h1 {
+  padding: 0;
+  margin: 0.75rem 0;
+}
+header a {
+  color:white;
+  text-decoration: none;
+}
+nav { position: relative; }
+nav h2 { display: none; }
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+main {
+  min-height: 500px;
+  background: white;
+  padding: 2rem;
+}
+
+/* Sitenavigation */ 
+nav#sitenav ul:first-of-type li {
+  color: white;
+  display: inline-block;
+  margin-right: 1rem;
+  margin-bottom: 0.5rem;
+}
+nav#sitenav ul:last-of-type {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  color: black;
+  background: #aaa;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  margin: 0;
+}
+
+/* Metanavigation */ 
+nav#metanav {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding-right: 2rem;
+}
+nav#metanav li {
+  display: inline-block;
+  font-size: 0.75rem; 
+  color: #ccc;
+  margin-right: 0.5rem;
+}
+nav#metanav li:first-of-type {
+  background: url(grafiken/international.png) left 0 no-repeat;
+  padding-left: 1rem;
+}
+nav#metanav li:last-of-type {
+  background: url(grafiken/icon_cart.gif) left 0 no-repeat;
+  padding-left: 1rem;
+}
+
+/* eof */ 
+

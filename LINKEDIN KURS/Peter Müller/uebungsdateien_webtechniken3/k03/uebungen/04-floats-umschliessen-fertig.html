@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  
+  <head>
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <title>Float: ein umgebendes Element clearen - Videokurs zu HTML + CSS</title>
+    <meta name="description" content="In diesem Kurs lernen Sie das Erstellen und Gestalten von Webseiten mit HTML und CSS">
+  
+  <style>
+    /* Basisgestaltung */ 
+    html {
+      font-family: sans-serif; 
+    }
+    
+    body {
+      min-width: 320px; 
+      max-width: 780px; 
+      margin: auto; 
+    }
+
+    /* Abstände Logo und Slogan anpassen */ 
+    .site-header {
+      margin-bottom: 2em; 
+    }
+    .site-logo {
+      margin-bottom: 0; 
+    }
+    .site-slogan {
+      margin: 0; 
+    }
+    .site-content {
+      line-height: 1.5; 
+    }
+    .site-header, 
+    .site-content {
+      padding-right: 1em;
+      padding-left: 1em; 
+    }        
+    
+    main {
+      hyphens: auto; 
+    }
+    
+    .site-footer {
+      font-size: smaller;
+      background-color: #333; 
+      padding: 1rem;
+      margin-top: 2rem; 
+      
+      /* clear: both; */ 
+    }
+
+    .site-footer a {
+      color: white; 
+      text-decoration: none; 
+    }
+
+    /**
+      *  Klassen zum Floaten von Bildern 
+      * 
+      */ 
+    
+    .bildlinks {
+      float: left; 
+      margin-right: 1rem; 
+      margin-bottom: 1rem; 
+    }
+    
+    .bildrechts {
+      float: right; 
+      margin-left: 1rem; 
+      margin-bottom: 1rem; 
+    }
+    
+    
+    article > header:first-child { 
+      background: #eee; 
+      padding: 0.5rem; 
+    } 
+
+    /** 
+      * Regeln zum Clearen eines umgebenden Elements
+      * (siehe Datei mit Lösungen)
+      */ 
+    
+    .clear-overflow {
+      overflow:hidden; 
+    }
+    
+    .clearfix::after {
+      content: "";
+      display: table; 
+      clear: both;
+    }
+    
+    .clear-flow-root {
+      display: flow-root; 
+    }
+    
+       
+  </style>    
+        
+  </head>
+
+  <body>
+    
+    <header class="site-header wrapper">
+      
+      <h1 class="site-logo">
+        <img   src="bilder/logo-html+css-222.gif"
+            srcset="bilder/logo-html+css-444.gif 2x,
+                    bilder/logo-html+css-666.gif 3x"
+               alt="HTML + CSS" 
+             width="222" 
+            height="33">
+      </h1>
+      <p class="site-slogan">Webseiten erstellen und gestalten</p>
+      
+    </header>
+    
+    <main class="site-content wrapper">
+      
+      <section class="content-intro">
+      
+        <article>
+          
+          <header class="clear-flow-root">
+            
+            <h2>Float - das umgebende Element clearen</h2>
+
+            <img src="bilder/waldemar-weber.gif" 
+                 class="bildrechts"
+                 alt="Der Autor" 
+                 width="150" 
+                 height="150">
+
+            <p>Eine wunderbare Heiterkeit hat meine ganze Seele eingenommen, gleich den süßen Frühlingsmorgen, die ich mit ganzem Herzen genieße. Ich bin allein und freue mich meines Lebens in dieser Gegend, die für solche Seelen geschaffen ist wie die meine. </p>
+          
+          </header>
+
+          <p>Ich bin so glücklich, mein Bester, so ganz in dem Gefühle von ruhigem Dasein versunken, daß meine Kunst darunter leidet. Ich könnte jetzt nicht zeichnen, nicht einen Strich, und bin nie ein größerer Maler gewesen als in diesen Augenblicken. </p>
+
+          <p>Wenn das liebe Tal um mich dampft, und die hohe Sonne an der Oberfläche der undurchdringlichen Finsternis meines Waldes ruht, und nur einzelne Strahlen sich in das innere Heiligtum stehlen, ich dann im hohen Grase am fallenden Bache liege, und näher an der Erde tausend mannigfaltige Gräschen mir merkwürdig werden; wenn ich das Wimmeln der kleinen Welt zwischen Halmen, die unzähligen, unergründlichen Gestalten der Würmchen, der Mückchen näher an meinem Herzen fühle, und fühle die Gegenwart des Allmächtigen, der uns nach seinem Bilde schuf, das Wehen des Alliebenden, der uns in ewiger Wonne schwebend trägt und erhält; mein Freund! </p>
+
+          <p>Wenn's dann um meine Augen dämmert, und die Welt um mich her und der Himmel ganz in meiner Seele ruhn wie die Gestalt einer Geliebten - dann sehne ich mich oft und denke : ach könntest du das wieder ausdrücken, könntest du dem Papiere das einhauchen, was so voll, so warm in dir lebt, daß es würde der Spiegel deiner Seele, wie deine Seele ist der Spiegel des unendlichen Gottes! - mein Freund - aber ich gehe darüber zugrunde, ich erliege unter der Gewalt der Herrlichkeit dieser Erscheinungen. </p>
+
+        </article>  
+      </section>
+      
+ 
+    </main>
+    
+     <footer class="site-footer">
+      
+      <a href="#top">Nach oben</a>
+    
+    </footer>
+    
+    
+  </body>
+</html>
+
+
+
+
+
+

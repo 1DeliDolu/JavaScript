@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<html lang="de">
+  
+  <head>
+  
+    <meta charset="utf-8">
+    
+    <title>z-index - Videokurs zu HTML + CSS</title>
+    <meta name="description" content="In diesem Videokurs lernen Sie das Erstellen und Gestalten von Webseiten mit HTML und CSS.">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    
+    <style>
+      /* Basisgestaltung */ 
+      * {
+       box-sizing: border-box; 
+      }
+      html {
+        font-family: sans-serif; 
+      }
+
+      body {
+        background: #eee; 
+        color: black; 
+        padding: 0; 
+        margin: 0; 
+      }
+ 
+      div {
+        position: absolute; 
+        
+        background: white; 
+        width: 25%; 
+        height: 100px; 
+        padding: 10px; 
+        border: 3px solid #800; 
+        margin: 5px; 
+      }
+      
+      /* Zum Testen von z-index, auto durch Zahlen ersetzen */ 
+      
+      div:nth-child(1) {
+        top: 0; 
+        left: 0; 
+        background: white;
+        z-index: auto; 
+      }
+      
+      div:nth-child(2) {
+        top: 50px; 
+        left: 50px; 
+        background: #e3c0c0;
+        z-index: auto; 
+      }
+      
+      div:nth-child(3) {
+        top: 100px; 
+        left: 100px; 
+        background: #c47d7d; 
+        z-index: auto; 
+      }
+      
+      
+      
+      
+  </style>  
+    
+  </head>
+
+  <body>
+  
+    <div>Box 1</div>
+    <div>Box 2</div>
+    <div>Box 3</div>
+    
+  </body>
+</html>
+
+
+
+
+
+

@@ -1,0 +1,75 @@
+/* Kontaktformular - HTML5 für Webdesigner */
+body { padding: 0 2em ; }
+
+form {
+  background: #eee url(hintergrund.png) 0 0 repeat;
+  line-height: 1.2; 
+  width: 28em;  
+  padding: 1em; 
+  border-radius: 0.5em  ;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3); 
+}
+form > div { margin-bottom: 1em; }
+label { 
+  cursor: pointer;  
+  margin-bottom: 0.25em;
+  display: inline-block;
+  vertical-align: top;
+  text-align: right; 
+  width: 8em;
+}
+input[type="text"], 
+input[type="email"], 
+input[type="tel"], 
+input[type="url"], 
+input[type="date"], 
+input[type="month"], 
+input[type="week"],  
+textarea { 
+  width: 18em;
+  padding: 0.25em;  
+  margin-bottom: 1em;
+}
+input[type="number"] { 
+  width: 3em;
+  padding: 0.25em;
+  margin-bottom: 1em;
+}
+textarea { 
+  max-width: 100%; 
+  min-height: 10em; 
+}
+input:focus, textarea:focus {
+  background-color: #f2f2f2; 
+}
+
+input[type="submit"] { margin-left: 8rem; }  
+
+
+
+
+
+@media screen and (max-width: 767px) {
+
+  form {width: 200px; }
+  label {display:block; text-align: left;}
+  input[type="text"], 
+  input[type="email"], 
+  input[type="tel"], 
+  input[type="url"], 
+  input[type="date"], 
+  input[type="month"], 
+  input[type="week"],  
+  textarea { 
+    max-width: 90%;
+  }
+  input[type="number"] { 
+  width: 3em;
+  padding: 0.25em;
+  margin-bottom: 1em;
+}
+  input[type="submit"] { margin-left: 0; }  
+
+}
+
+/* eof */

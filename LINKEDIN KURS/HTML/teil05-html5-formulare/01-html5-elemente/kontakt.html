@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head> 
+  <title>Kontaktseite - HTML5 für Webdesigner</title>
+  <meta charset="utf-8"> 
+  <link href="formulare.css" rel="stylesheet"> 
+</head>
+
+<body>
+
+<h1>Kontaktformular</h1>
+
+<form id="kontaktformular" action="#">
+  
+  <div><!-- Name -->
+    <label for="besuchername">Name:</label>
+    <input type="text" 
+           id="besuchername" 
+           name="besuchername"
+           placeholder="Vorname Nachname"
+           required> 
+  </div>
+
+  <div><!-- E-Mail -->
+    <label for="besuchermail">E-Mail:</label>
+    <input type="email" 
+           id="besucheremail" 
+           name="besucheremail"
+           required>
+  </div>
+
+  <div><!-- Telefon -->
+    <label for="besuchertelefon">Telefon:</label>
+    <input type="tel" 
+           id="besuchertelefon" 
+           name="besuchertelefon"
+           required>
+  </div>
+
+  <div><!-- Homepage -->
+    <label for="besucherhomepage">Homepage:</label>
+    <input type="url" 
+           id="besucherhomepage" 
+           name="besucherhomepage"
+           required>
+  </div>
+
+  <div><!-- Nachricht -->
+    <label for="nachricht">Nachricht:</label>
+    <textarea id="nachricht" 
+              name="nachricht" 
+              cols="20" 
+              rows="5"></textarea>
+  </div>
+
+  <div>
+    <input type="submit" value="Abschicken">
+  </div>
+
+</form>
+
+</body>
+</html>

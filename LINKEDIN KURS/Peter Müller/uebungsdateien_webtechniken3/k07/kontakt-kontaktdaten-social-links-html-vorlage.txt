@@ -1,0 +1,5 @@
+         <ul class="social-links">
+            <li><a href="#"><i class="fab fa-linkedin fa-2x"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter-square fa-2x"></i></a></li>
+            <li><a href="#"><i class="fab fa-facebook fa-2x"></i></a></li>
+          </ul>      
