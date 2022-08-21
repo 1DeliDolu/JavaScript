@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Combinator</title>
+</head>
+<style>
+    div>p {
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <h2>Child Selector</h2>
+    <p>The child selector (>) selects all elelments that the children of a sprecified element.</p>
+    <div>
+        <p>Paragraf 1 in the div.</p>
+        <p>Paragraf 2 in the div. </p>
+        <section>
+            <!-- not Child but Descendant-->
+            <p> Paragraf 3 in the div (inside a section elements).</p>
+
+        </section>
+        <p>Paragraf 4 in the a div.</p>
+
+    </div>
+    <p>Paragraf 5. Not in a Div.</p>
+    <p>Paragraph 6. not in a div.</p>
+
+</body>
+
+</html>
+<hr style="doted">
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Adjacent Sibling Selector (+)</title>
+</head>
+<style>
+    div+p {
+        background-color: yellow;
+    }
+</style>
+
+<body>
+    <h2>Adjacent Sibling Selector </h2>
+    <p>The +selector is used to select an element that is directly after anotjer specific element.</p>
+    <p>the following example selects the first p element that are place immediately after div elements:</p>
+    <div>
+        <p> Paragraph 1 in the div.</p>
+        <p> Paragraph 2 in the div. </p>
+    </div>
+
+    <p>Paragraph 3 in the div. </p>
+    <p>Paragraph 4 in the div.</p>
+    <div>
+        <p> Paragraph 5 in the div.</p>
+        <p> Paragraph 6 in the div. </p>
+    </div>
+    <p>Paragraph 7 in the div. </p>
+    <p>Paragraph 8 in the div.</p>
+
+</body>
+
+</html>
+<hr>
+<html>
+
+<head>
+    <meta charset="UTF_8">
+    <title>General Sibling Selector (~)</title>
+</head>
+
+<body>
+    <h2>General Sibling Selector </h2>
+    <p>The general sibling selector (~) selects all elements that are next sibling of a specified element.</p>
+    <p>Paragraph 1</p>
+    <div>
+        <p>Paragraph 2</p>
+    </div>
+    <p>
+        Paragraph 3
+    </p>
+    <code>Some code.</code>
+    <p>Paragraph 4</p>
+</body>
+
+</html>
+<hr>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Change the color of all "p" elements, that are descendants of "div" elements, to "red".</title>
+</head>
+<style>
+    div p {
+        color: red;
+    }
+</style>
+
+<body>
+    <p>Change the color of all "p" elements, that are descendants of "div" elements, to "red".</p>
+    <div>
+        <p>This is a paragragh.</p>
+        <p>This is a Paragraph</p>
+    </div>
+    <p>This is a Paragraph</p>
+    <p>This is a Paragraph</p>
+</body>
+
+</html>
