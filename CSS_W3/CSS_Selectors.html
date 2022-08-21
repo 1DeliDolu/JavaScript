@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!--Here, all <p> elements on the page will be center-aligned, with a red text color: -->
+<html>
+
+<head>
+    <style>
+        p {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>Every paragraph will be affected by the style.</p>
+    <p id="para1">Me too!</p>
+    <p>And me!</p>
+
+</body>
+
+</html>
+<hr>
+<!--The CSS rule below will be applied to the HTML element with id="para1": -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        #para1 {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p id="para1">Hello World!</p>
+    <p>This paragraph is not affected by the style.</p>
+
+</body>
+
+</html>
+<!--In this example all HTML elements with class="center" will be red and center-aligned: -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        .center {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="center">Red and center-aligned heading</h1>
+    <p class="center">Red and center-aligned paragraph.</p>
+
+</body>
+
+</html>
+<hr>
+<!--In this example only <p> elements with class="center" will be red and center-aligned: -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p.center {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="center">This heading will not be affected</h1>
+    <p class="center">This paragraph will be red and center-aligned.</p>
+
+</body>
+
+</html>
+<hr>
+<!--In this example the <p> element will be styled according to class="center" and to class="large": -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        p.center {
+            text-align: center;
+            color: red;
+        }
+        
+        p.large {
+            font-size: 300%;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 class="center">This heading will not be affected</h1>
+    <p class="center">This paragraph will be red and center-aligned.</p>
+    <p class="center large">This paragraph will be red, center-aligned, and in a large font-size.</p>
+
+</body>
+
+</html>
+<hr>
+<!--The CSS rule below will affect every HTML element on the page: -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        * {
+            text-align: center;
+            color: blue;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello world!</h1>
+
+    <p>Every element on the page will be affected by the style.</p>
+    <p id="para1">Me too!</p>
+    <p>And me!</p>
+
+</body>
+
+</html>
+<hr>
+<!--The CSS Grouping Selector
+The grouping selector selects all the HTML elements with the same style definitions.
+
+Look at the following CSS code (the h1, h2, and p elements have the same style definitions):-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        h1,
+        h2,
+        p {
+            text-align: center;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Hello World!</h1>
+    <h2>Smaller heading!</h2>
+    <p>This is a paragraph.</p>
+
+</body>
+
+</html>
