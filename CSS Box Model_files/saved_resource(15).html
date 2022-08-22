@@ -1,0 +1,138 @@
+
+<!-- saved from url=(0488)https://csync.smilewanted.com/?gdpr=1&gdpr_consent=CPZuhHAPZuhHADlBEADECRCsAP_AAH_AACiQIxtf_X__b3_n-_7___t0eY1f9_7__-0zjhfdt-8N3f_X_L8X_2M7vF36tr4KuR4ku3bBIQdtHOncTUmx6olVrzPsbk2cr7NKJ7Pkmnsbe2dYGH9_n93T_ZKZ7______7________________________-_____9______________________________4IxgEmGpeQBdiWODJtGEUKIEYVhIdQKACigGFoisIHVwU7K4CfUELABAKgIwIgQYgowYBAAIBAEhEQEgB4IBEARAIAAQAKgEIACNgEFgBYGAQACgGhYgRQBCBIQZEBEcpgQESJRQT2ViCUHexphCHWWAFAo_oqEBEoAQLAyEhYOY4AkBLhZIFmKF8gBGCFAAAA&us_privacy=1-%2D- -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script src="./decode_consent.js.Herunterladen" type="text/javascript" async=""></script><script>
+(function(){
+
+    function docReady(fn) {
+        if(document.readyState === "complete" || document.readyState === "interactive"){
+            setTimeout(fn, 1);
+        }else{
+            document.addEventListener("DOMContentLoaded", fn);
+        }
+    }
+
+    function getSearchParameters() {
+        var prmstr = window.location.search.substr(1);
+        return prmstr != null && prmstr != "" ? transformToAssocArray(prmstr) : {};
+    }
+
+    function loadAsyncScript(src, callback){
+        var script = document.createElement('script');
+        script.src = src;
+        script.type = 'text/javascript';
+        script.async = true;
+        if(callback != null){
+            if (script.readyState) { // IE, incl. IE9
+                script.onreadystatechange = function() {
+                    if (script.readyState == "loaded" || script.readyState == "complete") {
+                        script.onreadystatechange = null;
+                        callback();
+                    }
+                };
+            } else {
+                script.onload = function() { // Other browsers
+                    callback();
+                };
+            }
+        }
+        a=document.getElementsByTagName('script')[0];
+        a.parentNode.insertBefore(script,a);
+    }
+
+    function transformToAssocArray( prmstr ) {
+        var params = {};
+        var prmarr = prmstr.split("&");
+        for ( var i = 0; i < prmarr.length; i++) {
+            var tmparr = prmarr[i].split("=");
+            params[tmparr[0]] = tmparr[1];
+        }
+        return params;
+    }
+
+    function create_cookie_sync(url){
+        var ifrm = document.createElement("iframe");
+        ifrm.src = url;
+        ifrm.scrolling = "no";
+        ifrm.frameBorder = 0;
+        ifrm.width = 0;
+        ifrm.height = 0;
+        ifrm.style.margin = 0;
+        ifrm.style.padding = 0;
+        ifrm.style.display = "none";
+        ifrm.style.width = "0px";
+        ifrm.style.height = "0px";
+        document.body.append(ifrm);
+    }
+
+    function call_cookies_sync(){
+        docReady(function() {
+            var count_cookie_sync = 0;
+
+            create_cookie_sync("https://csync.smilewanted.com/drop_cookie_sw.php");
+
+            if(output_list_cookies_sync.length > 0){
+                output_list_cookies_sync.forEach(function(cookie_sync_url){
+                    setTimeout(function(){
+
+                        cookie_sync_url = cookie_sync_url.replaceAll('[GDPR_APPLIES]', gdpr_applies);
+                        cookie_sync_url = cookie_sync_url.replaceAll('[GDPR_CONSENT_STRING]', consent_string);
+
+                        create_cookie_sync(cookie_sync_url);
+                    }, 50*count_cookie_sync);
+
+                    count_cookie_sync++;
+                });
+            }
+        });
+    }
+
+    var list_cookies_sync = {"appnexus_prebid_server":{"order":0,"redirect_url":"https:\/\/csync.smilewanted.com\/getuid?source=prebid-server&gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&us_privacy=&redirect=https%3A%2F%2Fib.adnxs.com%2Fprebid%2Fsetuid%3Fbidder%3Dsmilewanted%26gdpr%3D[GDPR_APPLIES]%26gdpr_consent%3D[GDPR_CONSENT_STRING]%26f%3Di%26uid%3D%24UID"},"smart":{"order":2,"redirect_url":"https:\/\/sync.smartadserver.com\/getuid?gdpr_consent=[GDPR_CONSENT_STRING]&nwid=2491&url=https:\/\/csync.smilewanted.com\/set_partner_userid_get\/smart\/[sas_uid]"},"improve":{"order":3,"redirect_url":"https:\/\/ice.360yield.com\/server_match?r=https:\/\/csync.smilewanted.com\/set_partner_userid_get\/improve\/{PUB_USER_ID}&partner_id=1010"},"pubmatic":{"order":5,"redirect_url":"https:\/\/ads.pubmatic.com\/AdServer\/js\/user_sync.html?p=158810&gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]&predirect=https%3A%2F%2Fcsync.smilewanted.com%2Fset_partner_userid_get%2Fpubmatic%2F"},"spotx":{"order":7,"redirect_url":"https:\/\/sync.search.spotxchange.com\/partner?adv_id=178357&redir=https:\/\/csync.smilewanted.com\/set_partner_userid_get\/spotx\/$SPOTX_USER_ID"},"rtbhouse":{"order":9,"redirect_url":""},"yahoo":{"order":10,"redirect_url":"https:\/\/ups.analytics.yahoo.com\/ups\/58618\/occ?gdpr=[GDPR_APPLIES]&gdpr_consent=[GDPR_CONSENT_STRING]"}};
+
+    var output_list_cookies_sync = [];
+
+    for(let [key, value] of Object.entries(list_cookies_sync)){
+        output_list_cookies_sync[value.order] = value.redirect_url;
+    }
+
+    var gdpr_applies = 0;
+    var consent_string = '';
+    var params = getSearchParameters();
+    var force_calls = false;
+
+    setTimeout(function(){
+
+        try{
+            if(typeof top.window.__tcfapi !== 'undefined'){
+                top.window.__tcfapi('getTCData', 2, function (tcData, success){
+                    if(success){
+                        gdpr_applies = tcData.gdprApplies ? 1 : 0;
+                        consent_string = tcData.tcString;
+                    }
+                });
+            }else{
+                if(params.gdpr && params.gdpr_consent){
+                    gdpr_applies = params.gdpr;
+                    consent_string = params.gdpr_consent;
+                }else{
+                    force_calls = true;
+                }
+            }
+        }catch(e){
+            if(params.gdpr && params.gdpr_consent){
+                gdpr_applies = params.gdpr;
+                consent_string = params.gdpr_consent;
+            }else{
+                force_calls = true;
+            }
+        }
+
+        loadAsyncScript("https://static.smilewanted.com/js/decode_consent/decode_consent.js", function() {
+            if((sw_consent.vendor_allowed(consent_string, 639) && sw_consent.purpose_allowed(consent_string, 1) && sw_consent.purpose_allowed(consent_string, 2)) || force_calls){
+                call_cookies_sync();
+            }
+        });
+
+    }, 0);
+})();
+
+</script></head><body marginwidth="0" marginheight="0"><iframe src="./drop_cookie_sw.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./getuid.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./getuid(1).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./server_match.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./user_sync(5).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./partner.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./saved_resource(18).html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe><iframe src="./occ.html" scrolling="no" frameborder="0" width="0" height="0" style="margin: 0px; padding: 0px; display: none; width: 0px; height: 0px;"></iframe></body></html>

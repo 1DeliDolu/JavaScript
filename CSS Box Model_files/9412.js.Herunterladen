@@ -1,0 +1,151 @@
+BAP.copyJSON({
+  "data": {
+    "icon_position": "top-right",
+    "default_icon": "_us",
+    "mobile_in_app_url": "",
+    "default_footer": "Privacy controls by Evidon, Inc.",
+    "icon_display": "expandable",
+    "icon_grayscale": 100,
+    "container_opacity": 70,
+    "offset_x": 0,
+    "offset_y": 0,
+    "generic_icon": false,
+    "icon_delay": 0,
+    "nid": 9412,
+    "nwid": null,
+    "aid": 1697,
+    "icid": null,
+    "skip_L2": true,
+    "behavioral": "definitive",
+    "generic_text": null,
+    "adv_name": "MiQ",
+    "adv_msg": "",
+    "adv_logo": "",
+    "adv_link": "",
+    "mobile_message": null,
+    "display_mobile_overlay": false,
+    "mobile_advertiser_logo_url": "",
+    "default_icon_text": "AdChoices",
+    "default_generic1": "This ad has been matched to your interests. It was selected for you based on your browsing activity.",
+    "default_generic2": "This ad may have been matched to your interests based on your browsing activity.",
+    "default_generic3": "helped",
+    "default_generic4": "determine that you might be interested in an ad like this.",
+    "default_generic5": "select this ad for you.",
+    "default_generic6": "selected this ad for you.",
+    "default_link1": "More information & opt-out options",
+    "default_link2": "What is interest based advertising",
+    "default_link3": "Learn about your choices",
+    "ecid": null,
+    "hide_wi": false,
+    "hide_cl": false,
+    "custom_optout": {
+      "desktop": null,
+      "iosweb": "http://info.evidon.co.uk/more_info/9412",
+      "iosapp": "http://info.evidon.co.uk/more_info/9412",
+      "androidweb": "http://info.evidon.co.uk/more_info/9412",
+      "androidapp": "http://info.evidon.co.uk/more_info/9412"
+    },
+    "server": [
+      {
+        "name": "AppNexus"
+      }
+    ],
+    "message_properties": {
+      "skip_L2_de": true,
+      "translation_de": {
+        "icon": "_de",
+        "icon_text": "Datenschutzinfo"
+      },
+      "skip_L2_fr": true,
+      "translation_fr": {
+        "icon": "_fr",
+        "icon_text": "Choisir sa pub"
+      },
+      "skip_L2_es": true,
+      "translation_es": {
+        "icon": "_es",
+        "icon_text": "Gestio&#769;n anuncios"
+      },
+      "skip_L2_at": true,
+      "translation_at": {
+        "icon": "_de",
+        "icon_text": "Datenschutzinfo"
+      },
+      "skip_L2_ua": true,
+      "translation_ua": {
+        "icon": "_ua",
+        "icon_text": "AdChoices"
+      },
+      "skip_L2_be": true,
+      "translation_be": {
+        "icon": "_nl_be",
+        "icon_text": "Info reclamekeuze"
+      },
+      "skip_L2_bg": true,
+      "translation_bg": {
+        "icon": "_bg",
+        "icon_text": "&#1042;&#1072;&#1096;&#1080;&#1103;&#1090; &#1080;&#1079;&#1073;&#1086;&#1088;"
+      },
+      "skip_L2_gr": true,
+      "translation_gr": {
+        "icon": "_gr",
+        "icon_text": "&#927;&#953; &#948;&#953;&#945;&#966;&#951;&#956;&#953;&#769;&#963;&#949;&#953;&#962; &#956;&#959;&#965;"
+      },
+      "skip_L2_tw": true,
+      "translation_tw": {
+        "icon": "_tw",
+        "icon_text": "&#24291;&#21578;&#36984;&#25799;"
+      },
+      "skip_L2_mx": true,
+      "translation_mx": {
+        "icon": "_es",
+        "icon_text": "Selecci&#243;n de Publicidad "
+      },
+      "skip_L2_se": true,
+      "translation_se": {
+        "icon": "_se",
+        "icon_text": "Annonsval"
+      },
+      "skip_L2_it": true,
+      "translation_it": {
+        "icon": "_it",
+        "icon_text": "Scegli tu!"
+      },
+      "skip_L2_jp": true,
+      "translation_jp": {
+        "icon": "_jp",
+        "icon_text": "&#12450;&#12489;&#12481;&#12519;&#12452;&#12473;"
+      },
+      "skip_L2_th": true,
+      "translation_th": {
+        "icon": "_th",
+        "icon_text": "AdChoices"
+      },
+      "skip_L2_br": true,
+      "translation_br": {
+        "icon": "_pt_br",
+        "icon_text": "MaisEscolhas"
+      },
+      "skip_L2_nl": true,
+      "translation_nl": {
+        "icon": "_nl",
+        "icon_text": "Info"
+      },
+      "skip_L2_cn": true,
+      "translation_cn": {
+        "icon": "_cn",
+        "icon_text": "&#24191;&#21578;&#36873;&#25321;"
+      },
+      "skip_L2_hk": true,
+      "translation_hk": {
+        "icon": "_tw",
+        "icon_text": "&#24291;&#21578;&#36984;&#25799;"
+      },
+      "skip_L2_ru": true,
+      "translation_ru": {
+        "icon": "_ru",
+        "icon_text": "AdChoices"
+      }
+    }
+  }
+});
