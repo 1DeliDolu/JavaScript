@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .grid-container {
+        display: grid;
+        justify-content: space-around;
+        grid-template-columns: 50px 50px 50px; /*Make the grid smaller than the container*/
+        gap: 10px;
+        background-color: #2196f3;
+        padding: 10px;
+      }
+
+      .grid-container > div {
+        background-color: rgba(255, 255, 255, 0.8);
+        text-align: center;
+        padding: 20px 0;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The justify-content Property</h1>
+
+    <p>
+      Use the <em>justify-content</em> property to align the grid inside the
+      container.
+    </p>
+
+    <p>
+      The value "space-around" will give the columns equal amount of space
+      around them:
+    </p>
+
+    <div class="grid-container">
+      <div>1</div>
+      <div>2</div>
+      <div>3</div>
+      <div>4</div>
+      <div>5</div>
+      <div>6</div>
+    </div>
+  </body>
+</html>
