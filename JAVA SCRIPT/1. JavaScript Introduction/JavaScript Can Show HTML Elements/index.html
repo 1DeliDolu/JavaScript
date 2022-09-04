@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript</title>
+    <style>
+      #demo {
+        display: none;
+        background-color: aquamarine;
+        font-size: large;
+        color: black;
+        border: 2px dashed;
+        height: 50px;
+        width: 300px;
+        text-align: center;
+        margin: auto;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>What Can JavaScript Do?</h2>
+
+    <p>JavaScript can show hidden HTML elements.</p>
+
+    <p id="demo">Hello JavaScript!</p>
+
+    <button
+      type="button"
+      onclick="document.getElementById('demo').style.display='block'"
+    >
+      Click Me!
+    </button>
+  </body>
+</html>
