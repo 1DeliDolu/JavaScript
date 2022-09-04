@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The window.print() Method</h2>
+
+    <p>Click the button to print the current page.</p>
+    <form action="/action_page.php" method="get" target="_blank">
+      <label for="fname">First name:</label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        placeholder="Ihr Vorname"
+        required
+      /><br /><br />
+      <label for="lname">Last name:</label>
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        placeholder="Ihr Nachname"
+        required
+      /><br /><br />
+      <input type="submit" value="Submit using GET" />
+      <input type="submit" formmethod="post" value="Submit using POST" />
+    </form>
+
+    <button onclick="window.print()">Print this page</button>
+  </body>
+</html>
