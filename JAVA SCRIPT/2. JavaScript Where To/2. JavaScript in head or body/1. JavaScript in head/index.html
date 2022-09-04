@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Demo JavaScript in Head</title>
+    <style>
+      #demo {
+        background-color: aqua;
+        text-align: center;
+        margin: auto;
+      }
+    </style>
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML =
+          "Paragraph changed.( kendime not you can change content was you want)";
+      }
+    </script>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Head</h2>
+
+    <p id="demo">A Paragraph.</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+  </body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      button:hover {
+        color: red;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Demo JavaScript in Body</h2>
+
+    <p id="demo">A Paragraph.</p>
+
+    <button type="button" onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML =
+          "Paragraph changed.( kendime not: You can change was you want)";
+      }
+    </script>
+  </body>
+</html>
