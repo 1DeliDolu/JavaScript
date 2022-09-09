@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Arrays</h2>
+
+    <p>Array.forEach() calls a function for each array element.</p>
+    <h3>Ordnen list</h3>
+
+    <p id="demo"></p>
+    <h3>Unordnen list</h3>
+    <p id="demo1"></p>
+
+    <script>
+      {
+        const fruits = ["Banana", "Orange", "Apple", "Mango"];
+        let text = "<ol>";
+        fruits.forEach(myFunction);
+        text += "</ol>";
+        document.getElementById("demo").innerHTML = text;
+        function myFunction(value) {
+          text += "<li>" + value + "</li>";
+        }
+      }
+      {
+        const obst = ["Banane", "Orange", "Apfel", "Kirsche"];
+        let text1 = "<ul>";
+        obst.forEach(myFunction1);
+        text1 += "</ul>";
+        document.getElementById("demo1").innerHTML = text1;
+        function myFunction1(value1) {
+          text1 += "<li>" + value1 + "</li>";
+        }
+      }
+    </script>
+  </body>
+</html>
