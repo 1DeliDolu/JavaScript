@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Regular Expressions</h2>
+
+    <p>Do a global search for "is" in a string:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      let text = "Is this all there is?";
+      let result = text.match(/is/g);
+      document.getElementById("demo").innerHTML = result;
+    </script>
+  </body>
+</html>
