@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Debugger</h2>
+
+    <p id="demo"></p>
+
+    <p>
+      With the debugger turned on, the code below should stop executing before
+      it executes the third line.
+    </p>
+
+    <script>
+      let x = 15 * 5;
+      debugger;
+      document.getElementById("demo").innerHTML = x;
+    </script>
+  </body>
+</html>
