@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript TypeError</title>
+  </head>
+  <body>
+    <h1>JavaScript TypeError</h1>
+    <p>You cannot convert an number to upper case :</p>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <script>
+      // let num = 1;
+      //let case1 = a; // bu kod ReferenceError hatasi vermez. cünkü a kücük harf.
+      try {
+        num.toUpperCase();
+
+      } catch (err) {
+        document.getElementById("demo").innerHTML = err.name;
+      }
+    </script>
+  </body>
+</html>
