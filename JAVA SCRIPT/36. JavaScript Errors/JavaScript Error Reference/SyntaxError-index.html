@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript SyntaxError</title>
+  </head>
+  <body>
+    <h1>JavaScript SyntaxError</h1>
+    <p>you can not eveluate code that contaoin a syntax error:</p>
+    <p id="demo"></p>
+    <script>
+      try {
+        eval("'Hello"); //tekli tirnak unutulmus.
+        //eval('"Hello');burada da ciftli tek tirnak unutulmus.bu kodda sytax error hatasini veriyor.
+      } catch (err) {
+        document.getElementById("demo").innerHTML = err.name;
+      }
+    </script>
+  </body>
+</html>
