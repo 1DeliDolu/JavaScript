@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>JavaScript Strings</h1>
+    <h2>The match() Method</h2>
+
+    <p>match() searches for a match in a string.</p>
+
+    <p>Do a search for "ain":</p>
+
+    <p id="demo"></p>
+
+    <script>
+      let text = "The rain in SPAIN stays mainly in the plain";
+      let result = text.match("ain"); //sadece ain'leri bulur sonuna /"ain"/gi yazarsak hepsini bulunur büyük kücük harf fark etmez
+
+      document.getElementById("demo").innerHTML = result;
+    </script>
+  </body>
+</html>
