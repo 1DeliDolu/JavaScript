@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript for...in Loop</title>
+  </head>
+  <body>
+    <h1>JavaScript for...in Loop</h1>
+    <h2>JavaScript Object Properties</h2>
+    <p>Looping object property values:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        fname: "John",
+        lname: "Doe",
+        age: 25,
+      };
+
+      let txt = "";
+      for (let x in person) {
+        txt += person[x] + " ";
+      }
+
+      document.getElementById("demo").innerHTML = txt;
+    </script>
+  </body>
+</html>
