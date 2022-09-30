@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using the JavaScript Keyword new</title>
+    <style>
+      demo2 {
+        color: blue;
+      }
+      .demo1 {
+        display: inline;
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Objects</h2>
+    <h3>Using the JavaScript Keyword new</h3>
+    <p>Creating a JavaScript Object:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = new Object();
+      person.firstName = "John";
+      person.lastName = "Doe";
+      person.age = 50;
+      person.eyeColor = "blue";
+
+      document.getElementById("demo").innerHTML =
+        "<span id='demo2'>" +
+        person.firstName +
+        "</span> is " +
+        person.age +
+        ' years <span id="demo1">old</span>.';
+    </script>
+  </body>
+</html>
