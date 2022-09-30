@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Objects</h2>
+    <p>Object.values() converts an object to an array.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+
+      let myAr = Object.values(person);
+
+      document.getElementById("demo").innerHTML =
+        myAr + " (array elements) / John is  " + myAr[1] + " years old";
+    </script>
+  </body>
+</html>
