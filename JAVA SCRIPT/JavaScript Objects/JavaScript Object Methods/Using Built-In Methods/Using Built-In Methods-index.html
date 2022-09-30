@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Built-In Methods</title>
+  </head>
+  <body>
+    <h1>JavaScript Objects</h1>
+    <h2>Using Built-In Methods</h2>
+    <p id="demo1"></p>
+    <p id="demo"></p>
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+      };
+      person.name = function () {
+        return (
+          '<span style="color:red;">' +
+          this.firstName +
+          "</span><span style='color:blue;'> " +
+          this.lastName +
+          " </span>"
+        ).toUpperCase(); //önce parantez icinde islen yapar sonra büyük harfe cevirir.
+      };
+
+      document.getElementById("demo").innerHTML =
+        "My father is <span style='color:red;'>" + person.name() + "</span>";
+      document.getElementById("demo1").innerHTML = person.name;
+    </script>
+  </body>
+</html>
