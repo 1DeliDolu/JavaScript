@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Objects</h2>
+    <p>JSON.stringify will convert dates into strings:</p>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      var person = {
+        name: "John",
+        today: new Date(),
+      };
+
+      document.getElementById("demo").innerHTML = JSON.stringify(person);// burada saat zulu saati olarak aliyor.
+      document.getElementById("demo1").innerHTML = person.today;//burada ise local saat ayarlaniyor.
+    </script>
+  </body>
+</html>
