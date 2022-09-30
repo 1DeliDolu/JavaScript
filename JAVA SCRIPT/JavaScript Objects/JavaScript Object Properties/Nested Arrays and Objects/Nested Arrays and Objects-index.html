@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Arrays and Objects</title>
+  </head>
+  <body>
+    <h1>Nested Arrays and Objects</h1>
+    <h2>Nested JavaScript Objects and Arrays.</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      let x = "";
+      const myObj = {
+        name: "John",
+        age: 30,
+        cars: [
+          { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+          { name: "BMW", models: ["320", "X3", "X5"] },
+          { name: "Fiat", models: ["500", "Panda"] },
+        ],
+      };
+
+      for (let i in myObj.cars) {
+        /* burada ise objenin icindeki car arraylarina ulasiyor.*/
+        x +=
+          "<h2><ul>" +
+          myObj.cars[i].name +
+          "</ul></h2>"; /* car arrayinin icindeki objelere ulasp adlarini aliyor.*/
+        for (let j in myObj.cars[i].models) {
+          /* yukaridaki name aldiktan modellere ulasiyor. Bitince bir üstteki for döngüsüne dönüyor.*/
+          x += "<li>" + myObj.cars[i].models[j] + "</li><br>";
+        }
+      }
+
+      document.getElementById("demo").innerHTML = x;
+    </script>
+    <script>
+      let y = "";
+      const myTier = {
+        name: "Mustafa",
+        age: 32,
+        tier: [
+          {
+            name: "Vogel",
+            art: ["Adler", "Ente", "Pfau", "Taube", "Ganz", "Falke"],
+          },
+          {
+            name: "Hund",
+            art: ["Golden", "Dobermann", "Volf"],
+          },
+        ],
+      };
+      for (let k in myTier.tier) {
+        y += "<h2>" + myTier.tier[k].name + "</h2>";
+        for (let l in myTier.tier[k].name) {
+          y += "<li>" + myTier.tier[k].art[l] + "</li><br>";
+        }
+      }
+      document.getElementById("demo1").innerHTML = y;
+    </script>
+  </body>
+</html>
