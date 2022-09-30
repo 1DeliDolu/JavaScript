@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Function or Getter?</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Function or Getter?</h1>
+    <h2>JavaScript Object Methods</h2>
+
+    <p>Object data can be accessed using a getter.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      // Create an object:
+      const person = {
+        firstName: prompt(" Entire first name:", "Hans"),
+        lastName: prompt(" Entire last name:","Müller"),
+        get fullName() {
+          return this.firstName + " " + this.lastName;
+        },
+        get age() {
+          return prompt(" How old is:","00");
+        },
+      };
+      // Display data from the object using a getter:
+      document.getElementById("demo").innerHTML =
+        person.fullName + " is <span>" + person.age + "</span> years old.";
+    </script>
+  </body>
+</html>
