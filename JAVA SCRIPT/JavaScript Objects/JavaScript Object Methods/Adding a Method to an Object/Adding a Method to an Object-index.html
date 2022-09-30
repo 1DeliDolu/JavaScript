@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding a Method to an Object</title>
+  </head>
+  <body>
+    
+    <h1>JavaScript Objects</h1>
+    <h2>Adding a Method to an Object</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+      };
+      person.name = function () {
+        return this.firstName + " " + this.lastName;
+      };
+
+      document.getElementById("demo").innerHTML =
+        "My father is " + person.name();
+    </script>
+  </body>
+</html>
