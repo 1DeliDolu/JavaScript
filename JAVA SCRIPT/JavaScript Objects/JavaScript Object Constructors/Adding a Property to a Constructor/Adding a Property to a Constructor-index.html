@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding a Property to a Constructor</title>
+  </head>
+  <body>
+    <h1>JavaScript Object Constructors</h1>
+    <h2>Adding a Property to a Constructor</h2>
+    <p>You cannot add a new property to a constructor function.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      // Constructor function for Person objects
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      // You can NOT add a new property to a constructor function
+      Person.nationality = "English";
+
+      // Create 2 Person objects
+      const myFather = new Person("John", "Doe", 50, "blue");
+      const myMother = new Person("Sally", "Rally", 48, "green");
+      myMother.nationality = "Spanisch";
+      // Display nationality
+      document.getElementById("demo").innerHTML =
+        "The nationality of my father is " +
+        myFather.nationality +
+        " the nationality of my mother  is " +
+        myMother.nationality +
+        ".";
+    </script>
+  </body>
+</html>
