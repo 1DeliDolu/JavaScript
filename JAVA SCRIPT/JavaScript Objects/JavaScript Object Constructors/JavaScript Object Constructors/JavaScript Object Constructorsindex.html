@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Object Constructors</title>
+  </head>
+  <body>
+    <h2>JavaScript Object Constructors</h2>
+
+    <p id="demo"></p>
+    <p id="demo1"></p>
+
+    <script>
+      // Constructor function for Person objects
+      function Person(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      // Create a Person object
+      const myFather = new Person("John", "Doe", 50, "blue");
+
+      // Display age
+      document.getElementById("demo").innerHTML =
+        "My father is " + myFather.age + ".";
+    </script>
+    <script>
+      // Constructor function for Person objects
+      function Person1(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+      }
+
+      // Create a Person object
+      const myFather1 = new Person("John", "Doe", 50, "blue");
+
+      // Display age
+      document.getElementById("demo1").innerHTML =
+        "My father is " + myFather.age + ".";
+    </script>
+  </body>
+</html>
