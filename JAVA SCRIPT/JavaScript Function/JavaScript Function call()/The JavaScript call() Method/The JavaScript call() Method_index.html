@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The JavaScript call() Method</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Functions</h2>
+    <p>
+      This example calls the fullName method of person, using it on person1:
+    </p>
+    <p>
+      This example calls the fullName method of person, using it on person2:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+      const person2 = {
+        firstName: "Mary",
+        lastName: "Doe",
+      };
+      document.getElementById("demo").innerHTML =
+        "He is <span>" +
+        person.fullName.call(person1) +
+        "</span>. She is <span>" +
+        person.fullName.call(person2) +
+        "<span>";
+    </script>
+  </body>
+</html>
