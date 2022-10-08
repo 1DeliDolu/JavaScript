@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Arguments Object</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Functons</h1>
+    <h2>The Arguments Object</h2>
+    <p>Finding the max and.</p>
+    <p>Sum of all arguments:</p>
+    <p id="demo"></p>
+
+    <p id="demo"></p>
+
+    <script>
+      function findMax() {
+        let max = -Infinity;
+        for (let i = 0; i < arguments.length; i++) {
+          if (arguments[i] > max) {
+            max = arguments[i];
+          }
+        }
+        return max;
+      }
+      function findMin() {
+        let min = Infinity;
+        for (let j = 0; j < arguments.length; j++) {
+          if (arguments[j] < min) {
+            min = arguments[j];
+          }
+        }
+        return min;
+      }
+      function sumAll() {
+        let sum = 0;
+        for (let i = 0; i < arguments.length; i++) {
+          sum += arguments[i];
+        }
+        return sum;
+      }
+
+      document.getElementById("demo").innerHTML =
+        "Max number:<span>" +
+        findMax(4, 5, 6, 1, 123, 500, 115, 44, 88) +
+        "</span>, Min number:<span>" +
+        findMin(4, 5, 6, 1, 123, 500, 115, 44, 88) +
+        "</span>. Sum of all arguments:<span>" +
+        sumAll(4, 5, 6, 1, 123, 500, 115, 44, 34, 56, 87, 65, 43, 21, 88) +
+        "</span>";
+    </script>
+  </body>
+</html>
