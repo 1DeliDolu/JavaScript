@@ -11,7 +11,8 @@ h1{
  li{
     background-color: grey;
     display: inline-block;
-    width: 23.5%;
+    width: 23%;
+    width: 23%;
     text-align: center;
     float: left;
     list-style-type: none;
