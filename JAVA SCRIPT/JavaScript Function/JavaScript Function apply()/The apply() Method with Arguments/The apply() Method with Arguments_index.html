@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The apply() Method with Arguments</title>
+    <style>
+      span {
+        color: red;
+      }
+      #deo {
+        color: blue;
+      }
+      #deo1 {
+        background-color: red;
+      }
+      .deo {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The apply() Method with Arguments</h1>
+    <h2>JavaScript Functions</h2>
+    <p>
+      In this example the fulllName method of person is <b>applied</b> on
+      person1:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + " " + this.lastName + "," + city + "," + country
+          );
+        },
+      };
+
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+
+      document.getElementById("demo").innerHTML =
+        "With <mark class='deo'>apply()</mark> metod:" +
+        person.fullName.apply(person1, [
+          "<span id='deo'>Oslo",
+          "Norway</span>",
+        ]) +
+        ", or with <mark id='deo1'>call()</mark> metod:" +
+        person.fullName.call(person1, "<span>Oslo", "Norway</span>"); //call() ve apply() metodlari arasindaki farklar.
+    </script>
+  </body>
+</html>
