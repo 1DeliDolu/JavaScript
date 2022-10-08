@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The call() Method with Arguments</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Functions</h2>
+    <p>
+      This example calls the fullName method of person, using it on person1:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        fullName: function (city, country) {
+          return (
+            this.firstName + " " + this.lastName + "," + city + "," + country
+          );
+        },
+      };
+
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+      };
+
+      const person2 = {
+        firstName: "Mary",
+        lastName: "Doe",
+      };
+      const country = prompt("Where are you from?");
+      document.getElementById("demo").innerHTML =
+        " Person 1: <span>" +
+        person.fullName.call(
+          person1,
+          "</span> city:<span>Oslo</span>",
+          " country:<span>" + country + "</span>"
+        ); //call() metodunun icine istegimiz degeri atiyabiliyoruz.
+    </script>
+  </body>
+</html>
