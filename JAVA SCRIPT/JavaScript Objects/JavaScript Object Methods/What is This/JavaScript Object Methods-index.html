@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>JavaScript Object Methods</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>The JavaScript <i style="color: red">this</i> Keyword</h1>
+    <p>
+      In this example, <b style="color: red">this</b> refers to the
+      <b style="color: red">person</b> object.
+    </p>
+    <p>
+      Because <b style="color: red">fullName</b> is a method of the person
+      object.
+    </p>
+
+    <p id="demo"></p>
+    <fieldset>
+      <legend>JavaScript Object Methods</legend>
+      <pre>
+        <b class="demo1"> // Create an object:</b>
+        <b class="demo">const</b> <b class="demo2">person</b>= {
+        firstName: "Deli",
+        lastName: "Dolu",
+        id: 5566,
+        fullName : function() {
+        <b class="demo">return</b><b class="demo1"> this</b>.firstName + " " +<b class="demo1">this</b>.lastName;
+        }
+      };
+
+        <b class="demo1">// Display data from the object:</b>
+      document.getElementById("demo").innerHTML = person.fullName();
+      <p><b>Answer</b>:<span id="demo1" class="demo"></span></p>
+      </pre>
+    </fieldset>
+
+    <script>
+      // Create an object:
+      const person = {
+        firstName: "Deli",
+        lastName: "Dolu",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      // Display data from the object:
+      document.getElementById("demo").innerHTML = person.fullName();
+      document.getElementById("demo1").innerHTML = person.fullName();
+    </script>
+    <h1>What is this?</h1>
+    <fieldset>
+      <legend>What is this?</legend>
+      <pre>
+        In JavaScript, the <b class="demo">this</b> keyword refers to an object.
+
+        Which object depends on how <b class="demo">this</b> is being invoked (used or called).
+        
+        The <b class="demo">this</b> keyword refers to different objects depending on how it is used:
+      
+        In an object method, <b class="demo">this</b> refers to the object.
+        Alone, <b class="demo">this</b> refers to the global object.
+        In a function, <b class="demo">this</b> refers to the global object.
+        In a function, in strict mode, <b class="demo">this</b> is undefined.
+        In an event, this refers to the element that received the event.
+        Methods like <b class="demo">call()</b>, <b class="demo">apply()</b>, and <b class="demo">bind()</b> can refer this to any object.
+
+        <b class="demo">Note:</b>
+        this is not a variable. It is a keyword. You cannot change the value of this.
+      </pre>
+    </fieldset>
+
+    <h1>JavaScript Methods</h1>
+    <fieldset>
+      <legend>JavaScript Methods</legend>
+      <pre>
+        JavaScript methods are actions that can be performed on objects.
+
+        A JavaScript <b>method</b>  is a property containing a <b>function definition</b> .
+
+        <b class="demo">Property</b> 	 <b class="demo">Value</b> 
+        firstName	  John
+        lastName	  Doe
+        age	          50
+        eyeColor	  blue
+        fullName	  function() {return this.firstName + " " + this.lastName;}
+      </pre>
+      <mark>Methods are functions stored as object properties.</mark>
+    </fieldset>
+  </body>
+</html>
