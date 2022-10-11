@@ -6,11 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Using the JavaScript Keyword new</title>
     <style>
-      demo2 {
+      #demo2 {
         color: blue;
       }
-      .demo1 {
+      #demo1 {
         display: inline;
+        color: red;
+      }
+      .demo1 {
         color: red;
       }
     </style>
@@ -21,7 +24,32 @@
     <p>Creating a JavaScript Object:</p>
 
     <p id="demo"></p>
+    <fieldset>
+      <legend>Using the JavaScript Keyword new</legend>
+      <pre>
+    The following example create a new JavaScript object using <span id="demo1">new Object()</span> ,
+     and then adds 4 properties:
+  </pre>
+      <pre>
+    <span class="demo2">const</span> prson = new Object();
+    prson.firstName = "John";
+    prson.lastName = "Doe";
+    prson.age = 50;
+    prson.eyeColor = "blue"; 
 
+    document.getElementById("demo").innerHTML =
+    prson.firstName + " is " + prson.age + " years old.";
+  </pre>
+      <p id="emo"></p>
+      <pre>
+        The examples above do exactly the same.
+
+        But there is no need to use <span class="demo1">new Object()</span> .
+
+        For readability, simplicity and execution speed, 
+        use the object literal method.
+      </pre>
+    </fieldset>
     <script>
       const person = new Object();
       person.firstName = "John";
@@ -35,6 +63,20 @@
         "</span> is " +
         person.age +
         ' years <span id="demo1">old</span>.';
+    </script>
+    <script>
+      const prson = new Object();
+      prson.firstName = "John";
+      prson.lastName = "Doe";
+      prson.age = 50;
+      prson.eyeColor = "blue";
+
+      document.getElementById("emo").innerHTML =
+        '<span class="demo1">' +
+        prson.firstName +
+        "</span> is <span class='demo1'>" +
+        prson.age +
+        "</span> years old.";
     </script>
   </body>
 </html>
