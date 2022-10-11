@@ -5,14 +5,152 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JavaScript Variables</title>
+    <style>
+      span {
+        color: red;
+      }
+      #red {
+        color: red;
+      }
+    </style>
   </head>
   <body>
     <h2>JavaScript Variables</h2>
-    <p>Person's name is <span id="demo" style="color: red"></span></p>
+    <fieldset>
+      <legend>Objects are Variables</legend>
+      <p>JavaScript variables can contain single values:</p>
+      <p>Person's name is <span id="demo" style="color: red"></span></p>
+    </fieldset>
+
+    <fieldset>
+      <legend>Objects are Variables</legend>
+      <pre>
+    JavaScript variables can also contain many values.
+    Objects are variables too. But objects can contain many values.
+    Object values are written as <b>name : value</b>  
+    pairs (name and value separated by a colon).
+  </pre>
+      <p><b>Note:</b> A JavaScript object is a collection of named values</p>
+      <pre>
+        let <span>person1</span>  = {
+          firstName: "John",
+          lastName: "Doe",
+          age: 50,
+          eyeColor: "blue",
+        };
+  
+        document.getElementById("demo1").innerHTML =
+          " " +<span>person1</span>.firstName + " " +<span> person1</span>.lastName;
+      </pre>
+      <p>Creating an object:</p>
+      <p>Er is <span id="demo1"></span>.</p>
+    </fieldset>
+    <br />
+    <h1>Objects are Variables</h1>
+    <fieldset>
+      <legend>Objects are Variables</legend>
+      <p>
+        It is a common practice to declare objects with the
+        <span>const</span> keyword.
+      </p>
+      <p>Creating an object:</p>
+
+      <p>His name is <span id="dem"></span>.</p>
+      <pre>
+      <span>const</span> <mark>prsn</mark> = {
+        firstName : "John",
+        lastName  : "Doe",
+        age       :  50,
+        eyeColor  : "blue"
+        };
+  
+  document.getElementById("dem").innerHTML =<mark>prsn</mark>.firstName + " " +<mark>prsn</mark>.lastName;
+</pre
+      >
+    </fieldset>
+    <br />
+    <h1>Object Properties</h1>
+    <fieldset>
+      <legend>Object Properties</legend>
+      <pre>
+        The named values, in JavaScript objects, are called properties.
+          <span>Property</span>       <span>Value</span>  
+          firstName	 John
+          lastName	 Doe
+          age	         50
+          eyeColor	 blue
+
+          Objects written as name value pairs are similar to:
+          <b id="red">*</b> Associative arrays in PHP
+          <b id="red">*</b> Dictionaries in Python
+          <b id="red">*</b> Hash tables in C
+          <b id="red">*</b> Hash maps in Java
+          <b id="red">*</b> Hashes in Ruby and Perl
+      </pre>
+    </fieldset>
+    <br />
+    <h1>Object Methods</h1>
+    <fieldset>
+      <legend>Object Methods</legend>
+      <pre>
+        Methods are <b>actions</b>  that can be performed on objects.
+        <b>Object properties</b> can be both primitive values, other objects, and functions.
+        An object method is an object property containing a <b>function definition</b> .
+        
+        Property	  Value
+        firstName	  John
+        lastName	  Doe
+        age	          50
+        eyeColor	  blue
+        fullName	  function() {return this.firstName + " " + this.lastName;}
+      </pre>
+      <p>
+        <span>Note:</span> JavaScript objects are containers for named values,
+        called properties and methods.
+      </p>
+      <p>You will learn more about methods in the next chapters.</p>
+    </fieldset>
+    <br />
+    <h1>Creating a JavaScript Object</h1>
+    <fieldset>
+      <legend>Creating a JavaScript Object</legend>
+      <pre>
+        With JavaScript, you can define and create your own objects.
+        There are different ways to create new objects:
+
+         <b>1.</b> Create a single object, using an object literal.
+         <b>2.</b> Create a single object, with the keyword <span>new</span> .
+         <b>3.</b> Define an object constructor, and then create objects of the constructed type.
+         <b>4.</b> Create an object using <span>Object.create()</span> .
+      </pre>
+    </fieldset>
+
     <script>
       // Create and display a variable:
       let person = "Joe Doe";
       document.getElementById("demo").innerHTML = '"' + person + '"';
+    </script>
+    <script>
+      let person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      document.getElementById("demo1").innerHTML =
+        " " + person1.firstName + " " + person1.lastName;
+    </script>
+    <script>
+      const prsn = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      document.getElementById("dem").innerHTML =
+        prsn.firstName + " " + prsn.lastName;
     </script>
   </body>
 </html>
