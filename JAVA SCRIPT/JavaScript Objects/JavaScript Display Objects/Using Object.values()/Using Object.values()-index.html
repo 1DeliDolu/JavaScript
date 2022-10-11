@@ -1,22 +1,73 @@
 <!DOCTYPE html>
-<html>
-  <body>
-    <h2>JavaScript Objects</h2>
-    <p>Object.values() converts an object to an array.</p>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using Object.values()</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      .demo3 {
+        color: brown;
+      }
+      .demo4 {
+        background-color: beige;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="demo4">
+    <header>
+      <h1>JavaScript Objects</h1>
+    </header>
+    <h2>Using Object.values()</h2>
+    <fieldset>
+      <legend>Using <b class="demo"> Object.values()</b></legend>
+      <p>
+        Any JavaScript object can be converted to an array using
+        <b class="demo">Object.values()</b>:
+      </p>
+      <p><b class="demo">Object.values()</b> converts an object to an array.</p>
+      <p>
+        <b class="demo">myArray </b>is now a JavaScript array, ready to be
+        displayed:
+      </p>
 
-    <p id="demo"></p>
-
+      <pre>      
+    <span class="demo2"><code><</code>script<code>></code></span>
+        <b class="">const</b> <b class="demo1">person</b> = {
+        name: "Deli",
+        age : 35,
+        city: "New York"
+        };
+        
+        let <b class="demo">myArray</b>  = Object.values(<b class="demo1">person</b>)
+        
+        document.getElementById("<b class="demo3">demo</b>").innerHTML = <b class="demo">myArray</b> ;
+        <b class="demo1">//Object.values() is supported in all major browsers since 2016.</b>
+        <span class="demo2"><code><</code>/script<code>></code></span>
+        <span class="demo2"><code><</code>p <b style="color: black;">id="demo"</b><code>></code></span><span class="demo2"><code><</code>/p<code>></code></span>
+  </pre>
+      <p><span class="demo">Answer</span> : <span id="demo"></span></p>
+    </fieldset>
     <script>
       const person = {
         name: "John",
         age: 30,
         city: "New York",
       };
-
-      let myAr = Object.values(person);
-
-      document.getElementById("demo").innerHTML =
-        myAr + " (array elements) / John is  " + myAr[1] + " years old";
+      let myArray = Object.values(person);
+      document.getElementById("demo").innerHTML = myArray;
     </script>
   </body>
 </html>
