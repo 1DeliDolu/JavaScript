@@ -1,10 +1,58 @@
 <!DOCTYPE html>
 <html>
-  <body>
-    <h2>JavaScript Objects</h2>
-    <p>Display object properties:</p>
+  <head>
+    <title>Displaying the Object in a Loop</title>
+    <meta charset="utf-8" />
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      .demo3 {
+        color: brown;
+      }
+      h1 {
+        text-align: center;
+      }
+      .demo4 {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body class="demo4">
+    <header><h1>JavaScript Objects</h1></header>
 
-    <p id="demo"></p>
+    <h2>Display object properties:</h2>
+
+    <fieldset>
+      <legend>Displaying the Object in a <b class="demo">Loop</b></legend>
+      <p>The properties of an object can be collected in a loop:</p>
+      <pre>
+      <span class="demo2"><code><</code>script<code>></code></span>
+        <b class="demo">const </b><b class="demo1">person</b>= {
+          name: "Deli",
+          age : 35,
+          city: "New York"
+          };
+          
+          let txt = "";
+          for (let x in <b class="demo1">person</b>) {
+            txt += <b class="demo1">person</b>[x] + " ";
+          };
+          
+        document.getElementById("demo").innerHTML = txt;
+        
+        <span class="demo1">//Note: You must use person[x] in the loop.person.x will not work (Because x is a variable).</span>
+      <span class="demo2"><code><</code>/script<code>></code></span>
+        <b class="demo2"><code><</code>p <b style="color:black ;">id="demo"</b><code>></code></b><b class="demo2"><code><</code>/p<code>></code></b>
+      </pre>
+      <p><span class="demo">Answer</span>: <span id="demo"></span></p>
+    </fieldset>
 
     <script>
       const person = {
@@ -18,7 +66,7 @@
         txt += person[x] + " ";
       }
 
-      document.getElementById("demo").innerHTML = txt;
+      document.getElementById("demo").innerHTML = txt + ".";
     </script>
   </body>
 </html>
