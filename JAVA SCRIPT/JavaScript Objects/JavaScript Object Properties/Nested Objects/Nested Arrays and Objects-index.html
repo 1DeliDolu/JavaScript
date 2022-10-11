@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Arrays and Objects</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Nested Arrays and Objects</h1>
+    <h2>Nested JavaScript Objects and Arrays.</h2>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p>Values in an object can be another object:</p>
+    <fieldset>
+      <legend>Nested Objects</legend>
+
+      <pre>
+        myObj = {
+          name:"John",
+          age:30,
+          cars: {
+            car1:"Ford",
+            car2:"BMW",
+            car3:"Fiat"
+          }
+        }
+      </pre>
+    </fieldset>
+    <p>
+      You can access nested objects using the dot notation or the bracket
+      notation:
+    </p>
+    <h1>myObj.cars.car2</h1>
+    <fieldset>
+      <legend>myObj.cars.car2;</legend>
+      <pre>
+      <b class="demo">const</b> myObj = {
+        name: "John",
+        age: 30,
+        cars: {
+        car1: "Ford",
+        car2: "BMW",
+        car3: "Fiat"
+        }
+      }
+      document.getElementById("dem").innerHTML = myObj.cars.car2;
+    </pre>
+      <p id="dem"></p>
+    </fieldset>
+    <p>or:</p>
+    <h1>myObj2.cars["car2"]</h1>
+    <fieldset>
+      <legend>myObj2.cars["car2"]</legend>
+      <pre>
+        <b class="demo">const</b> <b class="demo2">myObj2</b> = { 
+          name: "John", 
+          age: 30, 
+          cars: { 
+            car1:"Ford", 
+            car2: "BMW", 
+            car3: "Fiat" 
+            } 
+          }
+          document.getElementById("demo").innerHTML = myObj2.cars["car2"];
+      </pre>
+      <p id="dmo"></p>
+    </fieldset>
+    <!--#############################################################-->
+    <p>or:</p>
+    <h1>myObj3["cars"]["car2"]</h1>
+
+    <fieldset>
+      <legend>myObj3["cars"]["car2"]</legend>
+      <pre>
+        <b class="demo">const</b>  <b class="demo2">myObj3</b> = {
+        name: "John",
+        age: 30,
+        cars: {
+        car1: "Ford",
+        car2: "BMW",
+        car3: "Fiat"
+        }
+      }
+      document.getElementById("demo3").innerHTML = myObj3["cars"]["car2"];</pre>
+      <p id="demo3" style="color: red"></p>
+    </fieldset>
+    <!--#############################################################-->
+
+    <script>
+      let x = "";
+      const myObj = {
+        name: "John",
+        age: 30,
+        cars: [
+          { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+          { name: "BMW", models: ["320", "X3", "X5"] },
+          { name: "Fiat", models: ["500", "Panda"] },
+        ],
+      };
+
+      for (let i in myObj.cars) {
+        /* burada ise objenin icindeki car arraylarina ulasiyor.*/
+        x +=
+          "<h2><ul>" +
+          myObj.cars[i].name +
+          "</ul></h2>"; /* car arrayinin icindeki objelere ulasp adlarini aliyor.*/
+        for (let j in myObj.cars[i].models) {
+          /* yukaridaki name aldiktan modellere ulasiyor. Bitince bir üstteki for döngüsüne dönüyor.*/
+          x += "<li>" + myObj.cars[i].models[j] + "</li><br>";
+        }
+      }
+
+      document.getElementById("demo").innerHTML = x;
+    </script>
+    <script>
+      let y = "";
+      const myTier = {
+        name: "Mustafa",
+        age: 32,
+        tier: [
+          {
+            name: "Vogel",
+            art: ["Adler", "Ente", "Pfau", "Taube", "Ganz", "Falke"],
+          },
+          {
+            name: "Hund",
+            art: ["Golden", "Dobermann", "Volf"],
+          },
+        ],
+      };
+
+      for (let k in myTier.tier) {
+        y += "<h2>" + myTier.tier[k].name + "</h2>";
+        for (let l in myTier.tier[k].name) {
+          y += "<li>" + myTier.tier[k].art[l] + "</li><br>";
+        }
+      }
+      document.getElementById("demo1").innerHTML = y;
+    </script>
+    <script>
+      const myObj1 = {
+        name: "John",
+        age: 30,
+        cars: {
+          car1: "Ford",
+          car2: "BMW",
+          car3: "Fiat",
+        },
+      };
+      document.getElementById("dem").innerHTML =
+        " <b class='demo'>" + myObj1.cars.car2 + "</b>";
+    </script>
+    <script>
+      const myObj2 = {
+        name: "John",
+        age: 30,
+        cars: {
+          car1: "Ford",
+          car2: "BMW",
+          car3: "Fiat",
+        },
+      };
+      document.getElementById("dmo").innerHTML =
+        "<b class='demo'>" + myObj2.cars["car2"] + "</b>";
+    </script>
+    <script>
+      const myObj3 = {
+        name: "John",
+        age: 30,
+        cars: {
+          car1: "Ford",
+          car2: "BMW",
+          car3: "Fiat",
+        },
+      };
+      document.getElementById("demo3").innerHTML =
+        "<b>" + myObj3["cars"]["car2"] + "</br>";
+    </script>
+    <script>
+      const myObj4 = {
+        name: "John",
+        age: 30,
+        cars: {
+          car1: "Ford",
+          car2: "BMW",
+          car3: "Fiat",
+        },
+      };
+
+      let p1 = "cars";
+      let p2 = "car2";
+      document.getElementById("demo4").innerHTML = myObj4[p1][p2];
+    </script>
+  </body>
+</html>
