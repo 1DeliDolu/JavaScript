@@ -1,31 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Accessing Object Methods</title>
-</head>
-<body>
-
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
     <h1>JavaScript Objects</h1>
     <h2>Accessing Object Methods</h2>
     <p>Creating and using an object method.</p>
-    <p>A method is actually a function definition stored as a property value.</p>
-    
-    <p id="demo"></p>
-    
+    <p>
+      A method is actually a function definition stored as a property value.
+    </p>
+
+ 
+    <fieldset>
+      <legend>Accessing Object Methods</legend>
+      <p>
+        You access an object method with the following
+        <i class="demo">objectName.methodName()</i>
+      </p>
+
+      <pre>
+      You will typically describe fullName() as a method of the person object, and fullName as a property.
+
+      The fullName property will execute (as a function) when it is invoked with ().
+      
+      This example accesses the fullName() <b>method</b>  of a person object:
+      
+      <b class="demo2"><code><</code>script<code>></code></b>
+        <b class="demo">const</b> <b class="demo1">person </b> = {
+          firstName: "John",
+          lastName: "Doe",
+          id: 5566,
+          fullName: function() {
+          <b class="demo">return </b> this.firstName + " " + this.lastName;
+          }
+        };
+
+        document.getElementById("demo").innerHTML = person.fullName();
+      <b class="demo2"><code><</code><code>/script<code>></code></b></pre
+      >
+      <p><b class="demo2">Answer</b> : <span id="demo"></span></p>
+      <p>If you access the fullName <b>property</b> , without (), it will return the <b>function definition:</b> function definition:</p>
+      <pre>
+        <b class="demo2"><code><</code>script<code>></code></b>
+        <b class="demo">const</b> <b class="demo1">person </b> = {
+          firstName: "John",
+          lastName: "Doe",
+          id: 5566,
+          fullName: function() {
+          <b class="demo">return </b> this.firstName + " " + this.lastName;
+          }
+        };
+
+        document.getElementById("demo").innerHTML = person.fullName;
+      <b class="demo2"><code><</code><code>/script<code>></code></b>
+      </pre>
+      <p><b class="demo2">Answer</b> : <span id="demo1"></span></p>
+    </fieldset>
+
     <script>
-    const person = {
-      firstName: "John",
-      lastName: "Doe",
-      id: 5566,
-      fullName: function() {
-        return this.firstName + " " + this.lastName;
-      }
-    };
-    
-    document.getElementById("demo").innerHTML = person.fullName();
-    </script> 
-</body>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        id: 5566,
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+
+      document.getElementById("demo").innerHTML =" <b class='demo'>" +person.fullName()+"</b>";
+      document.getElementById("demo1").innerHTML =" <b class='demo'>" +person.fullName+"</b>";
+    </script>
+  </body>
 </html>
