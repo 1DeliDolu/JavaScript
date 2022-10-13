@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JavaScript Function or Getter?</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      .demo3 {
+        color: brown;
+      }
+      .demo4 {
+        color: orange;
+      }
+      .body {
+        background-color: bisque;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="body">
+    <header><h1>JavaScript Object Accessors</h1></header>
+
+    <h2>JavaScript Setter or Getter?</h2>
+
+    <p>Object data can be accessed using property stored as a function.</p>
+
+    <fieldset>
+      <legend>JavaScript Getter (The get Keyword)</legend>
+      <p>
+        This example uses a <b class="demo">lang</b> property to
+        <b class="demo">get</b> the value of the
+        <b class="demo">language</b> property.
+      </p>
+      <pre>
+    <span>Getters and setters allow you to get and set object properties via methods.</span>
+    <span>This example uses a lang property to get the value of the language property:</span>
+    <span class="demo2"><code><</code>script<code>></code></span>
+        <span class="demo1">//Create an object:</span>
+        <b class="demo">const</b> <b class="demo4"> person</b> = {
+        firstName: "John",
+        lastName: "Doe",
+        language: "en",
+        get lang() {
+        <b class="demo3">return</b> <b class="demo">this</b>.language;
+        }
+      };
+
+    <span class="demo1">// Display data from the object using a getter:</span>
+    document.getElementById("<b class="demo3">demo</b>").innerHTML =<b class="demo4">person</b>.lang;
+    <span class="demo2"><code><</code>/script<code>></code></span>
+    <span class="demo2"><code><</code>p<code><span style="color: black;"> id="<b class="demo3">demo</b>"</span>></code></span><span class="demo2"><code><</code>/p<code>></code></span>
+        </pre>
+      <p><span class="demo">Answer</span>: <span id="demo"></span></p>
+    </fieldset>
+
+    <script>
+      // Create an object:
+      const person = {
+        firstName: "Deli",
+        lastName: "Dolu",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+        country: function () {
+          return prompt("Where are you from", "Germany");
+        },
+        age: function () {
+          return prompt("How old is: ", "33");
+        },
+      };
+
+      // Display data from the object using a method:
+      document.getElementById("demo").innerHTML =
+        person.fullName() +
+        " is from <span class='demo'>" +
+        person.country() +
+        "</span> and <span class='demo'>" +
+        person.age() +
+        "</span> years old.";
+    </script>
+  </body>
+</html>
