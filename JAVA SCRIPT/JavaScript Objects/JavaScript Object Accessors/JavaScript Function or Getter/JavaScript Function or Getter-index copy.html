@@ -32,10 +32,13 @@
     <pre>
       Example 1 access fullName as a function: person.fullName().
       Example 2 access fullName as a property: person.fullName.
-      The second example provides a simpler syntax.</pre>
+      The second example provides a simpler syntax.</pre
+    >
     <fieldset>
       <legend>JavaScript Function or Getter?</legend>
-      <span>Object data can be accessed using property stored as a function.</span>
+      <span
+        >Object data can be accessed using property stored as a function.</span
+      >
       <pre>  
         <span class="demo2"><code><</code>script<code>></code></span>
             <span class="demo1">//Create an object:</span>
@@ -70,7 +73,7 @@
           }
         };
         <span class="demo1">// Display data from the object using a getter:</span>
-        document.getElementById("<b class="demo3">demo</b>").innerHTML =<b class="demo4">person</b>.fullName();
+        document.getElementById("<b class="demo3">demo</b>").innerHTML =<b class="demo4">person</b>.fullName;
         <span class="demo2"><code><</code>/script<code>></code></span>
         <span class="demo2"><code><</code>p<code><span style="color: black;"> id="<b class="demo3">demo</b>"</span>></code></span><span class="demo2"><code><</code>/p<code>></code></span>
             </pre>
@@ -81,8 +84,8 @@
       // Create an object:
       const person = {
         firstName: prompt(" Entire first name:", "Deli"),
-        lastName: prompt(" Entire last name:","Dolu"),
-        age : prompt(" Entire your age:", "33"),
+        lastName: prompt(" Entire last name:", "Dolu"),
+        age: prompt(" Entire your age:", "33"),
         fullName: function () {
           return this.firstName + " " + this.lastName;
         },
