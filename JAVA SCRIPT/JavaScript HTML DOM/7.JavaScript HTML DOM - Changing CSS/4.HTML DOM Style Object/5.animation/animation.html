@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation: mymove 1s infinite;
+      }
+
+      @keyframes mymove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 200px;
+        }
+      }
+
+      @keyframes mynewmove {
+        from {
+          top: 0px;
+        }
+        to {
+          top: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to change the value of the animation property.
+    </p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.animation = "mynewmove 4s 2";
+      }
+    </script>
+
+    <div id="myDIV"></div>
+  </body>
+</html>
