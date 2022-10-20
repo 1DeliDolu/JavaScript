@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  position: relative;
+  animation: mymove 2s infinite;
+}
+
+@keyframes mymove {
+  from {left: 0px;}
+  to {left: 200px;}
+}
+
+@keyframes myNEWmove {
+  from {width: 0px;}
+  to {width: 500px; background: blue;}
+}
+</style>
+</head>
+<body>
+
+<p>Click the "Try it" button to change what keyframes to use in the animation:</p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.animationName = "myNEWmove";
+}
+</script>
+
+<div id="myDIV"></div>
+
+</body>
+</html>
