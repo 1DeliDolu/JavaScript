@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body onhashchange="myFunction()">
+    <p>
+      Click the button to change the anchor part of the current URL to #part5
+    </p>
+
+    <button onclick="changePart()">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      // Using the location.hash property to change the anchor part
+      function changePart() {
+        location.hash = "part5";
+        var x = location.hash;
+        document.getElementById("demo").innerHTML =
+          "The anchor part is now: " + x;
+      }
+
+      // Alert some text if there has been changes to the anchor part
+      function myFunction() {
+        alert("The anchor part has changed!");
+      }
+    </script>
+  </body>
+</html>

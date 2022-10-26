@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>DOM touchcancel Event</h1>
+
+    <p ontouchcancel="myFunction()">
+      Touch this paragraph while you do something that will interrupt the event.
+      Different devices will interrupt the touch at different actions, so this
+      example can be difficult to demonstrate, but it is considered good
+      practice to include this event.
+    </p>
+
+    <p><strong>Note:</strong> This example is for touch devices only.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Touch Cancelled";
+      }
+    </script>
+  </body>
+</html>

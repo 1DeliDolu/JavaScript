@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Click this button to invoke an onclick event, and check whether it is
+      trusted:
+    </p>
+    <button id="myBtn" onclick="myFunction(event)">Try it</button>
+
+    <p>
+      Click this button to trigger an onclick event by a script, and check
+      whether it is trusted:
+    </p>
+    <button onclick="triggerClick()">Try it</button>
+
+    <p>
+      <strong>Note:</strong> The isTrusted property is not supported in Safari
+      and IE8 and earlier.
+    </p>
+
+    <script>
+      function myFunction(event) {
+        if ("isTrusted" in event) {
+          if (event.isTrusted) {
+            alert("The " + event.type + " event is trusted.");
+          } else {
+            alert("The " + event.type + " event is not trusted.");
+          }
+        } else {
+          alert("The isTrusted property is not supported by your browser");
+        }
+      }
+
+      function triggerClick() {
+        var btn = document.getElementById("myBtn");
+        btn.click();
+      }
+    </script>
+  </body>
+</html>

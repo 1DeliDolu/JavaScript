@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        margin: 25px;
+        width: 550px;
+        height: 100px;
+        background: orange;
+        position: relative;
+        font-size: 20px;
+        text-align: center;
+        -webkit-animation: mymove 4s infinite; /* Chrome, Safari, Opera */
+        animation: mymove 4s infinite;
+      }
+
+      /* Chrome, Safari, Opera */
+      @-webkit-keyframes mymove {
+        from {
+          top: 0px;
+        }
+        to {
+          top: 200px;
+        }
+      }
+
+      @keyframes mymove {
+        from {
+          top: 0px;
+        }
+        to {
+          top: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      This example uses the addEventListener() method to attach an
+      "animationstart" and "animationiteration" event to a DIV element.
+    </p>
+
+    <p>
+      When the animation is repeated, the background color of DIV will be light
+      blue.
+    </p>
+
+    <p>
+      In this example, the elapsedTime property returns the number of seconds
+      the <b>repeated animation</b> has been running:
+    </p>
+
+    <p>
+      <strong>Note:</strong> The elapsedTime property is not supported in IE9
+      and earlier versions.
+    </p>
+
+    <div id="myDIV">The animation has started</div>
+
+    <script>
+      var x = document.getElementById("myDIV");
+
+      // Code for Chrome, Safari and Opera
+      x.addEventListener("webkitAnimationIteration", myRepeatFunction);
+
+      // Standard syntax
+      x.addEventListener("animationiteration", myRepeatFunction);
+
+      function myRepeatFunction(event) {
+        this.style.backgroundColor = "lightblue";
+        this.innerHTML = "Elapsed time: " + event.elapsedTime + " seconds";
+      }
+    </script>
+  </body>
+</html>

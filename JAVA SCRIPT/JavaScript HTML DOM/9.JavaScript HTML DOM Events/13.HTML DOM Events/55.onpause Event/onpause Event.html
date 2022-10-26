@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      This example demonstrates how to assign an "onpause" event to a video
+      element.
+    </p>
+
+    <p>Play and pause the video.</p>
+
+    <video width="320" height="240" controls onpause="myFunction()">
+      <source src="movie.mp4" type="video/mp4" />
+      <source src="movie.ogg" type="video/ogg" />
+      Your browser does not support the video tag.
+    </video>
+
+    <script>
+      function myFunction() {
+        alert("The video was paused.");
+      }
+    </script>
+  </body>
+</html>

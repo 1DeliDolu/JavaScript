@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body
+    onmousedown="myFunction(event)"
+    onmouseup="myFunction(event)"
+    onkeydown="myFunction(event)"
+    onkeyup="myFunction(event)"
+  >
+    <p>
+      Press any key or click the mouse in this document to get what type of
+      event that was triggered.
+    </p>
+
+    <p>Event: <span id="demo"></span></p>
+
+    <script>
+      function myFunction(event) {
+        var x = event.type;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </body>
+</html>

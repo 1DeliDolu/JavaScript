@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <input type="text" oncopy="myFunction()" value="Try to copy this text" />
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "You copied text!";
+      }
+    </script>
+  </body>
+</html>

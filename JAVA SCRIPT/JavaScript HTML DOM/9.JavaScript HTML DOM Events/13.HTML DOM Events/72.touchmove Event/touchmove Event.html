@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>DOM touchmove Event</h1>
+
+    <p ontouchmove="myFunction(event)">
+      Touch this paragraph, and move the finger to trigger a function that will
+      display the x and y coordinates of the touch, according the the document:
+    </p>
+
+    <p><strong>Note:</strong> This example is for touch devices only.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(event) {
+        var x = event.touches[0].clientX;
+        var y = event.touches[0].clientY;
+        document.getElementById("demo").innerHTML = x + ", " + y;
+      }
+    </script>
+  </body>
+</html>

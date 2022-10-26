@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body onclick="myFunction(event)">
+    <p>
+      Click on a paragraph. An alert box will alert the element that triggered
+      the event.
+    </p>
+
+    <p>
+      <strong>Note:</strong> The target property returns the element that
+      triggered the event, and not necessarily the eventlistener's element.
+    </p>
+
+    <script>
+      function myFunction(event) {
+        alert(event.target.nodeName);
+      }
+    </script>
+  </body>
+</html>

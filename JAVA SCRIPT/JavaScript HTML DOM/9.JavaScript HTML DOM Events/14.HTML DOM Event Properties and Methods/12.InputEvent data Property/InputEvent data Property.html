@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>InputEvent data Property</h1>
+
+    <p>
+      The data property returns the character that was inserted with the event.
+    </p>
+
+    <p>Write something in the text field to trigger a function.</p>
+
+    <input type="text" id="myInput" oninput="myFunction(event)" />
+
+    <p>The inserted character: <span id="demo"></span></p>
+
+    <p>
+      <strong>Note:</strong> This property is not fully supported, and can
+      change before the final release.
+    </p>
+    <script>
+      function myFunction(event) {
+        document.getElementById("demo").innerHTML = event.data;
+      }
+    </script>
+  </body>
+</html>

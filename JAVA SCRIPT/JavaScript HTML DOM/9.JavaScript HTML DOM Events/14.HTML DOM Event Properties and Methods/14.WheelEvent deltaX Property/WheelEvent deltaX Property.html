@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body onwheel="myFunction(event)">
+    <h1>WheelEvent deltaX Property</h1>
+
+    <p>Scroll this page to see the value of the deltaX property.</p>
+
+    <p>
+      <strong>Note:</strong> Most mouse devices do not have the ability to
+      scroll left and right, and will always return 0.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(event) {
+        var x = event.deltaX;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </body>
+</html>

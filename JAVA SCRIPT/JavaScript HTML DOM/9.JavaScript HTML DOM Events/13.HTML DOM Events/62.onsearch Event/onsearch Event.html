@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Write something in the search field and press "ENTER".</p>
+
+<input type="search" id="myInput" onsearch="myFunction()">
+
+<p><strong>Note:</strong> The onsearch event is not supported in Internet Explorer, Firefox or Opera 12 and earlier versions.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+   var x = document.getElementById("myInput");
+   document.getElementById("demo").innerHTML = "You are searching for: " + x.value;
+}
+</script>
+
+</body>
+</html>
+

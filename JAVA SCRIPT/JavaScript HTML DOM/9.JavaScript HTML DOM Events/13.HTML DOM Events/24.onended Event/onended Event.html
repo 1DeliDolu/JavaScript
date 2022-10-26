@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      This example demonstrates how to assign an "onended" event to an audio
+      element.
+    </p>
+
+    <p>Press play and wait for the audio to end.</p>
+
+    <audio controls onended="myFunction()">
+      <source src="horse.ogg" type="audio/ogg" />
+      <source src="horse.mp3" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+
+    <script>
+      function myFunction() {
+        alert("The video has ended");
+      }
+    </script>
+  </body>
+</html>

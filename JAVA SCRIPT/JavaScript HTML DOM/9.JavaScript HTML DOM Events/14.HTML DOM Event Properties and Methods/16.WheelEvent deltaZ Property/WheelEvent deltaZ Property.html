@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body onwheel="myFunction(event)">
+    <h1>WheelEvent deltaZ Property</h1>
+
+    <p>Scroll this page to see the value of the deltaZ property.</p>
+
+    <p>
+      <strong>Note:</strong> Most mouse devices do not have the ability to
+      scroll along the z-axis, and will always return 0.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(event) {
+        var z = event.deltaZ;
+        document.getElementById("demo").innerHTML = z;
+      }
+    </script>
+  </body>
+</html>

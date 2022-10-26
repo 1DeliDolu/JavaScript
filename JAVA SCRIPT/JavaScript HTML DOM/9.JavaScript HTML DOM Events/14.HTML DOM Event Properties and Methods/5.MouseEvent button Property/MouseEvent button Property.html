@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div onmousedown="WhichButton(event)">
+      Click this text with one of your mouse buttons to return a number.
+      <p>
+        0 = The left mouse button<br />
+        1 = The middle mouse button<br />
+        2 = The right mouse button
+      </p>
+    </div>
+
+    <script>
+      function WhichButton(event) {
+        alert("You pressed button: " + event.button);
+      }
+    </script>
+  </body>
+</html>
