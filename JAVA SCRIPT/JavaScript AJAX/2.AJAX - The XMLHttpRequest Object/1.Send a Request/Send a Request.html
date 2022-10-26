@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The XMLHttpRequest Object</h2>
+
+    <div id="demo">
+      <p>Let AJAX change this text.</p>
+      <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+
+    <script>
+      function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          document.getElementById("demo").innerHTML = this.responseText;
+        };
+        xhttp.open("GET", "ajax_info.txt");
+        xhttp.send();
+      }
+    </script>
+    <details>
+      <summary></summary>
+      <pre>
+xhttp.open(<b style="color: green;">"GET", "ajax_info.txt"</b>);
+xhttp.send();
+
+To send a request to a server, you can use the open() and send() methods of the <b style="color: red;">XMLHttpRequest</b> object:</pre
+      >
+    </details>
+  </body>
+</html>

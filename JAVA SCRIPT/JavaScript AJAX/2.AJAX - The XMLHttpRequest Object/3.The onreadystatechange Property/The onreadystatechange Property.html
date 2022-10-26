@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        font-family: arial, sans-serif;
+        border-collapse: collapse;
+        width: 100%;
+      }
+
+      td,
+      th {
+        border: 1px solid #702626;
+        text-align: left;
+        padding: 8px;
+      }
+
+      tr:nth-child(even) {
+        background-color: #dddddd;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="demo">
+      <h2>The XMLHttpRequest Object</h2>
+      <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+
+    <script>
+      function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onreadystatechange = function () {
+          if (this.readyState == 4 && this.status == 200) {
+            document.getElementById("demo").innerHTML = this.responseText;
+          }
+        };
+        xhttp.open("GET", "ajax_info.txt");
+        xhttp.send();
+      }
+    </script>
+    <details>
+      <summary>The onreadystatechange Property</summary>
+      <pre>
+The <b style="color: red;">readyState</b>  property holds the status of the XMLHttpRequest.
+
+The <b style="color: red;">onreadystatechange</b>  property defines a callback function to be executed when the readyState changes.
+            
+The<b style="color: red;"></b> status property and the<b style="color: red;"> statusText</b> properties hold the status of the XMLHttpRequest object.
+<table>
+    <tr>
+        <th>Property</th>
+        <th>Description</th>
+    <tr>
+        <tr>
+            <td>onreadystatechange</td>
+            <td>Defines a function to be called when the readyState property changes</td>
+        </tr>
+        <tr>
+            <td>readyState</td>
+            <td>Holds the status of the XMLHttpRequest.
+                0: request not initialized
+                1: server connection established
+                2: request received
+                3: processing request
+                4: request finished and response is ready</td>
+        </tr>
+        <tr>
+            <td>status</td>
+            <td>200: "OK"
+                403: "Forbidden"
+                404: "Page not found"
+                For a complete list go to the Http Messages Reference</td>
+        </tr>
+        <tr>
+            <td>statusText</td>
+            <td>Returns the status-text (e.g. "OK" or "Not Found")</td>
+        </tr>
+
+</table>
+<pre>
+The <b style="color: red;">onreadystatechange</b>  function is called every time the readyState changes.
+
+When <b style="color: red;">readyState</b>  is 4 and status is 200, the response is ready:</pre>
+
+</pre>
+    </details>
+  </body>
+</html>
