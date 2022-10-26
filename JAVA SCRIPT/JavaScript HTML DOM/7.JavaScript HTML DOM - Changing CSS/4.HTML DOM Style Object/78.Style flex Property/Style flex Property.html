@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        width: 220px;
+        height: 300px;
+        border: 1px solid black;
+        display: flex;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to set the flex property of ALL DIV elements
+      inside the "myDIV" element:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <div style="background-color: coral">RED</div>
+      <div style="background-color: lightblue">BLUE</div>
+      <div style="background-color: lightgreen">
+        Green div with more content.
+      </div>
+    </div>
+
+    <p>
+      <b>Note:</b> IE11 and Edge support the flex property. IE 10 supports an
+      alternative, the msFlex property.
+    </p>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("myDIV");
+        var y = x.getElementsByTagName("DIV");
+        var i = 0;
+        for (i; i < y.length; i++) {
+          y[i].style.msFlex = "1"; // IE10
+          y[i].style.flex = "1";
+        }
+      }
+    </script>
+  </body>
+</html>

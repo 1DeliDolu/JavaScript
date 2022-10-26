@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        border: 1px solid black;
+        background-color: lightblue;
+        width: 300px;
+        height: 300px;
+        position: relative;
+        top: 20px;
+        margin-bottom: 20px;
+      }
+      button {
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to change the position property of the DIV
+      element:
+    </p>
+
+    <div id="myDIV">
+      <p>
+        This DIV element is placed 20 pixels from the top of its original
+        position.
+      </p>
+      <p>
+        Click the button to set the position property to "absolute" and see what
+        happens.
+      </p>
+      <p>It will then be placed 20 pixels from the top the page.</p>
+    </div>
+    <button onclick="myFunction()">absolute</button>
+    <button onclick="myFunction1()">relative</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.position = "absolute";
+      }
+      function myFunction1() {
+        document.getElementById("myDIV").style.position = "relative";
+      }
+    </script>
+  </body>
+</html>

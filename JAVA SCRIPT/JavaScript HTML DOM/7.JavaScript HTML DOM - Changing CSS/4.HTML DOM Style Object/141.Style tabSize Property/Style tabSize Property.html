@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<pre id="t1">
+I	have	tabs	inside!
+</pre>
+
+<p>Click the "Try it" button to cahnge the tab-size property of the PRE element</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("t1").style.MozTabSize = "16"; // Code for Firefox
+  document.getElementById("t1").style.tabSize = "16";
+}
+</script>
+
+<p><b>Note:</b> The tabSize property is not supported in Firefox. However, an alternative is supported: the MozTabSize property.</p>
+
+</body>
+</html>

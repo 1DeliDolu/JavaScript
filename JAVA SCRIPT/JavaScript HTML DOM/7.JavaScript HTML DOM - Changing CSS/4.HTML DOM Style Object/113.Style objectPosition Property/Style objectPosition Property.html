@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myImg {
+  width: 200px;
+  height: 400px;
+  object-fit: cover;
+  border: 5px solid red;
+}
+</style>
+</head>
+<body>
+<h1>Change objectOosition with JavaScript</h1>
+
+<p>Click the "Try it" button to change the object-position of the image:</p>
+
+<img src="paris.jpg" alt="Paris" id="myImg" width="400" height="300">
+<br>
+
+<button onclick="myFunction()">Try it</button>
+
+<p>Note: The objectPosition property is not supported in Internet Explorer/Edge 15 or earlier.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("myImg").style.objectPosition = "0 10%";
+}
+</script>
+
+</body>
+</html>

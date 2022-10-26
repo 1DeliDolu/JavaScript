@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        margin: auto;
+        border: 1px solid black;
+        outline: coral solid 5px;
+        width: 300px;
+        height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to change the outline-offset property of the DIV
+      element:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <h1>Hello</h1>
+    </div>
+
+    <p>
+      The outlineOffset property is not supported in IE or Edge 14 and earlier
+      versions.
+    </p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.outlineOffset = "15px";
+      }
+    </script>
+  </body>
+</html>

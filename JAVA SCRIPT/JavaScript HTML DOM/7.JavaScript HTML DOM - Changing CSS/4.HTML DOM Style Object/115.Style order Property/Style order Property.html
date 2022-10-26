@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #main {
+        width: 400px;
+        height: 150px;
+        border: 1px solid #000000;
+        display: flex;
+      }
+
+      #main div {
+        width: 70px;
+        height: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div style="background-color: coral" id="myRedDIV"></div>
+      <div style="background-color: lightblue" id="myBlueDIV"></div>
+      <div style="background-color: lightgreen" id="myGreenDIV"></div>
+      <div style="background-color: pink" id="myPinkDIV"></div>
+    </div>
+
+    <p>Click the "Try it" button to change the order of the four DIV's:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myRedDIV").style.order = "4";
+        document.getElementById("myBlueDIV").style.order = "3";
+        document.getElementById("myGreenDIV").style.order = "1";
+        document.getElementById("myPinkDIV").style.order = "2";
+      }
+    </script>
+  </body>
+</html>

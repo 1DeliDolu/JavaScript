@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Click the button to change the color of the image to black and white (100%
+      gray).
+    </p>
+
+    <button onclick="myFunction()">Try it</button><br /><br />
+
+    <img
+      id="myImg"
+      src="/cssref/pineapple.jpg"
+      alt="Pineapple"
+      width="300"
+      height="300"
+    />
+
+    <p>
+      <strong>Note:</strong> The filter property does not work in Internet
+      Explorer or Edge 12.
+    </p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myImg").style.filter = "grayscale(100%)";
+      }
+    </script>
+  </body>
+</html>

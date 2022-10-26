@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+#myImg {
+  width: 200px;
+  height: 400px;
+}
+</style>
+</head>
+<body>
+<h1>Change objectFit with JavaScript</h1>
+
+<p>Click the "Try it" button to cut off the sides of the image, preserving the aspect ratio:</p>
+
+<img src="paris.jpg" alt="Paris" id="myImg" width="400" height="300">
+<br>
+
+<button onclick="myFunction()">Try it</button>
+
+<p>Note: The objectFit property is not supported in Internet Explorer/Edge 15 or earlier.</p>
+
+<script>
+function myFunction() {
+  document.getElementById("myImg").style.objectFit = "cover";
+}
+</script>
+
+</body>
+</html>
+

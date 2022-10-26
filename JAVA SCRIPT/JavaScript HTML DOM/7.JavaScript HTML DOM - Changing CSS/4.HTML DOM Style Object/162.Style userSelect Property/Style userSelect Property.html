@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Click the "Try it" button to set the user-select property of the p element
+      to "none":
+    </p>
+
+    <button onclick="myFunction()">none</button>
+    <button onclick="myFunction1()">auto</button>
+    <button onclick="myFunction2()">text</button>
+    <button onclick="myFunction3()">all</button>
+
+    <p id="demo"> </p>
+    <p id="demo1"> </p>
+    <p id="demo2"> </p>
+    <p id="demo3"> </p>
+    
+
+     
+      After you click on the button, it is not possible to select the text of
+      this p element (try to double-click me before and after).
+    </p>
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("demo");
+        x.style.WebkitUserSelect = "none"; // Safari
+        x.style.msUserSelect = "none"; // IE 10 and IE11
+        x.style.userSelect = "none"; // Standard syntax
+      }
+      function myFunction1() {
+        var x = document.getElementById("demo1");
+        x.style.WebkitUserSelect = "auto"; // Safari
+        x.style.msUserSelect = "auto"; // IE 10 and IE11
+        x.style.userSelect = "auto"; // Standard syntax
+      }
+      function myFunction2() {
+        var x = document.getElementById("demo2");
+        x.style.WebkitUserSelect = "text"; // Safari
+        x.style.msUserSelect = "text"; // IE 10 and IE11
+        x.style.userSelect = "text"; // Standard syntax
+      }
+      function myFunction3() {
+        var x = document.getElementById("demo3");
+        x.style.WebkitUserSelect = "all"; // Safari
+        x.style.msUserSelect = "all"; // IE 10 and IE11
+        x.style.userSelect = "all"; // Standard syntax
+      }
+      
+    </script>
+  </body>
+</html>

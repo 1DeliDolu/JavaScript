@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        margin: auto;
+        border: 1px solid black;
+        width: 200px;
+        height: 100px;
+        background-color: coral;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click the "Try it" button to rotate the DIV element:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <h1>myDIV</h1>
+    </div>
+
+    <script>
+      function myFunction() {
+        // Code for IE9
+        document.getElementById("myDIV").style.msTransform = "rotate(20deg)";
+        // Standard syntax
+        document.getElementById("myDIV").style.transform = "rotate(20deg)";
+      }
+    </script>
+
+    <p>
+      <b>Note:</b> Internet Explorer 9 supports an alternative, the msTransform
+      property. Newer versions of IE and Edge support the transform property (do
+      not need the ms prefix).
+    </p>
+  </body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table {
+        border: 1px solid black;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td id="myTd">Some example text</td>
+      </tr>
+    </table>
+    <br />
+
+    <button type="button" onclick="myFunction()">Align text</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myTd").style.verticalAlign = "bottom";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        width: 150px;
+        height: 100px;
+        background-color: lightblue;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to change the let the DIV element wrap words:
+    </p>
+
+    <div id="myDIV">Thiscouldbeaninsainlylargeword</div>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.wordWrap = "break-word";
+      }
+    </script>
+  </body>
+</html>

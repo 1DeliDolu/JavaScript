@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div.container {
+  width: 300px;
+  border: 1px solid;
+}
+
+div.box {
+  width: 150px;
+  border: 3px solid coral;
+  float: left;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="box" id="box1">This is BOX1.</div>
+<div class="box" id="box2">This is BOX2.</div>
+<div style="clear:both;"></div>
+</div>
+
+<p>Two 150 pixels boxes inside a 300 pixels container. It should fit nicely, but because of the borders and padding, the two boxes take up more space than 150 pixels each. This "problem" can be solved by setting the boxSizing property to "border-box".</p>
+
+<p>Click the "Try it" button to set the boxSizing property of the two boxes to "border-box":</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("box1").style.MozBoxSizing = "border-box"; /* Code for old Firefox */
+  document.getElementById("box2").style.MozBoxSizing = "border-box"; /* Code for old Firefox */
+  document.getElementById("box1").style.boxSizing = "border-box";
+  document.getElementById("box2").style.boxSizing = "border-box";
+}
+</script>
+
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div.container {
+  width: 300px;
+  border: 1px solid;
+}
+
+div.box {
+  width: 150px;
+  border: 3px solid coral;
+  float: left;
+  padding: 10px;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+<div class="box" id="box1">This is BOX1.</div>
+<div class="box" id="box2">This is BOX2.</div>
+<div style="clear:both;"></div>
+</div>
+
+<p>Two 150 pixels boxes inside a 300 pixels container. It should fit nicely, but because of the borders and padding, the two boxes take up more space than 150 pixels each. This "problem" can be solved by setting the boxSizing property to "border-box".</p>
+
+<p>Click the "Try it" button to set the boxSizing property of the two boxes to "border-box":</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("box1").style.MozBoxSizing = "border-box"; /* Code for old Firefox */
+  document.getElementById("box2").style.MozBoxSizing = "border-box"; /* Code for old Firefox */
+  document.getElementById("box1").style.boxSizing = "border-box";
+  document.getElementById("box2").style.boxSizing = "border-box";
+}
+</script>
+
+</body>
+</html>

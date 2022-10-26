@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+img {
+  position: absolute;
+  top: 50px;
+}
+</style>
+</head>
+<body>
+
+<img id="myImg" src="w3javascript.gif" width="100" height="132">
+
+<button type="button" onclick="clipImage()">Clip image</button>
+<button type="button" onclick="clearClip()">Unclip image</button>
+
+<script>
+function clipImage() {
+  document.getElementById("myImg").style.clip = "rect(0px 75px 75px 0px)";
+}
+
+function clearClip() {
+  document.getElementById("myImg").style.clip = "auto";
+}
+</script>
+
+</body>
+</html>

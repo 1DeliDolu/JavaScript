@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #main {
+        width: 400px;
+        height: 150px;
+        border: 1px solid #000000;
+        display: flex;
+        justify-content: space-around;
+      }
+
+      #main div {
+        width: 70px;
+        height: 70px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div style="background-color: coral"></div>
+      <div style="background-color: lightblue"></div>
+      <div style="background-color: khaki"></div>
+      <div style="background-color: pink"></div>
+    </div>
+
+    <p>
+      Click the "Try it" button to set the value of the justifyContent property
+      to "space-between"
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p>
+      <b>Note:</b> Internet Explorer 11 and earlier versions do not support the
+      justifyContent property.
+    </p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("main").style.justifyContent = "space-between";
+      }
+    </script>
+  </body>
+</html>

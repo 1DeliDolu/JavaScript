@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDiv {
+        border: 1px solid #ff0000;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv">This is a div element.</div>
+    <br />
+
+    <button type="button" onclick="myFunction()">
+      Set right position of div to -100 px
+    </button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDiv").style.right = "-100px";
+      }
+    </script>
+  </body>
+</html>

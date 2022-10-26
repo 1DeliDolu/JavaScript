@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Set initial with JavaScript</h1>
+
+    <div>
+      <h1 id="bc">Hello World</h1>
+      <ul>
+        <li id="a">Item one</li>
+        <li id="b">Item two</li>
+        <li id="c">Item three</li>
+      </ul>
+    </div>
+
+    <p>
+      Click the "Try it" button to set the value of the color property to
+      "initial" for the second list item:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("b").style.color = "initial";
+      }
+    </script>
+
+    <p>
+      <b>Note:</b> The "initial" keyword is not supported in Internet Explorer
+      11 and earlier versions.
+    </p>
+  </body>
+</html>

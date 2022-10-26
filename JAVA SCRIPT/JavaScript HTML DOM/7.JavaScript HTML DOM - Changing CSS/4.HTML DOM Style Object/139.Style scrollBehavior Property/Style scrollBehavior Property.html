@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #section1 {
+        height: 600px;
+        background-color: pink;
+      }
+
+      #section2 {
+        height: 600px;
+        background-color: yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Smooth Scroll</h1>
+
+    <p>
+      Click on the links inside the pink and yellow DIVs before you click on the
+      "Apply smooth scroll effect" button - to see the effect before and after
+      applying the smooth scroll effect.
+    </p>
+
+    <p>
+      Note: IE 11 (and earlier versions) and Safari 13 (and earlier) do not
+      support the scrollBehavior property.
+    </p>
+
+    <button onclick="myFunction()">Apply smooth scroll effect</button>
+
+    <div class="main" id="section1">
+      <h2>Section 1</h2>
+      <a href="#section2">Click Me to Go to Section 2 Below</a>
+    </div>
+
+    <div class="main" id="section2">
+      <h2>Section 2</h2>
+      <a href="#section1">Click Me to Go to Section 1 Above</a>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.documentElement.style.scrollBehavior = "smooth";
+      }
+    </script>
+  </body>
+</html>

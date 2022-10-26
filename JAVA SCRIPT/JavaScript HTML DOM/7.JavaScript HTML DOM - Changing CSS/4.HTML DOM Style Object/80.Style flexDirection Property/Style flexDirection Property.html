@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #main {
+        width: 350px;
+        height: 350px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+        flex-direction: row;
+      }
+
+      #main div {
+        width: 50px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div style="background-color: coral">A</div>
+      <div style="background-color: lightblue">B</div>
+      <div style="background-color: khaki">C</div>
+      <div style="background-color: pink">D</div>
+      <div style="background-color: lightgrey">E</div>
+      <div style="background-color: lightgreen">F</div>
+    </div>
+
+    <p>
+      Click the "Try it" button to set the value of the flexDirection property
+      to "column-reverse".
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p>
+      <b>Note:</b> Internet Explorer 10 and earlier versions earlier versions do
+      not support the flexDirection property.
+    </p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("main").style.flexDirection = "column-reverse";
+      }
+    </script>
+  </body>
+</html>

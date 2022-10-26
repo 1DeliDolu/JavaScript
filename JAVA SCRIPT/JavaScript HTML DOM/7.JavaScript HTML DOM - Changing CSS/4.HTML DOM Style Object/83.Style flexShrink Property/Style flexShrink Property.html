@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #main {
+        width: 350px;
+        height: 100px;
+        border: 1px solid #c3c3c3;
+        display: flex;
+      }
+
+      #main div {
+        flex-grow: 1;
+        flex-shrink: 1;
+        flex-basis: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <div style="background-color: coral">Red DIV</div>
+      <div style="background-color: lightblue" id="myBlueDiv">Blue DIV</div>
+    </div>
+
+    <p>
+      Click the "Try it" button to set the value of the flexShrink property to
+      "5" for the blue div element
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p>
+      <b>Note:</b> Internet Explorer 10 and earlier versions earlier versions do
+      not support the flexShrink property.
+    </p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myBlueDiv").style.flexShrink = "5";
+      }
+    </script>
+  </body>
+</html>

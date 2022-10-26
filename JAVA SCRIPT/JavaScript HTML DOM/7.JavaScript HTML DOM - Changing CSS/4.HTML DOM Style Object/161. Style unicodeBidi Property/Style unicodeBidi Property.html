@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>This is a paragraph.</p>
+    <p id="myP" style="direction: rtl">This is another paragraph.</p>
+
+    <button type="button" onclick="myFunction()">Override text</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myP").style.unicodeBidi = "bidi-override";
+      }
+    </script>
+  </body>
+</html>

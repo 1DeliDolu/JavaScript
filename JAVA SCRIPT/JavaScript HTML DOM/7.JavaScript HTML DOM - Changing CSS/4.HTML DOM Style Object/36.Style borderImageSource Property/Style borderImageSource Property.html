@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+div {
+  background-color: lightgrey;
+  border: 30px solid transparent;
+  border-image: url('border.png') 30 1 1 1 1 0 round;
+}
+</style>
+</head>
+<body>
+
+<div id="main">
+<p>
+This is a DIV element that uses an image as a border.
+</p>
+</div>
+
+<p>Here are the two images used:</p>
+<img src="border.png">
+<img src="img_flwr.gif" width="224" height="162">
+
+<p>Click the "Try it" button to change the value of the borderImageSource property.</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("main").style.borderImageSource = "url('img_flwr.gif')";
+}
+</script>
+
+<p><b>Note:</b>Internet Explorer 10 and earlier versions do not support this property.</p>
+
+</body>
+</html>
+

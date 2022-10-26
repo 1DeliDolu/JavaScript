@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p#demo {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="demo">Hello world!</p>
+
+    <p>
+      Click the "Try it" button to change the text-decoration-line of the
+      paragraph.
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").style.textDecorationLine =
+          "line-through";
+      }
+    </script>
+  </body>
+</html>
