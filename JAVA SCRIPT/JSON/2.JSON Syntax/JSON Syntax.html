@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Syntax</title>
+    <style>
+      /* loader begin*/
+      .loader {
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid blue;
+        border-right: 16px solid green;
+        border-bottom: 16px solid red;
+        width: 120px;
+        height: 120px;
+        margin: auto;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 3s linear infinite;
+      }
+      .loader:hover{
+        animation: spin 0.5s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      /*loader end*/
+
+      main {
+        background-color: bisque;
+        width: 75%;
+        float: right;
+      }
+      aside {
+        background-color: grey;
+        width: 25%;
+        float: left;
+        
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      a {
+        display: inline-block;
+        text-decoration: none;
+        width: 95%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-bottom: 3px red solid;
+        color: black;
+      }
+      span {
+        background-color: yellow;
+      }
+      b {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align: center;">JSON Syntax</h1>
+    </header>
+    <div class="clearfix">
+      <aside>
+        <a href="#syntax">Syntax Rules</a>
+        <a href="#data">JSON Data</a>
+        <a href="#evaluate">JSON - Evaluates</a>
+        <a href="#value">JSON Values</a>
+        <a href="#object">JS Objects</a>
+        <a href="#array">JS Arrays as JSON</a>
+        <a href="#file">JSON Files</a>
+        <img class="loader" src="img_json.jpg" alt="loader" />
+      </aside>
+      <p>The JSON syntax is a subset of the JavaScript syntax.</p>
+      <main>
+        <fieldset>
+          <legend>JSON Syntax Rules</legend>
+          <h1 id="syntax">JSON Syntax Rules</h1>
+          <pre>
+          
+JSON Syntax Rules
+  JSON syntax is derived from JavaScript object notation syntax:
+  Data is in name/value pairs
+  Data is separated by commas
+  Curly braces hold objects
+  Square brackets hold arrays
+
+</pre
+          >
+        </fieldset>
+      </main>
+
+      <main>
+        <fieldset>
+          <legend>JSON Data - A Name and a Value</legend>
+          <h1 id="data">JSON Data - A Name and a Value</h1>
+          <pre>
+JSON data is written as name/value pairs (aka key/value pairs).
+A name/value pair consists of a field name (in double quotes), 
+followed by a colon, followed by a value:
+
+Example:
+"name":"John"
+<span>JSON names require double quotes.</span>
+        </pre>
+        </fieldset>
+      </main>
+
+      <main>
+        <fieldset>
+          <legend>JSON - Evaluates to JavaScript Objects</legend>
+          <h1 id="evaluate">JSON - Evaluates to JavaScript Objects</h1>
+          <pre>
+The JSON format is almost identical to JavaScript objects.
+In JSON, keys must be strings, written with double quotes:
+JSON
+  {"name":"John"}
+
+In JavaScript, keys can be strings, numbers, or identifier names:
+JavaScript
+  {name:"John"}
+
+        </pre
+          >
+        </fieldset>
+      </main>
+
+      <main>
+        <fieldset>
+          <legend>JSON Values</legend>
+          <h1 id="value">JSON Values</h1>
+          <pre>
+In JSON, values must be one of the following data types:
+
+  #a string
+  #a number
+  #an object
+  #an array
+  #a boolean
+  #null
+  
+In JavaScript values can be all of the above, plus any other valid 
+JavaScript expression, including:
+  #a function
+  #a date
+  #undefined
+            
+In JSON, string values must be written with double quotes:
+  JSON:
+    <b>{"name":"John"}</b>
+            
+In JavaScript, you can write string values with double or 
+single quotes:
+  JavaScript:
+    <b>{name:'John'}</b>            
+          </pre>
+        </fieldset>
+      </main>
+
+      <main>
+        <fieldset>
+          <legend>JavaScript Objects</legend>
+          <h1 id="object">JavaScript Objects</h1>
+
+          <pre>
+Because JSON syntax is derived from JavaScript object notation, 
+very little extra software is needed to work with JSON within 
+JavaScript.
+
+With JavaScript you can create an object and assign data to it, 
+like this:
+
+Example
+person = {name:"John", age:31, city:"New York"};
+You can access a JavaScript object like this:
+
+Example
+// returns John
+person.name;
+<a href="demo.html">Try it Yourself</a>
+It can also be accessed like this:
+
+Example
+// returns John
+person["name"];
+<a href="dem.html">Try it Yourself</a>
+Data can be modified like this:
+
+Example
+person.name = "Gilbert";
+<a href="dmo.html">Try it Yourself</a>
+It can also be modified like this:
+
+Example
+person["name"] = "Gilbert";
+You will learn how to convert JavaScript objects into JSON later in 
+this tutorial.
+        </pre>
+        </fieldset>
+      </main>
+      <main>
+        <fieldset>
+          <legend>JavaScript Arrays as JSON</legend>
+          <h1 id="array">JavaScript Arrays as JSON</h1>
+          <pre>
+The same way JavaScript objects can be written as JSON, JavaScript
+arrays can also be written as JSON.
+You will learn more about objects and arrays later in this tutorial.
+</pre
+          >
+        </fieldset>
+      </main>
+      <main>
+        <fieldset>
+          <legend>JSON Files</legend>
+          <pre>
+          <h1 id="file">JSON Files</h1>
+#The file type for JSON files is ".json"
+#The MIME type for JSON text is "application/json"
+        </pre>
+        </fieldset>
+      </main>
+    </div>
+  </body>
+</html>
