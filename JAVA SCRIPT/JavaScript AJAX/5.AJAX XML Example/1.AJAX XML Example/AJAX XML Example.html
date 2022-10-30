@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid black;
+      border-collapse: collapse;
+    }
+    th,
+    td {
+      padding: 5px;
+    }
+    b {
+      color: red;
+    }
+  </style>
+  <body>
+    <h2>The XMLHttpRequest Object</h2>
+
+    <button type="button" onclick="loadDoc()">Get my CD collection</button>
+    <br /><br />
+    <table id="demo"></table>
+
+    <script>
+      function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          myFunction(this);
+        };
+        xhttp.open("GET", "cd_catalog.xml");
+        xhttp.send();
+      }
+      function myFunction(xml) {
+        const xmlDoc = xml.responseXML;
+        const x = xmlDoc.getElementsByTagName("CD");
+        let table = "<tr><th>Artist</th><th>Title</th></tr>";
+        for (let i = 0; i < x.length; i++) {
+          table +=
+            "<tr><td>" +
+            x[i].getElementsByTagName("ARTIST")[0].childNodes[0].nodeValue +
+            "</td><td>" +
+            x[i].getElementsByTagName("TITLE")[0].childNodes[0].nodeValue +
+            "</td></tr>";
+        }
+        document.getElementById("demo").innerHTML = table;
+      }
+    </script>
+    <details>
+      <summary>Example Explained</summary>
+
+      <fieldset>
+        <legend>AJAX XML Example</legend>
+        <pre>
+When a user clicks on the "Get CD info" button above, the <b>loadDoc()</b>  function is executed.
+
+The <b>loadDoc()</b> function creates an <b>XMLHttpRequest</b>  object, adds the function to be executed 
+when the server response is ready, and sends the request off to the server.
+            
+When the server response is ready, an HTML table is built, nodes (elements) are extracted 
+from the XML file, and it finally updates the element "demo" with the HTML table filled with XML data: 
+        </pre>
+      </fieldset>
+    </details>
+  </body>
+</html>

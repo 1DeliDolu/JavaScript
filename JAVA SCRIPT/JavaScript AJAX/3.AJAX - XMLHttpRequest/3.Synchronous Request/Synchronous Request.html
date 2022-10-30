@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The XMLHttpRequest Object</h2>
+
+    <p id="demo">Let AJAX change this text.</p>
+
+    <button type="button" onclick="loadDoc()">Change Content</button>
+
+    <script>
+      function loadDoc() {
+        var xhttp = new XMLHttpRequest();
+        xhttp.open("GET", "ajax_info.txt", false);
+        xhttp.send();
+        document.getElementById("demo").innerHTML = xhttp.responseText;
+      }
+    </script>
+    <details>
+        <summary>Synchronous Request</summary>
+        <pre>
+To execute a synchronous request, change the third parameter in the <b style="color: red;">open()</b> method to <b style="color: red;">false</b>:
+        </pre>
+        <fieldset>xhttp.open(<b style="color: green">"GET", "ajax_info.txt", false</b>);</fieldset>
+        <pre>
+Sometimes async = false are used for quick testing. You will also find synchronous requests in older JavaScript code.
+Since the code will wait for server completion, there is no need for an <b style="color: red;">onreadystatechange</b> function:</pre>
+    </details>
+  </body>
+</html>

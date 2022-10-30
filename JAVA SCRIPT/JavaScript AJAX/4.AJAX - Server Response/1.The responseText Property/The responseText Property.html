@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="demo">
+      <h2>The XMLHttpRequest Object</h2>
+      <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+
+    <script>
+      function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          document.getElementById("demo").innerHTML = this.responseText;
+        };
+        xhttp.open("GET", "ajax_info.txt");
+        xhttp.send();
+      }
+    </script>
+    <details>
+        <summary>The responseText Property</summary>
+        <pre>
+The <b style="color:red;">responseText</b> property returns the server response as a JavaScript string, 
+and you can use it accordingly:</pre>
+    </details>
+  </body>
+</html>

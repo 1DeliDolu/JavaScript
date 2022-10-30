@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>The XMLHttpRequest Object</h2>
+    <p id="demo"></p>
+
+    <script>
+      const xhttp = new XMLHttpRequest();
+      xhttp.onload = function () {
+        const xmlDoc = this.responseXML;
+        const x = xmlDoc.getElementsByTagName("ARTIST");
+        let txt = "";
+        for (let i = 0; i < x.length; i++) {
+          txt = txt + x[i].childNodes[0].nodeValue + "<br>";
+        }
+        document.getElementById("demo").innerHTML = txt;
+      };
+      xhttp.open("GET","cd_catalog.xml");
+      xhttp.send();
+    </script>
+    <details>
+        <summary></summary>
+        <pre>
+The XMLHttpRequest object has an in-built XML parser.
+
+The <b style="color: red;">responseXML</b>  property returns the server response as an XML DOM object.
+            
+Using this property you can parse the response as an XML DOM object:</pre>
+    </details>
+  </body>
+</html>

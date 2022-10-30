@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AJAX ASP Example</title>
+    <style>
+        b{
+            color: red;
+        }
+        .demo{
+            background-color: bisque;
+        }
+        span{
+            color: blue;
+        }
+    </style>
+  </head>
+  <body>
+    <h2>The XMLHttpRequest Object</h2>
+    <h3>Start typing a name in the input field below:</h3>
+
+    <p>Suggestions: <span id="txtHint"></span></p>
+    <p>
+      First name: <input type="text" id="txt1" onkeyup="showHint(this.value)" />
+    </p>
+
+    <script>
+      function showHint(str) {
+        if (str.length == 0) {
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+        }
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          document.getElementById("txtHint").innerHTML = this.responseText;
+        };
+        xhttp.open("GET", "gethint.asp?q=" + str);
+        xhttp.send();
+      }
+    </script>
+    <details>
+        <summary>Example Explained</summary>
+        <fieldset>
+            <legend>AJAX ASP Example</<legend></legend>
+            <pre>
+In the example above, when a user types a character in the input field, a function called <b>showHint()</b>  is executed.
+
+The function is triggered by the <b>onkeyup</b> event.
+                
+Here is the code:
+<pre class="demo">
+<span><code><</code>script<code>></code></span>
+    function showHint(str) {
+      if (str.length == 0) {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+      } else {
+        const xmlhttp = new XMLHttpRequest();
+        xmlhttp.onload = function() {
+          document.getElementById("txtHint").innerHTML = this.responseText;
+        }
+      xmlhttp.open("GET", "gethint.asp?q=" + str);
+      xmlhttp.send();
+      }
+    }
+<span><code><</code>/script<code>></code>
+    </pre>
+Code explanation:
+
+First, check if the input field is empty (str.length == 0). If it is, clear the content of the txtHint placeholder and exit the function.
+    
+However, if the input field is not empty, do the following:
+    
+Create an XMLHttpRequest object
+Create the function to be executed when the server response is ready
+Send the request off to an ASP file (gethint.asp) on the server
+Notice that q parameter is added gethint.asp?q="+str
+The str variable holds the content of the input field
+            </pre>
+        </fieldset>
+    </details>
+  </body>
+</html>
