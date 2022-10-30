@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <canvas
+      id="myCanvas"
+      width="400"
+      height="400"
+      style="border: 1px solid grey"
+    ></canvas>
+
+    <script>
+      const canvas = document.getElementById("myCanvas");
+      const ctx = canvas.getContext("2d");
+
+      let xMax = (canvas.height = canvas.width);
+      ctx.transform(1, 0, 0, -1, 0, xMax);
+
+      let slope = 1.2;
+      let intercept = 70;
+
+      ctx.beginPath();
+      ctx.moveTo(0, intercept);
+      ctx.lineTo(xMax, xMax * slope + intercept);
+      ctx.stroke();
+    </script>
+  </body>
+</html>

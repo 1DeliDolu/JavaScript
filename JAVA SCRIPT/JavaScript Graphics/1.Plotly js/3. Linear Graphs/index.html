@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+  <body>
+    <div id="myPlot" style="width: 100%; max-width: 700px"></div>
+
+    <script>
+      let exp = "x + 17";
+
+      // Generate values
+      const xValues = [];
+      const yValues = [];
+      for (let x = 0; x <= 10; x += 1) {
+        xValues.push(x);
+        yValues.push(eval(exp));
+      }
+
+      // Define Data
+      const data = [
+        {
+          x: xValues,
+          y: yValues,
+          mode: "lines",
+        },
+      ];
+
+      // Define Layout
+      const layout = { title: "y = " + exp };
+
+      // Display using Plotly
+      Plotly.newPlot("myPlot", data, layout);
+    </script>
+  </body>
+</html>
