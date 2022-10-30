@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        background: yellow;
+        border: 1px solid #cccccc;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      This example demonstrates how to assign an "onshow" event to a menu
+      element.
+    </p>
+
+    <div contextmenu="mymenu">
+      <p>
+        Right-click inside this box to see the context menu!
+
+        <menu type="context" id="mymenu" onshow="myFunction()">
+          <menuitem
+            label="Refresh"
+            onclick="window.location.reload();"
+            icon="ico_reload.png"
+          ></menuitem>
+          <menu label="Share on...">
+            <menuitem
+              label="Twitter"
+              icon="ico_twitter.png"
+              onclick="window.open('//twitter.com/intent/tweet?text=' + window.location.href);"
+            ></menuitem>
+            <menuitem
+              label="Facebook"
+              icon="ico_facebook.png"
+              onclick="window.open('//facebook.com/sharer/sharer.php?u=' + window.location.href);"
+            ></menuitem>
+          </menu>
+          <menuitem
+            label="Email This Page"
+            onclick="window.location='mailto:?body='+window.location.href;"
+          ></menuitem>
+        </menu>
+      </p>
+    </div>
+
+    <p>
+      <strong>Note:</strong> The onshow event is currently only supported in
+      Firefox.
+    </p>
+
+    <script>
+      function myFunction() {
+        alert("The context menu is about to be shown");
+      }
+    </script>
+  </body>
+</html>

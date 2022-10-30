@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo1">This is an example paragraph.</p>
+    <p id="demo2">This is an example paragraph.</p>
+
+    <button type="button" onclick="changeLetters()">Set letter spacing</button>
+    <button type="button" onclick="changeWords()">Set word spacing</button>
+
+    <script>
+      function changeLetters() {
+        document.getElementById("demo1").style.letterSpacing = "15px";
+      }
+
+      function changeWords() {
+        document.getElementById("demo2").style.wordSpacing = "15px";
+      }
+    </script>
+  </body>
+</html>

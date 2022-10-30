@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        border: 1px solid black;
+        background-color: lightblue;
+        width: 175px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to change the text-overflow property of the DIV
+      element:
+    </p>
+
+    <button onclick="myFunction()">clip</button>
+    <button onclick="myFunction1()">ellipsis</button>
+    <button onclick="myFunction2()">string</button>
+    <button onclick="myFunction3()">initial</button>
+    <button onclick="myFunction4()">inherit</button>
+
+    <div id="myDIV">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit,<br />
+      sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam
+      erat volutpat.<br />
+      Ut wisi enim ad minim veniam,<br />
+      quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip
+      ex ea commodo consequat. Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Voluptatem quisquam soluta voluptates totam. Repellendus
+      laudantium aliquid odit odio officia eligendi! Sunt aperiam natus fugiat,
+      repellat aliquid culpa quia porro quis ab reprehenderit voluptatibus
+      dolorem provident tenetur eius veniam assumenda earum libero eum inventore
+      optio. Natus.
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.textOverflow = "clip";
+      }
+      function myFunction1() {
+        document.getElementById("myDIV").style.textOverflow = "ellipsis";
+      }
+      function myFunction2() {
+        document.getElementById("myDIV").style.textOverflow = "sring";
+        document.getElementById("myDIV").style.resize = "both";//kemdim
+        
+      }
+      function myFunction3() {
+        document.getElementById("myDIV").style.textOverflow = "initial";
+      }
+      function myFunction4() {
+        document.getElementById("myDIV").style.textOverflow = "inherit";
+      }
+    </script>
+  </body>
+</html>

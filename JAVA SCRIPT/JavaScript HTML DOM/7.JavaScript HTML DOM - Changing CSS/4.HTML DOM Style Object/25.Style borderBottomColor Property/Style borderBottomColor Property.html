@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDiv {
+        border: thick solid blue;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv">This is a div.</div>
+    <br />
+    <button type="button" onclick="myFunction()">
+      Change color of the bottom border
+    </button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDiv").style.borderBottomColor = "red";
+      }
+    </script>
+  </body>
+</html>

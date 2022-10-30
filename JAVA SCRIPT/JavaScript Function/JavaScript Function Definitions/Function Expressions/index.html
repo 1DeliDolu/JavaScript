@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <head>
+      <meta charset="utf-8" />
+      <title>JavaScript Functions</title>
+      <style>
+        span {
+          color: red;
+        }
+      </style>
+    </head>
+    <h2>JavaScript Functions</h2>
+    <p>
+      After a function has been stored in a variable, the variable can be used
+      as a function:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      const x = function (a, b) {
+        return a * b;
+      };
+      document.getElementById("demo").innerHTML =
+        "Antwort:" + x(4, 3) + ". This is a function: <span>" + x + "</span>";
+    </script>
+  </body>
+</html>

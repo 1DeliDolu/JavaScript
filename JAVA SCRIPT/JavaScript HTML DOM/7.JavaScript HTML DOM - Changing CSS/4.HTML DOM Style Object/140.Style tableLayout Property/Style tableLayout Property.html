@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table,
+      td {
+        border: 1px solid black;
+      }
+
+      #myTABLE {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to set table-layout property of the TABLE to
+      "fixed":
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <table id="myTABLE">
+      <tr>
+        <td>1000000000000000000000000000</td>
+        <td>10000000</td>
+      </tr>
+      <tr>
+        <td>John</td>
+        <td>Smith</td>
+      </tr>
+      <tr>
+        <td>Jane</td>
+        <td>Doe</td>
+      </tr>
+    </table>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myTABLE").style.tableLayout = "fixed";
+      }
+    </script>
+  </body>
+</html>

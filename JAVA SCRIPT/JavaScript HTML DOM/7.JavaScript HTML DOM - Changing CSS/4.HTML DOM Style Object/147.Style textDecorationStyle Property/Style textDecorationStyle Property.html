@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      p#demo {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="demo">Hello world!</p>
+
+    <p>
+      Click the "Try it" button to change the text-decoration-style of the
+      paragraph.
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").style.textDecorationStyle = "wavy";
+      }
+    </script>
+  </body>
+</html>

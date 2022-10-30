@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#main {
+  width: 220px;
+  height: 300px;
+  border: 1px solid black;
+  display: flex;
+  align-items: flex-start;
+}
+
+#main div {
+  flex: 1;
+}
+
+#myBlueDiv {
+  align-self: center;
+}
+</style>
+</head>
+<body>
+
+<div id="main">
+  <div style="background-color:coral;">RED</div>
+  <div style="background-color:lightblue;" id="myBlueDiv">BLUE</div>  
+  <div style="background-color:lightgreen;">Green div with more content.</div>
+</div>
+
+<p>Click the button to set the value of the alignSelf property to "stretch"</p>
+<button onclick="myFunction()">Try it</button>
+
+<script>
+function myFunction() {
+  document.getElementById("myBlueDiv").style.alignSelf = "stretch";
+}
+</script>
+
+<p><b>Note:</b> Internet Explorer 10 and earlier versions do not support the alignSelf property.</p>
+
+</body>
+</html>

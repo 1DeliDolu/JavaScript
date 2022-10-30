@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Displaying Object Properties</title>
+  <style>
+    .demo{
+      color: red;
+    }
+    .demo1{
+      color: green;
+    }
+    .demo2{
+      color: blue;
+    }
+    .demo3{
+      color:brown;
+    }
+    h1{
+      text-align: center;
+    }
+    body{
+      background-color: bisque;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Objects</h1>
+  </header>
+  
+  <h2>Display Object Properties:</2>
+  <br>
+  <br>
+  <fieldset>
+      <legend>Displaying Object Properties</legend>
+      <p>The properties of an object can be displayed as a string:</p>
+          <pre>
+      <span class="demo2"><code><</code>script<code>></code></span>
+        <b class="demo">const</b> <b class="demo1">person</b> = {
+          name: "Deli",
+          age :  30,
+          city: "New York"
+        };
+        
+        document.getElementById("<b class="demo3">demo</b>").innerHTML = 
+        <b class="demo1">person</b>.name + ", " +<b class="demo1">person</b>.age + ",
+        " +<b class="demo1">person</b>.city;
+      <span class="demo2"><code><</code>/script<code>></code></span>
+      <span class="demo2"><code><</code>p <b style="color: black;">id="<b class="demo3">demo</b>"</b><code>></code></span><span class="demo2"><code><</code>/p<code>></code></span>
+    </pre>
+
+      <p><span class="demo">Answer</span> : <span id="demo"></span></p>
+    </fieldset>
+
+    <script>
+      const person = {
+        name: "Deli",
+        age: 30,
+        city: "New York",
+      };
+
+      document.getElementById("demo").innerHTML =
+        person.name + ", " + person.age + ", " + person.city;
+    </script>
+  
+</body>
+</html>

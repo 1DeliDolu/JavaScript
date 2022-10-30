@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>InputEvent inputType Property</h1>
+
+    <p>
+      The inputType property returns the type of change that was done with the
+      event.
+    </p>
+
+    <p>
+      Write something, or delete something, in the text field to trigger a
+      function.
+    </p>
+
+    <input type="text" id="myInput" oninput="myFunction(event)" />
+
+    <p>The type of action:<span id="demo"></span></p>
+
+    <p>
+      <strong>Note:</strong> This property is not fully supported, and can
+      change before the final release.
+    </p>
+
+    <script>
+      function myFunction(event) {
+        document.getElementById("demo").innerHTML = event.inputType;
+      }
+    </script>
+  </body>
+</html>

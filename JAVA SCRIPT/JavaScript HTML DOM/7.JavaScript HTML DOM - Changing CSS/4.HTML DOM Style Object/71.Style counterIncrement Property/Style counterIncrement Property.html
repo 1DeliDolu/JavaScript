@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1 {
+        counter-increment: section;
+      }
+
+      h1:before {
+        content: "Section " counter(section) " ";
+      }
+    </style>
+  </head>
+  <body>
+    <h1>HTML Tutorial</h1>
+    <h1 id="myH1">CSS Tutorial</h1>
+    <h1>JavaScripts Tutorial</h1>
+
+    <p>
+      Click the "Try it" button to change the counterIncrement of the second H1
+      element:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myH1").style.counterIncrement = "subsection";
+      }
+    </script>
+  </body>
+</html>

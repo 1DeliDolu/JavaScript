@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Is Caps Lock Activated?</h1>
+    <p>
+      Click in the input field, then activate the Cap Lock key and click in the
+      input field again:
+    </p>
+
+    <input type="text" size="40" onmousedown="myFunction(event)" />
+
+    <p>
+      <strong>Note:</strong> The getModifierState() method is not supported in
+      Safari 10 or IE 8 and earlier versions.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(event) {
+        var x = event.getModifierState("CapsLock");
+        document.getElementById("demo").innerHTML = "Caps Lock activated: " + x;
+      }
+    </script>
+  </body>
+</html>

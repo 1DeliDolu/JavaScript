@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        width: 500px;
+        background-color: lightblue;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to make sure that the DIV element's height never
+      gets bigger than 100 pixels:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <p>This DIV element does not have a pre-defined height.</p>
+
+      <p>The height of this DIV element depends on its content.</p>
+
+      <p>
+        But if you click the "Try it" button, yo will make sure that this DIV
+        element does not exceed 100 pixels in height.
+      </p>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.maxHeight = "100px";
+      }
+    </script>
+  </body>
+</html>

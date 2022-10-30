@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Object Properties</h2>
+    <p>Deleting object properties.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const person = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      delete person["age"];
+
+      document.getElementById("demo").innerHTML =
+        person.firstname + " is <span>" + person.age + " </span> years old.";
+    </script>
+  </body>
+</html>

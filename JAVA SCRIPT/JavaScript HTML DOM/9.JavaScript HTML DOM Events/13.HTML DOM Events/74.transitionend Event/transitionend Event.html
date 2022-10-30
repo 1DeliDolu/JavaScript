@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        width: 100px;
+        height: 100px;
+        background: red;
+        -webkit-transition: width 2s; /* For Safari 3.1 to 6.0 */
+        transition: width 2s;
+      }
+
+      #myDIV:hover {
+        width: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Hover over the div element below, and wait for the transition effect to
+      end.
+    </p>
+
+    <div id="myDIV"></div>
+
+    <p>
+      <b>Note:</b> This example does not work in Internet Explorer 9 and earlier
+      versions.
+    </p>
+
+    <script>
+      // Code for Safari 3.1 to 6.0
+      document
+        .getElementById("myDIV")
+        .addEventListener("webkitTransitionEnd", myFunction);
+
+      // Standard syntax
+      document
+        .getElementById("myDIV")
+        .addEventListener("transitionend", myFunction);
+
+      function myFunction() {
+        this.innerHTML =
+          "transitionend event occured - The transition has completed";
+        this.style.backgroundColor = "pink";
+      }
+    </script>
+  </body>
+</html>

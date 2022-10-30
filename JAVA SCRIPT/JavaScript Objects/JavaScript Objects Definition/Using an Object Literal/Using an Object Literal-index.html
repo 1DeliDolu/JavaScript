@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Using an Object Literal</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Objects</h1>
+    <h2>Using an Object Literal</h2>
+    <p>Creating a JavaScript Object:</p>
+    <p id="demo"></p>
+    <fieldset>
+      <legend>Using an Object Literal</legend>
+      <pre>
+This is the easiest way to create a JavaScript Object.
+
+        1.Using an object literal, you both define and create an object in
+        one statement.
+        
+        2.An object literal is a list of name:value pairs (like age:50) inside curly braces {}.
+        
+        3.The following example creates a new JavaScript object with four properties:
+        
+        <span>const</span> <b>person</b>  = { <span>firstName:</span> "John",<span>lastName:</span> "Doe",<span>age</span> :50,<span>eyeColor:</span> "blue"};
+
+        document.getElementById("demo").innerHTML =
+        <b>person</b>.<span>firstName</span>  + " is " +<b>person</b>.<span>age</span>  + " years old.";</pre
+      >
+      <p>
+        Spaces and line breaks are not important. An object definition can span
+        multiple lines:
+      </p>
+
+      <pre>
+       <span>const</span> <b>person</b>  = {
+          firstName: "John",
+          lastName: "Doe",
+          age: 50,
+          eyeColor: "blue"
+          };
+        
+          document.getElementById("demo").innerHTML =
+         <b>person</b>.firstName + " is " +<b>person</b>.age + " years old.";
+      </pre>
+      <p>
+        This example creates an empty JavaScript object, and then adds 4
+        properties:
+      </p>
+      <pre>
+        <span>const</span>  prson = {};
+        <b>prson</b>.firstName =<span> "John"</span>;
+        <b>prson</b>.lastName = "Doe";
+        <b>prson</b>.age =<span>50</span> ;
+         <b>prson</b>.eyeColor = "blue"; 
+
+        document.getElementById("demo").innerHTML =
+        <b>prson</b>.firstName + " is " +<b>prson</b>.age + " years old.";
+
+      </pre>
+      <p>Creating a JavaScript Object:</p>
+
+      <p id="dmo"></p>
+    </fieldset>
+    <br />
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+      document.getElementById("demo").innerHTML =
+        person.firstName + " is <span>" + person.age + " </span> years old.";
+    </script>
+    <script>
+      const prson = {};
+      prson.firstName = "John";
+      prson.lastName = "Doe";
+      prson.age = 50;
+      prson.eyeColor = "blue";
+
+      document.getElementById("dmo").innerHTML =
+        "<span>" +
+        prson.firstName +
+        "</span> is <span>" +
+        prson.age +
+        "</span> years old.";
+    </script>
+  </body>
+</html>

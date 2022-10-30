@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function Declarations</title>
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <h2>Function Declarations</h2>
+    <p>
+      This example calls a function which performs a calculation and returns the
+      result:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      var x = myFunction(4, 3);//x degerine myFunction atadik. Sonra asagida fonksiyonu tanimladik.
+      document.getElementById("demo").innerHTML = x;
+
+      function myFunction(a, b) {
+        return a * b;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>toString()</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <h2>The toString() Method</h2>
+
+    <p>The toString() method returns the function as a string:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(a, b) {
+        return a * b;
+      }
+      document.getElementById("demo").innerHTML =
+        myFunction(3, 5).toString() + "<span>" + 23 + "</span>"; //(5,3) olmadan cagirsak idi fonksionun kendi tanimlamasi gelirdi. normalde 15 ile 23 toplayip 57 yazmali ama 1523 yazdi cünkü stringe cevirdik önce
+    </script>
+  </body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Object Properties</h2>
+    <p>Access a property with ["property"]:</p>
+
+    <p id="demo"></p>
+
+    <script>
+      // bu da farkli kodlandirma bir öncekinden
+      const person = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      document.getElementById("demo").innerHTML =
+        person["firstname"] + " is " + person["age"] + " years old.";
+    </script>
+  </body>
+</html>

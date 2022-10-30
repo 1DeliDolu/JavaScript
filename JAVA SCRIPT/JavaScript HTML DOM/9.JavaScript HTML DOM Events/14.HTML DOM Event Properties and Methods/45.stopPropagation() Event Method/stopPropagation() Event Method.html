@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <style>
+      div {
+        padding: 50px;
+        background-color: rgba(255, 0, 0, 0.2);
+        text-align: center;
+        cursor: pointer;
+      }
+    </style>
+
+    <h1>The stopPropagation() Method</h1>
+
+    <p>Click DIV 1:</p>
+    <div onclick="func2()">
+      DIV 2
+      <div onclick="func1(event)">DIV 1</div>
+    </div>
+
+    Stop propagation:
+    <input type="checkbox" id="check" />
+
+    <p></p>
+
+    <p>
+      Because DIV 1 is inside Div 2, both DIVs get clicked when you click on DIV
+      1.
+    </p>
+    <p>Check the stop propagation checkbox, and try again.</p>
+    <p>
+      The stopPropagation() method allows you to prevent propagation of the
+      current event.
+    </p>
+
+    <script>
+      function func1(event) {
+        alert("DIV 1");
+        if (document.getElementById("check").checked) {
+          event.stopPropagation();
+        }
+      }
+
+      function func2() {
+        alert("DIV 2");
+      }
+    </script>
+    <details>
+      <summary>Definition and Usage</summary>
+      <pre>The <b style="color: red;">stopPropagation()</b>  method prevents propagation of the same event from being called.
+
+        Propagation means bubbling up to parent elements or capturing down to child elements.</pre>
+    </details>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <body onpageshow="myFunction(event)">
+    <h1>Hello World!</h1>
+
+    <p>
+      <strong>Note:</strong> The onpageshow event and the persisted property is
+      not supported in Internet Explorer 10 and earlier versions.
+    </p>
+
+    <script>
+      function myFunction(event) {
+        if (event.persisted) {
+          alert("The page was cached by the browser");
+        } else {
+          alert("The page was NOT cached by the browser");
+        }
+      }
+    </script>
+  </body>
+</html>

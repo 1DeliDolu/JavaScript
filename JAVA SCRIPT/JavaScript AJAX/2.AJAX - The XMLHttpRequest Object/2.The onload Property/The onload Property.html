@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <div id="demo">
+      <h2>The XMLHttpRequest Object</h2>
+      <button type="button" onclick="loadDoc()">Change Content</button>
+    </div>
+
+    <script>
+      function loadDoc() {
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          document.getElementById("demo").innerHTML = this.responseText;
+        };
+        xhttp.open("GET", "ajax_info.txt");
+        xhttp.send();
+      }
+    </script>
+    <details>
+        <summary>The onload Property</summary>
+        <pre>
+With the <b style="color: red;">XMLHttpRequest</b> object you can define a callback function to be executed when the request receives an answer.
+The function is defined in the <b style="color: red;">onload</b> property of the <b style="color: red;">XMLHttpRequest</b> object:
+        </pre>
+    </details>
+  </body>
+</html>

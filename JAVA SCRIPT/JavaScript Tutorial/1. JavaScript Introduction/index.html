@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Introduction</title>
+    <style>
+      #start {
+        background-color: antiquewhite;
+        border: 2px dotted black;
+        text-align: center;
+      }
+      #demo {
+        background-color: aqua;
+        border: 1px solid red;
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2 id="start">What Can JavaScript Do?</h2>
+    <button
+      type="button"
+      onclick='document.getElementById("start").innerHTML = "Hello JavaScript World!"'
+    >
+      Click Me!
+    </button>
+    <p id="demo">JavaScript can change HTML content.</p>
+
+    <button
+      type="button"
+      onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'
+    >
+      Click Me!
+    </button>
+  </body>
+</html>

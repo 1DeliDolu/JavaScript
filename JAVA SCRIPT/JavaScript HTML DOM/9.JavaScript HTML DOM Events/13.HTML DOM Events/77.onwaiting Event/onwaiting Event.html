@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      This example demonstrates how to assign an "onwaiting" event to a video
+      element.
+    </p>
+
+    <p>Play the video.</p>
+
+    <video controls onwaiting="myFunction()">
+      <source src="mov_bbb.mp4" type="video/mp4" />
+      <source src="mov_bbb.ogg" type="video/ogg" />
+      Your browser does not support HTML5 video.
+    </video>
+
+    <p>
+      Video courtesy of
+      <a href="https://www.bigbuckbunny.org/" target="_blank">Big Buck Bunny</a
+      >.
+    </p>
+
+    <script>
+      function myFunction() {
+        alert("Wait! I need to buffer the next frame");
+      }
+    </script>
+  </body>
+</html>

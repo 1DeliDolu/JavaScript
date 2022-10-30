@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <body ontouchstart="countTouches(event)" ontouchend="countTouches(event)">
+    <h1>The TouchEvent's targetTouches Property</h1>
+
+    <p>Touch any element on this page.</p>
+
+    <p>
+      The number of fingers touching the current element is
+      <span id="demo">0</span>.
+    </p>
+
+    <p>
+      The targetTouches property returns an array of touch objects, one for each
+      finger that is touching the same ELEMENT.
+    </p>
+
+    <p><strong>Note:</strong> Touch events works for touch devices only.</p>
+
+    <script>
+      function countTouches(event) {
+        var x = event.targetTouches.length;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </body>
+</html>

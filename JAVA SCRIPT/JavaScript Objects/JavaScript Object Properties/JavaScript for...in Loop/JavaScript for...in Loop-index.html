@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript for...in Loop</title>
+    <style>
+      .demo{
+        color: red;
+      }
+      .demo1{
+        color: green;
+      }
+      .demo2{
+        color: blue;
+      }
+      .demo3{
+        color: orange;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript for...in Loop</h1>
+    <h2>JavaScript Object Properties</h2>
+    <p>Looping object property values:</p>
+
+    <p id="demo"></p>
+<fieldset>
+  <legend>JavaScript for...in Loop</legend>
+  <pre>
+    The JavaScript for...in statement loops through the properties of an object.
+
+    <span class="demo">Syntax</span>
+      for (let <b class="demo2">variable</b>  in <b class="demo1">object</b> ) {
+      // code to be executed
+      }
+  </pre>
+  <pre>
+    The block of code inside of the for...in loop will be executed once 
+    for each property.
+
+    Looping through the properties of an object:
+    <span class="demo">const</span> <b class="demo3">person</b>  = {
+      <b class="demo2">fname</b>:<b class="demo3">"John"</b>,
+      <b class="demo2">lname</b>:<b class="demo3">"Doe"</b>,
+      <b class="demo2">age</b>:<b class="demo3">25</b>
+      }; 
+    
+    let <mark>txt</mark>  = "";
+    for (let x in person) {
+      txt += person[x] + " ";
+    }
+    
+    document.getElementById("demo").innerHTML = txt;
+     <p><code><</code>p id="demo1"<code>></code><</code>/p<code>></code></p> 
+  </pre>
+  <p id="demo1"></p>
+</fieldset>
+    <script>
+      const person = {
+        fname: "John",
+        lname: "Doe",
+        age: 25,
+      };
+
+      let txt = "";
+      for (let x in person) {
+        txt += person[x] + " ";
+      }
+
+      document.getElementById("demo").innerHTML = "<span class='demo'>"+ txt +"</span> years old.";
+      document.getElementById("demo1").innerHTML = "<span class='demo'>"+ txt +"</span> years old.";
+    
+    </script>
+  </body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript switch</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      let x = prompt("Please enter On or Off ");
+
+      switch (x) {
+        case "Off":
+          text = "Shalter is Off";
+          break;
+        case "On":
+          text = "Shalter is On";
+          break;
+        default:
+          text = "No value found";
+      }
+      document.getElementById("demo").innerHTML = text;
+    </script>
+  </body>
+</html>

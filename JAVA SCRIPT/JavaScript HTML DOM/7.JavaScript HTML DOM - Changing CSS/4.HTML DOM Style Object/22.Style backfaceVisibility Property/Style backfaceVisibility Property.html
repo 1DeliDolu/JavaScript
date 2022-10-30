@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        color: white;
+        -webkit-animation: mymove 2s infinite linear alternate; /* Chrome, Safari, Opera */
+        animation: mymove 2s infinite linear alternate;
+      }
+
+      /* Chrome, Safari, Opera */
+      @-webkit-keyframes mymove {
+        to {
+          -webkit-transform: rotateY(180deg);
+        }
+      }
+
+      @keyframes mymove {
+        to {
+          transform: rotateY(180deg);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Check/uncheck the checkbox to change the backface-visibility of the
+      animated DIV element:
+    </p>
+    <div id="myDIV">
+      <h1>Hello</h1>
+    </div>
+
+    <input
+      type="checkbox"
+      onclick="myFunction(this)"
+      checked
+    />backface-visibility
+
+    <script>
+      function myFunction(x) {
+        if (x.checked === true) {
+          document.getElementById("myDIV").style.WebkitBackfaceVisibility =
+            "visible"; // Code for Chrome, Safari, Opera
+          document.getElementById("myDIV").style.backfaceVisibility = "visible";
+        } else {
+          document.getElementById("myDIV").style.WebkitBackfaceVisibility =
+            "hidden"; // Code for Chrome, Safari, Opera
+          document.getElementById("myDIV").style.backfaceVisibility = "hidden";
+        }
+      }
+    </script>
+
+    <p>
+      <strong>Note:</strong> The backface-visibility and backfaceVisibility
+      properties are not supported in Internet Explorer 9 and earlier versions.
+    </p>
+  </body>
+</html>

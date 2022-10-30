@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Stringify Functions</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      .demo3 {
+        color: brown;
+      }
+      .demo4 {
+        color: blueviolet;
+      }
+      h1 {
+        text-align: center;
+      }
+      body {
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>JavaScript Display Objects</h1></header>
+    <h2>Stringify Arrays</h2>
+
+    <fieldset>
+      <legend>Stringify Arrays</legend>
+      <p>It is also possible to stringify JavaScript arrays:</p>
+      <pre>
+    <p><b class="demo">JSON.stringify</b>  can stringify arrays:</p>
+  <span class="demo2"><code><</code>script></span>
+    
+    <b class="demo">const</b> <b class="demo1">arr </b> = ["John", "Peter", "Sally", "Jane"];
+    document.getElementById("demo").innerHTML = JSON.stringify(<b class="demo1">arr</b>);
+  <span class="demo2"><code><</code>/script></span>
+  <span class="demo2"><code><</code>p <b style="color: black;">id="demo"</b><code>></code><code><</code>/p <code>></code></span>
+    </pre>
+    <p>The result will be a string following the JSON notation:</p>
+    
+    <p><span class="demo">Answer</span>: <span id="demo"></span></p>
+    </fieldset>
+    <script>
+      const arr = ["John", "Peter", "Sally", "Jane"];
+      document.getElementById("demo").innerHTML = JSON.stringify(arr);
+    </script>
+  </body>
+</html>

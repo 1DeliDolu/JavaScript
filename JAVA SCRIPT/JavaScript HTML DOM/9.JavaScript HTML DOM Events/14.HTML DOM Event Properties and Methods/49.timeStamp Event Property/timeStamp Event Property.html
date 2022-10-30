@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Event timeStamp</h1>
+
+    <p>
+      Click the button to get the number of milliseconds from this document was
+      loaded until the button was clicked.
+    </p>
+
+    <button onclick="myFunction(event)">Click me!</button>
+
+    <p>Time since this document was loaded: <span id="demo"></span></p>
+
+    <script>
+      function myFunction(event) {
+        var n = event.timeStamp;
+        document.getElementById("demo").innerHTML = n;
+      }
+    </script>
+  </body>
+</html>

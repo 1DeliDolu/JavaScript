@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Deleting Properties</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      .demo3 {
+        color: orange;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Deleting Properties</h1>
+    <h2>JavaScript Object Properties</h2>
+    <p>Deleting object properties.</p>
+
+    <p id="demo"></p>
+
+    <h1>delete person.age</h1>
+    <fieldset>
+      <legend>delete person.age</legend>
+      <p>Deleting object properties.</p>
+      <p>
+        The <b class="demo">delete</b> keyword deletes a property from an
+        object:
+      </p>
+      <pre>
+        <b class="demo">const</b>  person = {
+          firstname: "John",
+          lastname: "Doe",
+          age: 50,
+          eyecolor: "blue"
+        };
+  
+        <b class="demo">delete</b>  person.age;
+  
+        document.getElementById("demo").innerHTML =
+        person.firstname + " is " + person.age + " years old.";
+      </pre>
+      <p id="dem"></p>
+    </fieldset>
+
+    <h1>delete person["age"]</h1>
+    <fieldset>
+      <legend>delete person["age"]</legend>
+      <pre>
+        <b class="demo">const</b> person = {
+          firstname: "John",
+          lastname: "Doe",
+          age: 50,
+          eyecolor: "blue"
+        };
+        
+        <b class="demo">delete</b> person["age"];
+        
+        document.getElementById("demo").innerHTML =
+        person.firstname + " is " + person.age + " years old.";
+      </pre>
+      <p id="dmo"></p>
+    </fieldset>
+    <h1>Deleting Properties</h1>
+    <fieldset>
+      <legend>Deleting Properties</legend>
+      <pre>
+        The <b class="demo">delete</b> keyword deletes both the value of the property and the property itself.
+
+        After <b class="demo">delete</b>, the property cannot be used before it is added back again.
+
+        The <b class="demo">delete</b> operator is designed to be used on object properties. It has no effect on variables or functions.
+
+        The <b class="demo">delete</b> operator should not be used on predefined JavaScript object properties. It can crash your application.
+      </pre>
+    </fieldset>
+    <script>
+      const person = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      delete person.age;
+
+      document.getElementById("demo").innerHTML =
+        person.firstname +
+        " is <span style='color:red;'>" +
+        person.age +
+        "</span> years old.";
+      document.getElementById("dem").innerHTML =
+        person.firstname +
+        " is <span style='color:red;'>" +
+        person.age +
+        "</span> years old.";
+    </script>
+    <script>
+      const prson = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      delete prson["age"];
+
+      document.getElementById("dmo").innerHTML =
+        prson.firstname +
+        " is <b class='demo'>" +
+        prson.age +
+        "</b> years old.";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDiv {
+        border: 1px solid #ff0000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv" style="margin: 2cm 4cm 3cm 5cm">This is a div.</div>
+    <br />
+    <button type="button" onclick="myFunction()">Return margin</button>
+
+    <script>
+      function myFunction() {
+        alert(document.getElementById("myDiv").style.margin);
+      }
+    </script>
+  </body>
+</html>

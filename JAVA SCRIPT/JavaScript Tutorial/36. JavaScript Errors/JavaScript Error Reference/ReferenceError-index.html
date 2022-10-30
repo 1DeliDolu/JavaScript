@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ReferenceError</title>
+  </head>
+  <body>
+    <h1>JavaScript ReferenceError</h1>
+    <p>You can not use the value of a non-existing variable:</p>
+    <p id="demo"></p>
+    <script>
+      let x = 5;
+      try {
+        x = y + 1;
+        //y degiskeni tanimli degil ve deger atanmamis.bunda dolayi ReferenceError hatasi aliyoruz.
+        // let y = x + 1;
+      } catch (err) {
+        document.getElementById("demo").innerHTML = err.name;
+      }
+    </script>
+  </body>
+</html>

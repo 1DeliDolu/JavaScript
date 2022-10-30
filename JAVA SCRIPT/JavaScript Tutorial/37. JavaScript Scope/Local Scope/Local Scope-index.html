@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript Scope</h2>
+
+    <p><b>carName</b> is undefined outside myFunction():</p>
+
+    <p id="demo1"></p>
+
+    <p id="demo2"></p>
+
+    <script>
+      myFunction();
+      // code here can NOT use carName
+      function myFunction() {
+        let carName = "Volvo";
+        // code here CAN use carName
+        document.getElementById("demo1").innerHTML =
+          typeof carName + " " + carName;
+      }
+      // code here can NOT use carName
+      document.getElementById("demo2").innerHTML = typeof carName;
+    </script>
+  </body>
+</html>

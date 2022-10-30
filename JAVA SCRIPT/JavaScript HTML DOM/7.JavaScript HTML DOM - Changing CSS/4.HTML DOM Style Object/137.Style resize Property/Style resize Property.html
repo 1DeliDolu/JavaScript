@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        border: 1px solid black;
+        background-color: lightblue;
+        width: 270px;
+        overflow: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click the "Try it" button to make the DIV element resizable:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <p>
+        Click the button, then drag the bottom right corner to resize this DIV
+        element.
+      </p>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.resize = "both";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=#, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h2>Function Scope</h2>
+
+    <button onclick="myFunction()">Please press the button</button>
+    <p id="demo"></p>
+    <script>
+      function myFunction() {
+        const carName = "Volvo"; // Function Scope
+        document.getElementById("demo").innerHTML =
+          "Name of the car :" + carName;
+        document.getElementById("demo").style.color = red;
+      }
+    </script>
+  </body>
+</html>

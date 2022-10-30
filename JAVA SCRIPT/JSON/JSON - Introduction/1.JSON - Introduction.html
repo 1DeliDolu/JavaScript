@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON - Introduction</title>
+    <style>
+      span {
+        background-color: yellow;
+      }
+      p{
+        background-color: bisque;
+        position: relative;
+      }
+    </style>
+  </head>
+  <body>
+    <style contenteditable="true" style="display: block; background-color: aqua; font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+      .img2 {
+        float: right;
+        width: 200px;
+        border-radius: 50%;
+                
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+    </style>
+    <header>
+      <h1>JSON - Introduction</h1>
+    </header>
+    <fieldset>
+      <legend>JSON - Introduction</legend>
+      <pre>
+<p style="border: 1px black solid; " class="clearfix">
+<img class="img2 " src="img_json.jpg" alt="JSON img">
+JSON stands for JavaScript Object Notation
+JSON is a text format for storing and transporting data
+JSON is "self-describing" and easy to understand  
+    </p>
+
+It defines an object with 3 properties:
+
+name
+age
+car
+Each property has a value.
+
+If you parse the JSON string with a JavaScript program, you can access the data as an object:
+<b style="color: violet;">let</b> personName = obj.name;
+<b style="color: violet;">let</b> personAge = obj.age;
+        </pre>
+
+      <pre>
+What is JSON?
+    #JSON stands for JavaScript Object Notation
+    #JSON is a lightweight data-interchange format
+    #JSON is plain text written in JavaScript object notation
+    #JSON is used to send data between computers
+    #JSON is language independent *  
+<span>*
+The JSON syntax is derived from JavaScript object notation, but the JSON format is text only.
+Code for reading and generating JSON exists in many programming languages.</span>          
+        </pre>
+<pre>
+Why Use JSON?
+    #The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects.
+    #Since the format is text only, JSON data can easily be sent between computers, and used by any programming language.         
+    JavaScript has a built in function for converting JSON strings into JavaScript objects:
+            
+    <b style="color:red;">JSON.parse()</b>
+    JavaScript also has a built in function for converting an object into a JSON string:
+    <b style="color:red;">JSON.stringify()</b>
+
+<span>You can receive pure text from a server and use it as a JavaScript object.
+You can send a JavaScript object to a server in pure text format.
+You can work with data as JavaScript objects, with no complicated parsing and translations.</span>
+
+Storing Data
+When storing data, the data has to be a certain format, and regardless of where you choose to store it, text is always one of the legal formats.
+JSON makes it possible to store JavaScript objects as text.
+
+</pre>
+    </fieldset>
+  </body>
+</html>

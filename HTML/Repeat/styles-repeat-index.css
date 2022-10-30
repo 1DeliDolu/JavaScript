@@ -1,0 +1,38 @@
+body {
+    background-color: hsl(208, 14%, 66%);
+}
+
+h1{
+
+    text-align: center;
+    color: blue;
+}
+
+ li{
+    background-color: grey;
+    display: inline-block;
+    width: 23%;
+    width: 23%;
+    text-align: center;
+    float: left;
+    list-style-type: none;
+    padding: 10px;
+    border-right: 1px solid red;
+}
+#left{
+    border-left: 1px solid red;
+    
+}
+a {
+    text-decoration: none;
+  }
+  li:hover,a:hover{
+    background-color: bisque;
+    color: black;
+    font-size: larger;
+    box-shadow: -15px 20px rgba(rgb(34, 23, 23), rgb(18, 29, 18), rgb(72, 72, 98), 0.9);
+  }
+  p{
+    margin: 30px 40px;
+    padding:0 20px;
+  } 

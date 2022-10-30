@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        width: 100px;
+        height: 100px;
+        background: red;
+        position: relative;
+        animation: mymove 2s 2;
+      }
+
+      @keyframes mymove {
+        from {
+          left: 0px;
+        }
+        to {
+          left: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to let the DIV element keep the styles set by
+      the last keyframe: to {left:200px;}, when the animation is finished.
+    </p>
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.animationFillMode = "forwards";
+      }
+    </script>
+
+    <div id="myDIV"></div>
+  </body>
+</html>

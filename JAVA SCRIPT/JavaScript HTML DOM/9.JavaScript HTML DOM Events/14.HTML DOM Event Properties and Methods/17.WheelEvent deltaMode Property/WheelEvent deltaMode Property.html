@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<body onwheel="myFunction(event)">
+
+<h1>WheelEvent deltaMode Property</h1>
+
+<p>Scroll this page to see the length unit of the delta values property.</p>
+
+<p><strong>Note:</strong> 0 = pixels, 1 = lines, 2 = pages.</p>
+
+<p id="demo"></p>
+
+<script>
+function myFunction(event) {
+  var x = event.deltaMode;
+  document.getElementById("demo").innerHTML = x;
+}
+</script>
+
+</body>
+</html>

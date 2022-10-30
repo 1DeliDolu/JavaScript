@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to position the DIV element 100 pixels from the
+      left edge:
+    </p>
+    <p>
+      <strong>Note:</strong> If the position property is set to "static", the
+      left property has no effect.
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <h1>myDIV</h1>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.left = "100px";
+      }
+    </script>
+  </body>
+</html>

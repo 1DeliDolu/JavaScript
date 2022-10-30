@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Press a key on the keyboard in the input field to find out if the SHIFT
+      key was pressed or not.
+    </p>
+
+    <input type="text" onkeydown="isKeyPressed(event)" />
+
+    <p id="demo"></p>
+
+    <script>
+      function isKeyPressed(event) {
+        var x = document.getElementById("demo");
+        if (event.shiftKey) {
+          x.innerHTML = "The SHIFT key was pressed!";
+        } else {
+          x.innerHTML = "The SHIFT key was NOT pressed!";
+        }
+      }
+    </script>
+  </body>
+</html>

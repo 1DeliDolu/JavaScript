@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Click the button to display the current click count of the clicked button.
+    </p>
+
+    <button onclick="myFunction(event)">Click count:</button>
+
+    <input id="myInput" type="text" />
+
+    <script>
+      function myFunction(event) {
+        var x = event.detail;
+        document.getElementById("myInput").value = x;
+      }
+    </script>
+  </body>
+</html>

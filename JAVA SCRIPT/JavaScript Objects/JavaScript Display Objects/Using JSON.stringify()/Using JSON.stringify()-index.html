@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Using JSON.stringify()</title>
+  <style>
+    .demo{
+      color: red;
+    }
+    .demo1{
+      color: green;
+    }
+    .demo2{
+      color: blue;
+    }
+    .demo3{
+      color: brown;
+    }
+    h1{
+      text-align: center;
+    }
+    body{
+      background-color: bisque;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>JavaScript Objects</h1>
+  </header>
+
+  <h2>Using JSON.stringify()</h2>
+  <fieldset>
+    <legend>Using JSON.stringify()</legend>
+    Any JavaScript object can be stringified (converted to a string) with the 
+    JavaScript function <b class="demo">JSON.stringify()</b> :
+    <pre>
+    Display properties in JSON format:
+
+      <span class="demo2"><code><</code>script<code>></code></span>
+        const person = {
+          name: "John",
+          age: 30,
+          city: "New York"
+        };
+        
+        document.getElementById("demo").innerHTML = JSON.stringify(person);
+        <span class="demo1">
+          /*The result will be a string following the JSON notation:
+          {"name":"John","age":50,"city":"New York"}*/</span>
+          
+        <span><b class="demo">JSON.stringify()</b>  is included in JavaScript and supported in all major browsers.</span>
+      
+      <span class="demo2"><code><</code>/script<code>></code></span>
+      <span class="demo2"><code><</code>p<code> <b style="color: black;">id="demo"</b>></code><span class="demo2"><code><</code>/p<code>></code></span>  
+    </pre>
+    <p><span class="demo">Answer</span> : <span id="demo"></span></p>
+  </fieldset>
+
+  <script>
+    const person = {
+      name: "John",
+      age: 30,
+      city: "New York"
+    };
+    
+    document.getElementById("demo").innerHTML = JSON.stringify(person);
+    </script>
+    
+  
+</body>
+</html>

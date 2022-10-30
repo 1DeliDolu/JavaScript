@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <textarea rows="4" cols="50">
+Click me (or use the tab key) to assure that I get focus. Then, click the input field to make sure that it gets focus.</textarea
+    ><br /><br />
+
+    Input field: <input type="text" onfocus="getRelatedElement(event)" />
+
+    <p>
+      <strong>Note:</strong> The relatedTarget property of the FocusEvent object
+      is not supported in IE8 and earlier.
+    </p>
+
+    <script>
+      function getRelatedElement(event) {
+        alert(
+          "The related element that lost focus was: " +
+            event.relatedTarget.tagName
+        );
+      }
+    </script>
+  </body>
+</html>

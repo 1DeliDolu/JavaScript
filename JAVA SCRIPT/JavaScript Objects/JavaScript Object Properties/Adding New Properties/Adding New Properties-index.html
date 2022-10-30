@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Adding New Properties</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      h2 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>JavaScript Object Properties</h2>
+    <p>Add a new property to an existing object:</p>
+
+    <p id="demo"></p>
+    <h2>Adding New Properties</h2>
+    <fieldset>
+      <legend>Adding New Properties</legend>
+      <p>
+        You can add new properties to an existing object by simply giving it a
+        value. Assume that the person object already exists - you can then give
+        it new properties:
+      </p>
+      <pre>
+        You can add new properties to an existing object by simply giving it a value.
+
+        Assume that the person object already exists - you can then give it new properties:
+        
+        <b class="demo">const</b> person = {
+          firstname: "John",
+          lastname: "Doe",
+          age: 50,
+          eyecolor: "blue"
+        };
+        
+        person.<b class="demo1">nationality</b> =<b class="demo2">"English"</b> ;
+        document.getElementById("demo").innerHTML =
+        person.firstname + " is " + person.nationality + ".";</pre>
+      <p id="dem"></p>
+    </fieldset>
+    <script>
+      const person = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      person.nationality = "English";
+      document.getElementById("demo").innerHTML =
+        person.firstname +
+        " is <b class='demo'>" +
+        person.nationality +
+        "</b>.";
+
+      document.getElementById("dem").innerHTML =
+        person.firstname +
+        " is <b class='demo'>" +
+        person.nationality +
+        "</b>.";
+    </script>
+  </body>
+</html>

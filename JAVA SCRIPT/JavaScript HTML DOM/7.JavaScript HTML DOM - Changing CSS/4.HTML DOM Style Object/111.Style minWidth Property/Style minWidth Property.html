@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        width: 50%;
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to make sure that the DIV element's width never
+      is below 400 pixels:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <p>This DIV element has a defined width of 50%.</p>
+
+      <p>The width of this DIV element is 50% of its parent element.</p>
+
+      <p>
+        Try resizing the browser window to see that width of this DIV element
+        will grow/shrink along width the resizing.
+      </p>
+
+      <p>
+        But if you click the "Try it" button, yo will make sure that this DIV
+        element does not get below 400 pixels in width.
+      </p>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.minWidth = "400px";
+      }
+    </script>
+  </body>
+</html>

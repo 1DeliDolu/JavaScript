@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        position: absolute;
+        width: 300px;
+        height: 150px;
+        background-color: lightblue;
+        border: 1px solid black;
+      }
+
+      #DIV2 {
+        position: relative;
+        top: 130px;
+        left: 30px;
+        width: 300px;
+        height: 150px;
+        background-color: coral;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click the "Try it" button to see through the blue DIV element:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="DIV2">
+      <h1>Voila!</h1>
+    </div>
+
+    <div id="myDIV"></div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.opacity = "0.5";
+      }
+    </script>
+  </body>
+</html>

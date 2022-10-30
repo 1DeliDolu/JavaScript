@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="styles-repeat-index.css" />
+  </head>
+  <body>
+    <h1>Contact with Us</h1>
+    <ul>
+      <li id="left"><a href="about.html">Home</a></li>
+      <li><a href="index-repet-index.html">About</a></li>
+      <li><a href="product.html">Product</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <br />
+    <br />
+    <hr />
+    <center>
+      <form action="#"></form>
+      <p>You can sent us your idea. It is important for us</p>
+      <form>
+        <label for="fname"> First name:</label> <br />
+        <input
+          required
+          type="text"
+          id="fname"
+          name="fname"
+          placeholder="Please your first name"
+        />
+      </form>
+      <br />
+      <form>
+        <label for="lname"> Last name:</label><br />
+        <input
+          required
+          type="text"
+          id="lname"
+          name="lname"
+          placeholder="Please your last name"
+        />
+      </form>
+      <br />
+      <p>Please select your gender.</p>
+      <form>
+        <input type="radio" id="html" name="fav_language" value="HTML" />
+        <label for="html">HTML</label><br />
+        <input type="radio" id="css" name="fav_language" value="CSS" />
+        <label for="css">CSS</label><br />
+        <input
+          type="radio"
+          id="javascript"
+          name="fav_language"
+          value="JavaScript"
+        />
+        <label for="javascript">JavaScript</label>
+      </form>
+      <br />
+      <p>You can sent us your file too.</p>
+      <form>
+        <label for="myfile"> Select a file</label>
+        <input type="file" id="myfile" name="myfile" multiple />
+      </form>
+      <br />
+      <form action="/action_page.php">
+        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+        <label for="vehicle1"> I have a bike</label><br />
+        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+        <label for="vehicle2"> I have a car</label><br />
+        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+        <label for="vehicle3"> I have a boat</label><br /><br />
+        <form>
+          <label for="cars"> Please select your car: </label>
+          <select name="cars" id="cars">
+            <option value="volvo">Volvo</option>
+            <option value="saab">Saab</option>
+            <option value="opel">Opel</option>
+            <option value="audi">Audi</option>
+          </select>
+        </form>
+        <br />
+
+        <br />
+        <form>
+          <label for="idea"></label>
+          <textarea name="idea" id="idea" cols="50" rows="30">
+Please write here your idea</textarea
+          >
+        </form>
+        <input type="submit" value="Submit" />
+      </form>
+    </center>
+  </body>
+</html>

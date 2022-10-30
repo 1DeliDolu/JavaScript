@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>How to Display JavaScript Objects?</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      .demo3 {
+        color: brown;
+      }
+      h1 {
+        text-align: center;
+      }
+      body {
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Objects</h1>
+    <h2>How to Display JavaScript Objects?</h2>
+
+    <fieldset>
+      <legend>How to Display JavaScript Objects?</legend>
+      <p>
+        Displaying a JavaScript object will output
+        <b class="demo">[object Object]</b>.
+      </p>
+      <pre>
+        <span class="demo2"><code><</code>script<code>></code></span>
+          <b class="demo">const</b> <b class="demo1">person</b>= {
+            name: "John",
+            age: 30,
+            city: "New York"
+            };
+          
+          document.getElementById("<b class="demo3">demo</b>").innerHTML = <b class="demo1">person</b> ;
+        <span class="demo2"><code><</code>/script<code>></code></span>
+        <span class="demo2"><code><</code>p <span style="color:black ;">id="<b class="demo3">demo</b>"</span><code>></code></span><span class="demo2"><code><</code>/p<code>></code></span>
+      </pre>
+      <p><b class="demo">Answer</b> : <span id="demo" class="demo"></span></p>
+      <pre>
+        Some common solutions to display JavaScript objects are:
+          <b class="demo">*</b> Displaying the Object Properties by name
+          <b class="demo">*</b> Displaying the Object Properties in a Loop
+          <b class="demo">*</b> Displaying the Object using Object.values()
+          <b class="demo">*</b> Displaying the Object using JSON.stringify()
+        </pre>
+    </fieldset>
+
+    <script>
+      const person = {
+        name: "John",
+        age: 30,
+        city: "New York",
+      };
+
+      document.getElementById("demo").innerHTML = "<span>" + person + "</span>";
+    </script>
+  </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <body onhashchange="myFunction(event)">
+    <p>
+      Click the button to change the anchor part (hash) of the current URL to
+      #part5
+    </p>
+
+    <p>
+      The oldURL property returns the URL of the document we navigated away
+      from.
+    </p>
+
+    <p>The newURL property returns the URL we are navigating to.</p>
+
+    <button onclick="changePart()">Try it</button>
+
+    <p>
+      <strong>Note:</strong> These properties are not supported in Internet
+      Explorer.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      // Using the location.hash property to change the anchor part
+      function changePart() {
+        location.hash = "part5";
+      }
+
+      function myFunction() {
+        document.getElementById("demo").innerHTML =
+          "Previous URL: " + event.oldURL + "<br>New URL: " + event.newURL;
+      }
+    </script>
+  </body>
+</html>

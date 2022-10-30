@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      h1:before {
+        counter-increment: section;
+        content: "Section " counter(section) ". ";
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to set the counter-reset property of the BODY
+      element:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <h1>HTML Tutorials</h1>
+    <h1>JavaScript Tutorials</h1>
+    <h1>CSS Tutorials</h1>
+
+    <script>
+      function myFunction() {
+        document.body.style.counterReset = "section";
+      }
+    </script>
+  </body>
+</html>

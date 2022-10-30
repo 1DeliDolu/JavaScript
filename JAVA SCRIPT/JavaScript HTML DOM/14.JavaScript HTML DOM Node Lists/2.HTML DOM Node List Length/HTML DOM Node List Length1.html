@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            b{
+                color: red;
+            }
+            pre{
+                background-color: bisque;
+            }
+        </style>
+    </head>
+  <body>
+    <h2>JavaScript HTML DOM</h2>
+
+    <p>Hello World!</p>
+
+    <p>Hello Norway!</p>
+
+    <p>Click the button to change the color of all p elements.</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        const myNodelist = document.querySelectorAll("p");
+        for (let i = 0; i < myNodelist.length; i++) {
+          myNodelist[i].style.color = "red";
+        }
+      }
+    </script>
+
+    <details>
+        <summary>The Difference Between an HTMLCollection and a NodeList</summary>
+        <fieldset>
+            <legend>The Difference Between an HTMLCollection and a NodeList</legend>
+            <pre>
+A NodeList and an HTMLcollection is very much the same thing.
+Both are array-like collections (lists) of nodes (elements) extracted from a document. The nodes can be accessed by index numbers. The index starts at 0.
+Both have a length property that returns the number of elements in the list (collection).
+An HTMLCollection is a collection of document elements.
+NodeList is a collection of document nodes (element nodes, attribute nodes, and text nodes).
+HTMLCollection items can be accessed by their name, id, or index number.
+NodeList items can only be accessed by their index number.
+An HTMLCollection is always a live collection. Example: If you add a <li> element to a list in the DOM, the list in the HTMLCollection will also change.
+A NodeList is most often a static collection. Example: If you add a <li> element to a list in the DOM, the list in NodeList will not change.
+The <b>getElementsByClassName()</b>  and <b>getElementsByTagName()</b>  methods return a live HTMLCollection.                
+The <b>querySelectorAll()</b>  method returns a static NodeList.                
+The <b>childNodes</b> property returns a live NodeList.
+            </pre>
+        </fieldset>
+    </details>
+  </body>
+</html>

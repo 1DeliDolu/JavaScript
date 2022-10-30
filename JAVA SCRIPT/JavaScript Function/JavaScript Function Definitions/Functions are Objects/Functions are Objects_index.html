@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions are Objects</title>
+  </head>
+  <body>
+    <h1>JavaScript Functions</h1>
+    <h2>Functions are Objects</h2>
+    <p>
+      The arguments.length property returns the number of arguments received by
+      the function:
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(a, b) {
+        return arguments.length; //eger b sonra virgül c(,c) yazsa idik ve myFunction(4, 3, 4)de yazsaydik cevap 3 olurdu.
+      }
+      function myFunction1(a, b, c) {
+        return arguments.length;
+      }
+      document.getElementById("demo").innerHTML =
+        "first function : " +
+        myFunction(4, 3) +
+        ", second function: " +
+        myFunction1(2, 5, 8);
+    </script>
+  </body>
+</html>

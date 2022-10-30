@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>DOM touchstart Event</h1>
+
+    <p ontouchstart="myFunction()">
+      Touch this paragraph to trigger a function that will write "Hello World".
+    </p>
+
+    <p><strong>Note:</strong> This example is for touch devices only.</p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        document.getElementById("demo").innerHTML = "Hello World";
+      }
+    </script>
+  </body>
+</html>

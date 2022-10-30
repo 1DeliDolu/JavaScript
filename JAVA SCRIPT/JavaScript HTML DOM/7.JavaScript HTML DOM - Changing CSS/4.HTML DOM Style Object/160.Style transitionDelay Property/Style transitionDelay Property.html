@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style> 
+#myDIV {
+  border: 1px solid black;
+  background-color: lightblue;
+  width: 270px;
+  height: 200px;
+  overflow: auto;
+  transition: all 2s;
+}
+
+#myDIV:hover {
+  background-color: coral;
+  width: 570px;
+  height: 500px;
+  padding: 100px;
+  border-radius: 50px;
+}
+</style>
+</head>
+<body>
+
+<p>Mouse over the DIV element and it will change, both in color and size!</p>
+
+<p>Click the "Try it" button and mouse over the DIV element again. The changes will now wait 2 seconds before happening:</p>
+
+<button onclick="myFunction()">Try it</button>
+
+<div id="myDIV">
+  <h1>myDIV</h1>
+</div>
+
+<script>
+function myFunction() {
+  document.getElementById("myDIV").style.transitionDelay = "2s";
+}
+</script>
+
+</body>
+</html>

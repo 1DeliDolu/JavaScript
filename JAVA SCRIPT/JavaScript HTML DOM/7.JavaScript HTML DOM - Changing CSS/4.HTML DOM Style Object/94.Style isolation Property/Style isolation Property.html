@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .a {
+        background-color: lightgreen;
+      }
+      #b {
+        width: 250px;
+        height: 250px;
+      }
+      .c {
+        width: 100px;
+        height: 100px;
+        border: 1px solid black;
+        padding: 2px;
+        mix-blend-mode: difference;
+      }
+      #d {
+        isolation: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Change isolation with JavaScript</h1>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <p>
+      Click the "Try it" button to change the isolation property for the div
+      "d".
+    </p>
+
+    <div id="b" class="a">
+      <div id="d">
+        <div class="a c">div d</div>
+      </div>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("d").style.isolation = "isolate";
+      }
+    </script>
+
+    <p>
+      <b>Note:</b> Internet Explorer 11 and earlier versions do not support the
+      isolation property.
+    </p>
+  </body>
+</html>

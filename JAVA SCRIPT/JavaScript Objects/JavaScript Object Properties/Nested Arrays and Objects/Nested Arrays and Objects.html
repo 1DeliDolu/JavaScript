@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Nested Arrays and Objects</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      .demo1 {
+        color: green;
+      }
+      .demo2 {
+        color: blue;
+      }
+      h1 {
+        text-align: center;
+      }
+      fieldset{
+        background-color: beige;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Nested Arrays and Objects</h1>
+    </header>
+
+    <p>Values in objects can be arrays, and values in arrays can be objects:</p>
+    <fieldset>
+      <legend>Nested Arrays and Objects</legend>
+      <pre>
+        <b class="demo2"><code><</code>script<code>></code></b>
+            let x = "";
+            <b class="demo"> const</b> <b class="demo2">myObj</b>  = {
+                name: "John",
+                age: 30,
+                cars: [
+                {name:"Ford", models:["Fiesta", "Focus", "Mustang"]},
+                {name:"BMW", models:["320", "X3", "X5"]},
+                {name:"Fiat", models:["500", "Panda"]}
+                ]
+            }
+
+            for (let i in myObj.cars) {
+                x += "<code><</code>h2<code>></code> " + myObj.cars[i].name + "<code><</code>/h2<code>></code>";
+                for (let j in myObj.cars[i].models) {
+                x += myObj.cars[i].models[j] + "<code><</code>br<code>></code>";
+                }
+            }
+
+            document.getElementById("demo").innerHTML = x;
+        <b class="demo2"><code><</code>/script<code>></code></b>
+        </pre>
+      <p class="demo"><b>Answer</b>:<code><</code>p id="demo" <code>></code><code><</code>/p<code>></code></p>
+      <p id="demo"></p>
+    </fieldset>
+    <script>
+      let x = "";
+      const myObj = {
+        name: "John",
+        age: 30,
+        cars: [
+          { name: "Ford", models: ["Fiesta", "Focus", "Mustang"] },
+          { name: "BMW", models: ["320", "X3", "X5"] },
+          { name: "Fiat", models: ["500", "Panda"] },
+        ],
+      };
+
+      for (let i in myObj.cars) {
+        x += "<h2>" + myObj.cars[i].name + "</h2>";
+        for (let j in myObj.cars[i].models) {
+          x += myObj.cars[i].models[j] +", ";
+        }
+      }
+
+      document.getElementById("demo").innerHTML = x;
+    </script>
+
+    <h1>Property Attributes</h1>
+    <fieldset>
+      <legend>Property Attributes</legend>
+    <pre>
+        All properties have a name. In addition they also have a value.
+
+        The value is one of the property's attributes.
+            
+        Other attributes are: enumerable, configurable, and writable.
+            
+        These attributes define how the property can be accessed 
+        (is it readable?, is it writable?)
+            
+        In JavaScript, all attributes can be read, 
+        but only the value attribute can be changed 
+        (and only if the property is writable).
+            
+        ( ECMAScript 5 has methods for both getting and 
+        setting all property attributes)
+        </pre
+      >
+    </fieldset>
+    <h1>Prototype Properties</h1>
+    <fieldset>
+      <legend>Prototype Properties</legend>
+      <pre>
+        JavaScript objects inherit the properties of their prototype.
+
+        The <b class="demo">delete</b> keyword does not delete inherited properties, 
+        but if you delete a prototype property, 
+        it will affect all objects inherited from the prototype.</pre>
+    </fieldset>
+  </body>
+</html>

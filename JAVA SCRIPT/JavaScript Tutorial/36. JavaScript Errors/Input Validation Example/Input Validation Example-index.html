@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>JavaScript try catch</h2>
+
+    <p>Please input a number between 5 and 10:</p>
+
+    <input id="input-id" type="text" />
+    <button type="button" onclick="myFunction()">Test Input</button>
+    <p id="parag-id"></p>
+
+    <script>
+      function myFunction() {
+        const message = document.getElementById("parag-id");
+        message.innerHTML = "";
+        let x = document.getElementById("input-id").value;
+        try {
+          if (x == "") throw "empty";
+          if (isNaN(x)) throw "not a number";
+          x = Number(x); // girilen degerin typeof string oldugu icin onu number ceviyor.
+          if (x < 5) throw "too low";
+          if (5 <= x && x <= 10) throw "ok";
+          if (x > 10) throw "too high";
+        } catch (err) {
+          message.innerHTML = "Input is " + err;
+        }
+      }
+    </script>
+  </body>
+</html>

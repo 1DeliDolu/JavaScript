@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        border: 1px solid #ff0000;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="myDiv">This is some text.</div>
+    <br />
+    <button type="button" onclick="changeMargin()">
+      Change bottom margin of the div element
+    </button>
+    <br />
+    <br />
+
+    <div id="myDiv2">This is some text.</div>
+    <br />
+    <button type="button" onclick="changePadding()">
+      Change bottom padding of the div element
+    </button>
+
+    <script>
+      function changeMargin() {
+        document.getElementById("myDiv").style.marginBottom = "100px";
+      }
+
+      function changePadding() {
+        document.getElementById("myDiv2").style.paddingBottom = "100px";
+      }
+    </script>
+  </body>
+</html>

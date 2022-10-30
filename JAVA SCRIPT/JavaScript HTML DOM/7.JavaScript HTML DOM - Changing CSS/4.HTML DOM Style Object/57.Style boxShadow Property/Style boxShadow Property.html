@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: coral;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to set the boxShadow property of the DIV
+      element:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <h1>myDIV</h1>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.boxShadow =
+          "10px 20px 30px lightblue";
+      }
+    </script>
+  </body>
+</html>

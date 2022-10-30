@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Global Object</title>
+  </head>
+  <body>
+    <h1>The Global Object</h1>
+    <h2>JavaScript Functions</h2>
+
+    <p>
+      In HTML the value of <b>this</b>, in a global function, is the window
+      object.
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      let x = myFunction();
+      function myFunction() {
+        return this;
+      }
+      document.getElementById("demo").innerHTML = x;
+    </script>
+  </body>
+</html>

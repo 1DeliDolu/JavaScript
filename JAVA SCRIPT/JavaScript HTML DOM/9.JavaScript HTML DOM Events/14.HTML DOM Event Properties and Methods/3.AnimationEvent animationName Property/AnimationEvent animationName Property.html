@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        margin: 25px;
+        width: 550px;
+        height: 100px;
+        background: orange;
+        position: relative;
+        font-size: 25px;
+        -webkit-animation-name: mymove; /* Chrome, Safari, Opera */
+        -webkit-animation-duration: 5s; /* Chrome, Safari, Opera */
+        animation-name: mymove;
+        animation-duration: 5s;
+      }
+
+      /* Chrome, Safari, Opera */
+      @-webkit-keyframes mymove {
+        from {
+          top: 0px;
+        }
+        to {
+          top: 200px;
+        }
+      }
+
+      @keyframes mymove {
+        from {
+          top: 0px;
+        }
+        to {
+          top: 200px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      This example uses the addEventListener() method to attach an
+      "animationstart" event to a DIV element.
+    </p>
+
+    <p>
+      The animationName property returns the animation name used in this
+      animation:
+    </p>
+
+    <p>
+      <strong>Note:</strong> The animationName property is not supported in IE9
+      and earlier versions.
+    </p>
+
+    <div id="myDIV"></div>
+
+    <script>
+      var x = document.getElementById("myDIV");
+
+      // Code for Chrome, Safari and Opera
+      x.addEventListener("webkitAnimationStart", myStartFunction);
+
+      // Standard syntax
+      x.addEventListener("animationstart", myStartFunction);
+
+      function myStartFunction(event) {
+        this.innerHTML = "The animation-name is: " + event.animationName;
+      }
+    </script>
+  </body>
+</html>

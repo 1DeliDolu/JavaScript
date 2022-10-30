@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AJAX PHP Example</title>
+    <style>
+      .demo {
+        color: red;
+      }
+      span{
+        color: blue;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>The XMLHttpRequest Object</h2>
+    <h3>Start typing a name in the input field below:</h3>
+
+    <p>Suggestions: <span id="txtHint"></span></p>
+    <p>
+      First name: <input type="text" id="txt1" onkeyup="showHint(this.value)" />
+    </p>
+
+    <script>
+      function showHint(str) {
+        if (str.length == 0) {
+          document.getElementById("txtHint").innerHTML = "";
+          return;
+        }
+        const xhttp = new XMLHttpRequest();
+        xhttp.onload = function () {
+          document.getElementById("txtHint").innerHTML = this.responseText;
+        };
+        xhttp.open("GET", "gethint.php?q=" + str);
+        xhttp.send();
+      }
+    </script>
+    <details>
+      <summary></summary>
+      <fieldset>
+        <legend>Example Explained</legend>
+        <pre>
+In the example above, when a user types a character in the input field, 
+a function called <b class="demo">showHint()</b>  is executed.
+
+The function is triggered by the <b class="demo">onkeyup</b>  event.
+            
+Here is the code:
+
+<b style="background-color: bisque;"><span><code><</code><code>script</code>></span>
+function showHint(str) {
+    if (str.length == 0) {
+      document.getElementById("txtHint").innerHTML = "";
+      return;
+    }
+    const xhttp = new XMLHttpRequest();
+    xhttp.onload = function () {
+      document.getElementById("txtHint").innerHTML = this.responseText;
+    };
+    xhttp.open("GET", "gethint.php?q=" + str);
+    xhttp.send();
+  }
+  <span><code><</code><code>/script</code>></span></b>
+
+Code explanation:
+
+First, check if the input field is empty (str.length == 0). If it is, clear the content of the txtHint placeholder and exit the function.
+
+However, if the input field is not empty, do the following:
+
+Create an XMLHttpRequest object
+Create the function to be executed when the server response is ready
+Send the request off to a PHP file (gethint.php) on the server
+Notice that q parameter is added gethint.php?q="+str
+The str variable holds the content of the input field
+        </pre>
+      </fieldset>
+    </details>
+  </body>
+</html>

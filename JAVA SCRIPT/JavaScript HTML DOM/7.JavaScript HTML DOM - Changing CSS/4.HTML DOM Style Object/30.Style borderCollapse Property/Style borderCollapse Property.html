@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <table id="myTable" border="1">
+      <tr>
+        <th>Month</th>
+        <th>Savings</th>
+      </tr>
+      <tr>
+        <td>January</td>
+        <td>$100</td>
+      </tr>
+      <tr>
+        <td>February</td>
+        <td>$150</td>
+      </tr>
+    </table>
+    <br />
+
+    <button type="button" onclick="myFunction()">Collapse border</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myTable").style.borderCollapse = "collapse";
+      }
+    </script>
+  </body>
+</html>

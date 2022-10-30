@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FORM</title>
+    <style>
+      body {
+        background-color: rgb(23, 113, 168);
+        text-align: center;
+      }
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Form Text Field and Label Element</h1>
+    <form
+      action="#"
+      target="_parent"
+      autocomplete="off"
+      method="get"
+      name="myForm"
+    >
+      <!--burada bilgiler otomatik dolor-->
+      <!--The response is displayed in the parent frame ve asadiklere farkli deger verdim mantikli degil-->
+      <label for="fname">First Name:</label>
+      <input
+        type="text"
+        id="fname"
+        name="fname"
+        value=""
+        placeholder="Please your first name"
+      />
+      <br />
+      <label for="lname">Last Name:</label>
+      <input
+        type="text"
+        id="lname"
+        name="lname"
+        value=""
+        placeholder="Please your last name"
+      />
+      <br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+    <h1>Radio Buttons</h1>
+    <p>Choose your favorite Web language:</p>
+    <form action="#" target="_blank">
+      <!--The response is displayed in a new window or tab-->
+      <input type="radio" name="fav_language" id="html" value="HTML" />
+      <label for="html">HTML</label><br />
+      <input type="radio" name="fav_language" id="css" value="CSS" />
+      <label for="css">CSS</label><br />
+      <input
+        type="radio"
+        name="fav_language"
+        id="javascript"
+        value="JavaScript"
+      />
+      <label for="javacript">JavaScript</label><br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+    <h1>Checkboxes</h1>
+    <form action="#" target="_self">
+      <!--The response is displayed in the current window-->
+      <p>What do you have?</p>
+      <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike" />
+      <label for="vehicle1"> I have a bike</label><br />
+      <input type="checkbox" id="vehicle2" name="vehicle2" value="Car" />
+      <label for="vehicle2">I have a car</label><br />
+      <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat" />
+      <label for="vehicle3">I have a bot</label><br />
+      <input
+        checked
+        type="checkbox"
+        id="vehicle4"
+        name="vehicle4"
+        value="Nothing"
+      />
+      <label for="vehicle4"> I have no vehicle</label><br />
+      <input type="submit" value="Submit" />
+      <input type="reset" value="Reset" />
+    </form>
+    <form action="#">
+      <h1>The <mark>select</mark> Element</h1>
+      <p>Which car do you want to have?</p>
+      <label for="cars"> Choose a car:</label>
+      <select id="cars" name="cars" size="4" multiple>
+        <!--burada multiple ile coklu secim yapiyoruz-->
+        <!--Ilk üc eleman gözükür bunu size="3" ayarliyor-->
+        <option value="cars">........</option>
+        <option value="Volvo">Volvo</option>
+        <option value="Saab">Saab</option>
+        <option value="Fiat">Fiat</option>
+        <option value="Audi">Audi</option>
+        <option value="Toyoto">Toyoto</option>
+        <option value="Ford">Ford</option>
+        <option value="Other">Other</option>
+
+        <!--her zaman bu üstte gözükecek-->
+      </select>
+      <input type="submit" name="submit" value="Submit" />
+      <input type="reset" name="reset" value="Reset" />
+    </form>
+
+    <h1>The <mark>textarea</mark> Element</h1>
+    <p>The textarea element defines a multi-line input field.</p>
+
+    <form action="/#">
+      <textarea name="message" rows="10" cols="30">
+The cat was playing in the garden.</textarea
+      >
+      <br /><br />
+      <input type="submit" />
+    </form>
+    <h1>The <mark>button</mark> Element</h1>
+    <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+
+    <h1>The <mark>fieldset und legend </mark> Elements</h1>
+    <form action="#">
+      <fieldset>
+        <legend>Personal:</legend>
+        <label for="fname">First name:</label><br />
+        <input
+          type="text"
+          id="fname"
+          name="fname"
+          value=""
+          placeholder="Your first name"
+        /><br />
+        <label for="lname">Last name:</label><br />
+        <input
+          type="text"
+          id="lname"
+          name="lname"
+          value=""
+          placeholder="Your last name"
+        /><br /><br />
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+    <h1>The <mark>datalist</mark> Element</h1>
+    <p>
+      The datalist element specifies a list of pre-defined options for an input
+      element.
+    </p>
+
+    <form action="#">
+      <input list="browsers" name="browser" />
+      <datalist id="browsers">
+        <option value="Internet Explorer"></option>
+        <option value="Firefox"></option>
+        <option value="Chrome"></option>
+        <option value="Opera"></option>
+        <option value="Safari"></option>
+      </datalist>
+
+      <input type="submit" />
+    </form>
+
+    <p>
+      <b>Note:</b> The datalist tag is not supported in Safari prior version
+      12.1.
+    </p>
+    <h1>The Element<mark> output</mark>Element</h1>
+    <p>The output element represents the result of a calculation.</p>
+
+    <form action="#" oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+      0
+      <input type="range" id="a" name="a" value="50" />
+      100 +
+      <input type="number" id="b" name="b" value="50" />
+      =
+      <output name="x" for="a b"></output>
+      <br /><br />
+      <input type="submit" />
+    </form>
+
+    <p>
+      <strong>Note:</strong> The output element is not supported in Edge prior
+      version 13.
+    </p>
+    <h1></h1>
+    <form action="#">
+      <fieldset>
+        <legend>Username and Password:</legend>
+        <label for="username">Username:</label><br />
+        <input type="text" id="username" name="username" /><br />
+        <label for="pwd">Password:</label><br />
+        <input type="password" id="pwd" name="pwd" /><br /><br />
+        <input type="submit" value="Submit" />
+        <input type="submit" value="Submit" />
+        <input type="reset" />
+      </fieldset>
+    </form>
+
+    <h1>Input Type <mark>Color</mark></h1>
+    <p>
+      The <strong>input type="color"</strong> is used for input fields that
+      should contain a color.
+    </p>
+
+    <form action="#">
+      <fieldset>
+        <legend>Color</legend>
+        <label for="favcolor">Select your favorite color:</label>
+        <input type="color" id="favcolor" name="favcolor" value="#ff0000" />
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+
+    <p>
+      <b>Note:</b> type="color" is not supported in Internet Explorer 11 or
+      Safari 9.1 (or earlier).
+    </p>
+
+    <h1>Input Type <mark>Date </mark></h1>
+
+    <p>Use the min and max attributes to add restrictions to dates:</p>
+
+    <form action="#">
+      <fieldset>
+        <legend>Date</legend>
+
+        <label for="datemin">Enter a date after 2000-01-01:</label>
+        <input
+          type="date"
+          id="datemin"
+          name="datemin"
+          min="2000-01-02"
+        /><br /><br />
+
+        <label for="datemax">Enter a date before 1980-01-01:</label>
+        <input
+          type="date"
+          id="datemax"
+          name="datemax"
+          max="1979-12-31"
+        /><br /><br />
+
+        <input type="submit" value="Submit" />
+      </fieldset>
+    </form>
+
+    <p>
+      <strong>Note:</strong> type="date" is not supported in Internet Explorer
+      11 or prior Safari 14.1.
+    </p>
+  </body>
+</html>

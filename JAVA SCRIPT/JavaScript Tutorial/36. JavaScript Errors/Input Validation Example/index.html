@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Errors</title>
+  </head>
+  <body>
+    <input type="text" id="data" />
+    <button type="button" onClick="errors()">Click</button>
+    <p id="result"></p>
+    <script>
+      function errors() {
+        var message, inputValue;
+        inputValue.getElementbyId("data").value;
+        message = document.getElementById("result");
+        message.innerHTML = "";
+        try {
+          if (inputValue == "") {
+            throw "Bu alani bos birakamazsiniz";
+          }
+          if (isNaN(inputValue)) {
+            throw " Bu alana sadece sayi girmelisiniz";
+
+            inputValue = Number(inputValue);
+          }
+          if (inputValue < 5) {
+            throw " Girilen sayi 5'ten kücük olamaz";
+          } else if (inputValue > 15) {
+            throw "Girilen sayi 15'ten büyük olamaz";
+          }
+        } catch (err) {
+          message.innerHTML = err;
+        } finally {
+          document.getElementById("data").value = "";
+        }
+      }
+    </script>
+  </body>
+</html>

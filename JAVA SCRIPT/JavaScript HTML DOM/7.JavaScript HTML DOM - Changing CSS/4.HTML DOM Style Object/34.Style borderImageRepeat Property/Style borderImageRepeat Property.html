@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      div {
+        background-color: lightgrey;
+        border: 30px solid transparent;
+        border-image: url("border.png") 30 30 30 30 1 1 1 1 0 stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="main">
+      <p>This is a DIV element that uses an image as a border.</p>
+    </div>
+
+    <p>
+      Click the "Try it" button to set the value of the borderImageRepeat
+      property to "round".
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+      function myFunction() {
+        document.getElementById("main").style.borderImageRepeat = "round";
+      }
+    </script>
+
+    <p>
+      <b>Note:</b>Internet Explorer 10 and earlier versions do not support this
+      property.
+    </p>
+  </body>
+</html>

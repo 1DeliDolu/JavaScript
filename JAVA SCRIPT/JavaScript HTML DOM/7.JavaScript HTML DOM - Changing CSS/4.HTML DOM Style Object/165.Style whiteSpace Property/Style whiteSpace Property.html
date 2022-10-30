@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        width: 400px;
+        height: 200px;
+        background-color: lightblue;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to make sure that the text inside the DIV
+      element never wraps:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy
+      nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat.
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.whiteSpace = "nowrap";
+      }
+    </script>
+  </body>
+</html>

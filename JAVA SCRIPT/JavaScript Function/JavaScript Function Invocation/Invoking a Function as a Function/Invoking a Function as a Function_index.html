@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Invoking a Function as a Function</title>
+  </head>
+  <body>
+    <h1>JavaScript Function Invocation</h1>
+    <h2>Invoking a Function as a Function</h2>
+    <p>
+      The global function (myFunction) returns the product of the arguments (a
+      ,b):
+    </p>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(a, b) {
+        return a * b;
+      }
+      document.getElementById("demo").innerHTML = myFunction(10, 2);
+    </script>
+  </body>
+</html>

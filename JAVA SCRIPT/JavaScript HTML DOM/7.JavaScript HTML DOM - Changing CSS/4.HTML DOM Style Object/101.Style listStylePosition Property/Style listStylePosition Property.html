@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      li {
+        background-color: lightblue;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click the "Try it" button to change the position of the list:</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <ul id="myUL">
+      <li>Emil</li>
+      <li>Tobias</li>
+      <li>Linus</li>
+    </ul>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myUL").style.listStylePosition = "inside";
+      }
+    </script>
+  </body>
+</html>

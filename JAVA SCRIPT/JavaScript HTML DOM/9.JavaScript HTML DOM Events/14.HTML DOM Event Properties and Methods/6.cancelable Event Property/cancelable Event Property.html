@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p>
+      Click the button to find out if the onclick event is a cancelable event.
+    </p>
+
+    <button onclick="myFunction(event)">Try it</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction(event) {
+        var x = event.cancelable;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+    <details>
+      <summary>Definition and Usage</summary>
+      <pre>
+The cancelable event property returns a Boolean value indicating whether or not an event is a cancelable event.
+The event is cancelable if it is possible to prevent the events default action.
+To cancel an event, use the preventDefault() method.
+
+
+        </pre
+      >
+    </details>
+  </body>
+</html>

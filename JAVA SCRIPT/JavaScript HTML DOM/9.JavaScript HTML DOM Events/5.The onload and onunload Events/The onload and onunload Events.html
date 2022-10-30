@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>The onload and onunload Events</title>
+    <style>
+      b {
+        color: red;
+      }
+      pre {
+        background-color: bisque;
+      }
+    </style>
+  </head>
+  <body onload="checkCookies()">
+    <h2>JavaScript HTML Events</h2>
+
+    <p id="demo"></p>
+
+    <script>
+      function checkCookies() {
+        var text = "";
+        if (navigator.cookieEnabled == true) {
+          text = "Cookies are enabled.";
+        } else {
+          text = "Cookies are not enabled.";
+        }
+        document.getElementById("demo").innerHTML = text;
+      }
+    </script>
+    <fieldset>
+      <legend>The onload and onunload Events</legend>
+      <pre>
+      The <b>onload</b> and <b>onunload</b> events are triggered when the user
+      enters or leaves the page. 
+      The <b></b>onload event can be used to check
+      the visitor's browser type and browser version, and load the proper
+      version of the web page based on the information. 
+      The <b>onload</b> and <b>onunload</b> events can be used to deal with cookies.
+    </pre>
+    </fieldset>
+  </body>
+</html>

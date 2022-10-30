@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Accessing JavaScript Properties</title>
+    <style>
+      span {
+        color: red;
+      }
+      .demo {
+        color: blue;
+      }
+      .demo1 {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Accessing JavaScript Properties</h1>
+    <h2>JavaScript Object Properties</h2>
+    
+    <p>Accessing JavaScript Properties</p>
+    <p id="demo"></p>
+    <fieldset>
+      <legend>objectName.property // person.age</legend>
+      <p>Access a property with <span>objectName</span>.<span class="demo">property</span>:</p>
+      <pre>
+        1. <span>objectName</span>.<span class="demo">property</span>// person.age
+          const person = {
+            firstname: "John",
+            lastname: "Doe",
+            age: 50,
+            eyecolor: "blue"
+          };
+      
+      document.getElementById("demo").innerHTML =
+      <span>person</span>.firstname + " is " + 
+      <span>person</span>.age + " years old.";
+    </pre>
+      <p id="dem"></p>
+    </fieldset>
+    <p>or</p>
+    <fieldset>
+      <legend>objectName["property"] // persn["age"]</legend>
+      <p>Access a property with objectName["property"]:</p>
+      <pre>
+        2. <span>objectName</span>["<span class="demo">property</span>"]
+           // persn["age"]
+        <span>const</span> prson = {
+          firstname: "John",
+          lastname: "Doe",
+          age: 50,
+          eyecolor: "blue"
+        };
+        document.getElementById("dmo").innerHTML =<b>persn</b>["firstname"]
+         + " is " +<b>persn</b>["age"] + " years old.";
+      </pre>
+      <p id="dmo"></p>
+    </fieldset>
+    <fieldset>
+      <legend>objectName[expression] // x = "age"; person1[x]</legend>
+      <p>Acces a property with objectName[<b class="demo1">x</b>]</p>
+      <pre>
+        3. objectName[expression] // x = "age"; person1[x]
+        <span>const</span> person1 = {
+          <b>firstname</b>: "John",
+          
+         <b>lastname</b>: "Doe",
+         <b>age</b>: 50,
+         <b>eyecolor</b>: "blue"
+        };
+        let x= "firstname";
+        let y= "age";
+        document.getElementById("demo").innerHTML = 
+        person1[<b class="demo1">x</b>] + " is " + person1[<b class="demo1">y</b>] + " years old.";
+      </pre>
+      <p id="demo1"></p>
+    </fieldset>
+
+    <script>
+      const person = {
+        firstName: "John",
+        lastNMame: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      document.getElementById("demo").innerHTML =
+        person.firstName +
+        " is <span>" +
+        person.age +
+        "</span> years old and hat <span style='color:blue'> " +
+        person.eyecolor +
+        "</span> eye color.";
+      document.getElementById("dem").innerHTML =
+        person.firstName + " is " + person.age + " years old.";
+    </script>
+    <!--##########################################################-->
+    <script>
+      const persn = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+
+      document.getElementById("dmo").innerHTML =
+        persn["firstname"] + " is " + persn["age"] + " years old.";
+    </script>
+
+    <!--##########################################################-->
+    <script>
+      const person1 = {
+        firstname: "John",
+        lastname: "Doe",
+        age: 50,
+        eyecolor: "blue",
+      };
+      let x = "firstName";
+      let y = "age";
+
+      document.getElementById("demo1").innerHTML =
+        person[x] + " is " + person[y] + " years old.";
+    </script>
+  </body>
+</html>

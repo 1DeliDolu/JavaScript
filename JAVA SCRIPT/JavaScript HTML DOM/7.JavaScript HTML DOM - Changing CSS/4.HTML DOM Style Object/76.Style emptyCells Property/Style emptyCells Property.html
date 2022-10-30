@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      table,
+      td {
+        border: 1px solid black;
+        margin: 15px;
+      }
+    </style>
+  </head>
+  <body>
+    <p>Click the button to "hide" or "show" empty table-cells:</p>
+
+    <button type="button" onclick="hide()">Hide empty cells</button>
+    <button type="button" onclick="show()">Show empty cells</button>
+
+    <table id="myTable">
+      <tr>
+        <td>Peter</td>
+        <td>Griffin</td>
+      </tr>
+      <tr>
+        <td>Lois</td>
+        <td></td>
+      </tr>
+    </table>
+
+    <script>
+      function hide() {
+        document.getElementById("myTable").style.emptyCells = "hide";
+      }
+
+      function show() {
+        document.getElementById("myTable").style.emptyCells = "show";
+      }
+    </script>
+  </body>
+</html>

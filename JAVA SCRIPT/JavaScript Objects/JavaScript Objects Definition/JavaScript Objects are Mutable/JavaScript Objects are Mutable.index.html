@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JavaScript Objects are Mutable</title>
+    <style>
+      span {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>JavaScript Objects are Mutable</h1>
+    <h2>JavaScript Objects</h2>
+    <p>JavaScript objects are mutable.</p>
+    <p>
+      Any changes to a copy of an object will also change the original object:
+    </p>
+
+    <p id="dmo"></p>
+    <fieldset>
+      <legend>JavaScript Objects are Mutable</legend>
+      <pre>
+        Objects are mutable: They are addressed by reference, not by value.
+            If person is an object, the following statement will not create
+            a copy of person:</pre
+      >
+      <p><span>const</span> x = person;</p>
+      <!--Will not create a copy of person.-->
+      <pre>
+        The object x is not a copy of person. 
+              It is person. Both x and person are the same object.
+
+              Any changes to x will also change person, 
+              because x and person are the same object.
+            </pre
+      >
+
+      <p>
+        Any changes to a copy of an object will also change the original object:
+      </p>
+      <pre>
+                <span>const</span><b> person</b> = {
+                firstName:"John",
+                lastName:"Doe",
+                age:50, eyeColor:"blue"
+              }
+              
+              <span>const</span><b> x</b> = <b>person</b> ;
+              x.age = <b>10</b> ;
+            </pre>
+    </fieldset>
+
+    <script>
+      const person1 = {
+        firstName: "John",
+        lastName: "Doe",
+        age: 50,
+        eyeColor: "blue",
+      };
+
+      const x = person1;
+      x.age = 10;
+
+      document.getElementById("dmo").innerHTML =
+        person1.firstName +
+        " is <span style='color:red'>" +
+        person1.age +
+        "</span> years old."; //burada yeni atanan yasi kirmizi yaptik.
+    </script>
+  </body>
+</html>

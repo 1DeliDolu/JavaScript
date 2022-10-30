@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Keyboard Event</h1>
+<h2>The keyCode Property</h2>
+
+<p>The keyCode property is deprecated, use the which property instead.</p>
+
+<input type="text" size="40" onkeypress="myFunction(event)">
+
+<p>"The Unicode value is:"</p>
+<p id="demo"></p>
+
+<script>
+function myFunction(event) {
+  let unicode= event.which;
+  document.getElementById("demo").innerHTML = unicode;
+}
+</script>
+<details>
+    <summary>KeyboardEvent keyCode</summary>
+</details>
+
+</body>
+</html>
+

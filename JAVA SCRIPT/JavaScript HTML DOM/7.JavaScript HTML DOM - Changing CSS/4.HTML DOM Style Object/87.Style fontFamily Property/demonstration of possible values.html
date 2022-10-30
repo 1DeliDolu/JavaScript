@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="demo">This is a paragraph.</p>
+
+    <select onchange="myFunction(this);" size="13">
+      <option>Georgia</option>
+      <option>Palatino Linotype</option>
+      <option>Book Antiqua</option>
+      <option>Times New Roman</option>
+      <option>Arial</option>
+      <option>Helvetica</option>
+      <option>Arial Black</option>
+      <option>Impact</option>
+      <option>Lucida Sans Unicode</option>
+      <option>Tahoma</option>
+      <option>Verdana</option>
+      <option>Courier New</option>
+      <option>Lucida Console</option>
+    </select>
+
+    <script>
+      function myFunction(selectTag) {
+        var listValue = selectTag.options[selectTag.selectedIndex].text;
+        document.getElementById("demo").style.fontFamily = listValue;
+      }
+    </script>
+  </body>
+</html>

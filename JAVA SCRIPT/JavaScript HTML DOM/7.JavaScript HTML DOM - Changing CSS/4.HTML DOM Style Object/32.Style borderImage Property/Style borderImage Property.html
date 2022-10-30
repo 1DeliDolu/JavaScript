@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #myDIV {
+        border: 15px solid transparent;
+        width: 250px;
+        padding: 10px 20px;
+        -webkit-border-image: url(border.png) 30 30 stretch; /* Safari 5 */
+        -o-border-image: url(border.png) 30 30 stretch; /* Opera 12 */
+        border-image: url(border.png) 30 30 stretch;
+      }
+    </style>
+  </head>
+  <body>
+    <p>
+      Click the "Try it" button to change the border-image property of the DIV
+      element:
+    </p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <div id="myDIV">
+      <h1>Hello</h1>
+    </div>
+
+    <script>
+      function myFunction() {
+        document.getElementById("myDIV").style.WebkitBorderImage =
+          "url(border.png) 30 30 round"; /* Code for Safari 5 */
+        document.getElementById("myDIV").style.OBorderImage =
+          "url(border.png) 30 30 round"; /* Code for Opera 12 */
+        document.getElementById("myDIV").style.borderImage =
+          "url(border.png) 30 30 round";
+      }
+    </script>
+  </body>
+</html>

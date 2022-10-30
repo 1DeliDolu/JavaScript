@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p onmouseover="getRelatedElement(event)">Mouse over this paragraph.</p>
+
+    <script>
+      function getRelatedElement(event) {
+        alert(
+          "The cursor just exited the " +
+            event.relatedTarget.tagName +
+            " element."
+        );
+      }
+    </script>
+  </body>
+</html>
