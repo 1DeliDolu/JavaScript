@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+
+<h2>Finding HTML Elements by Query Selector</h2>
+
+<p class="intro">Hello World!</p>
+<p class="intro">Hello Sweden!</p>
+<p class="intro">Hello Japan!</p>
+
+<p id="demo"></p>
+
+<script>
+$(document).ready(function() {
+  var myElements = $("p.intro");
+  $("#demo").text("The first paragraph with class='intro' is: " + myElements[0].innerHTML);
+});
+</script>
+
+</body>
+</html>

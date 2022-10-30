@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2>Getting Parent HTML Element</h2>
+    <p id="01">Hello World!</p>
+    <p id="02">Hello Sweden!</p>
+
+    <p id="demo"></p>
+
+    <script>
+      $(document).ready(function () {
+        $("#demo").text($("#02").parent().prop("nodeName"));
+      });
+    </script>
+  </body>
+</html>

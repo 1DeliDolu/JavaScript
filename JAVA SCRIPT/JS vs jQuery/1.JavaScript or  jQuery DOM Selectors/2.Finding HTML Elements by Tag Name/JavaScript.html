@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Finding HTML Elements by Tag Name</h2>
+    <p>Hello World!</p>
+    <p>Hello Sweden!</p>
+    <p>Hello Japan!</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const myElements = document.getElementsByTagName("p");
+      document.getElementById("demo").innerHTML =
+        "The text in the first paragraph is: " + myElements[0].innerHTML;
+    </script>
+  </body>
+</html>

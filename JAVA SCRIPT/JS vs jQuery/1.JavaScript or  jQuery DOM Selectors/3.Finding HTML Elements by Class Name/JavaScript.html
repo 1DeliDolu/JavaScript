@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Finding HTML Elements by Class Name</h2>
+    <p class="intro">Hello World!</p>
+    <p class="intro">Hello Sweden!</p>
+    <p class="intro">Hello Japan!</p>
+
+    <p id="demo"></p>
+
+    <script>
+      const myElements = document.getElementsByClassName("intro");
+      document.getElementById("demo").innerHTML =
+        "The first paragraph with class='intro' is: " + myElements[0].innerHTML;
+    </script>
+  </body>
+</html>

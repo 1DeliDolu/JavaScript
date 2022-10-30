@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  </head>
+  <body>
+    <h2>Finding HTML Elements by Id</h2>
+    <p id="id01">Hello World!</p>
+    <p id="id02">Hello Sweden!</p>
+    <p id="id03">Hello Japan!</p>
+
+    <p id="demo"></p>
+
+    <script>
+      $(document).ready(function () {
+        var myElements = $("#id01");
+        $("#demo").text(
+          "The text from the id01 paragraph is: " + myElements[0].innerHTML
+        );
+      });
+    </script>
+  </body>
+</html>
