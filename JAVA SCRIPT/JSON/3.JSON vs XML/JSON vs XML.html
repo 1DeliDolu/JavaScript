@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON vs XML</title>
+    <style>
+  .flex-container {
+  display: flex;
+  justify-content: center;
+  background-color: DodgerBlue;
+}
+      /* loader begin*/
+      .loader {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 3s linear infinite;
+      }
+      .loader:hover{
+        animation: spin 0.5s linear infinite;
+      }
+
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      /*loader end*/
+      ul {
+        list-style-type: none;
+        margin:0;
+        padding: 0;
+      }
+      .clearfix::after {
+        content: "";
+        clear: both;
+        display: table;
+      }
+      .aside {
+        float: left;
+        background-color: azure;
+        width: 25%;
+      }
+      .main {
+        float: right;
+        width: 75%;
+      }
+      a {
+        color: black;
+        display: inline-block;
+        border: 2px red solid;
+        margin-top: 10px;
+        font-size: 15px;
+      }
+      fieldset {
+        background-color: bisque;
+      }
+      b{
+        color: green;
+      }
+      span{
+        color: red;
+      }
+      h1{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body class="clearfix">
+    <header><h1>JSON vs XML</h1></header>
+    <aside class="aside">
+      <ul>
+        <li><a href="#xml">JSON vs XML</a></li>
+        <li><a href="#like">JSON is Like XML</a></li>
+        <li><a href="#unlike">JSON is Unlike XML</a></li>
+        <li><a href="#better">Why JSON is Better Than XML</a></li>
+      </ul>
+      <br>
+      <div class="flex-container">
+        <br><br>
+        <img class="loader" title="JSON" src="img_json.jpg" alt="JSON Image">
+    <br><br>
+      </div>
+    </aside>
+    <main class="main">
+      <fieldset>
+        <legend>JSON vs XML</legend>
+        <h1 id="xml">JSON vs XML</h1>
+        <pre>
+Both JSON and XML can be used to receive data from a web server.
+
+The following JSON and XML examples both define an employees object, 
+with an array of 3 employees:
+JSON Example:
+{<b>"employees":</b>[
+    {<b>"firstName":"John", "lastName":"Doe"</b>},
+    {<b>"firstName":"Anna", "lastName":"Smith"</b>},
+    {<b>"firstName":"Anna", "lastName":"Smith"</b>}
+    ]
+ }
+ XML Example:
+ <<span>employees</span>>
+    <<span>employee</span>>
+        < <span>firstName</span>>John<<span>/firstName</span>> <<span>lastName</span>>Doe<<span>/lastName</span>>
+    <<span>/employee</span>>
+    <<span>employee</span>>
+        < <span>firstName</span>>Anna<<span>/firstName</span>> <<span>lastName</span>>Smith<<span>/lastName</span>>
+    <<span>/employee</span>>
+    <<span>employee</span>>
+        < <span>firstName</span>>Peter<<span>/firstName</span>> <<span>lastName</span>>Jones<<span>/lastName</span>>
+    <<span>/employee</span>>
+<<span>employees</span>>
+        </pre>
+       
+      </fieldset>
+      <fieldset>
+        <legend>JSON is Like XML Because</legend>
+        <h1 id="like">JSON is Like XML Because</h1>
+        <pre>
+*Both JSON and XML are "self describing" (human readable)
+*Both JSON and XML are hierarchical (values within values)
+*Both JSON and XML can be parsed and used by lots of programming 
+languages
+*Both JSON and XML can be fetched with an XMLHttpRequest
+        </pre>
+      </fieldset>
+      <fieldset>
+        <legend>JSON is Unlike XML Because</legend>
+        <h1 id="unlike">JSON is Unlike XML Because</h1>
+        <pre>
+*JSON doesn't use end tag
+*JSON is shorter
+*JSON is quicker to read and write
+*JSON can use arrays
+The biggest difference is:
+
+XML has to be parsed with an XML parser. JSON can be parsed by a
+ standard JavaScript function.
+        </pre>
+      </fieldset>
+      <fieldset>
+        <legend>Why JSON is Better Than XML</legend>
+        <h1 id="better">Why JSON is Better Than XML</h1>
+        <pre>
+<span style="background-color: yellow;"> XML is much more difficult 
+    to parse than JSON.
+JSON is parsed into a ready-to-use JavaScript object.</span>
+
+For AJAX applications, JSON is faster and easier than XML:
+
+Using XML
+
+    *Fetch an XML document
+    *Use the XML DOM to loop through the document
+    *Extract values and store in variables
+Using JSON
+
+    *Fetch a JSON string
+    *JSON.Parse the JSON string
+        </pre>
+      </fieldset>
+    </main>
+  </body>
+</html>

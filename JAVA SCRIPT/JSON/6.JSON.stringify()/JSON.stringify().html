@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON.stringify()</title>
+    <style>
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+      .green {
+        color: green;
+      }
+      .pink {
+        background-color: pink;
+      }
+      .purple {
+        color: purple;
+      }
+      pre {
+        background-color: bisque;
+        font-size: large;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      h1{
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>JSON.stringify()</h1>
+    </header>
+    <fieldset>
+      <legend>JSON.stringify()</legend>
+      <pre>A common use of JSON is to exchange data to/from a web server.
+
+    When sending data to a web server, the data has to be a string.
+            
+    Convert a JavaScript object into a string with <b class="red">JSON.stringify()</b>. </pre>
+    </fieldset>
+    <br />
+    <h1>Stringify a JavaScript Object</h1>
+    
+    <fieldset>
+      <legend>Stringify a JavaScript Object</legend>
+      <pre>Imagine we have this object in JavaScript:
+    <b class="purple">const</b> obj = {name: <b class="green">"John"</b> , age:<b class="blue">30</b> , city:<b class="green">"New York"</b> };
+    Use the JavaScript function <b class="red"> JSON.stringify()</b> to convert it into a string.
+    <b class="purple">const</b> myJSON = JSON.stringify(obj);
+    <span class="yellow">The result will be a string following the JSON notation.</span>
+    <b class="red">myJSON</b> is now a string, and ready to be sent to a server:
+</pre>
+Example:
+<details>
+<summary>Stringify a JavaScript Object</summary>
+<pre>
+    <h2>Create a JSON string from a JavaScript object.</h2>
+    <span class="red"
+    ><code class="green"><</code>p id=<b class="red">"demo"</b><code class="green">></code></span<span class="red"
+    ><code class="green"><</code>/p<code class="green">></code></span
+  >
+  >
+<span class="red"
+        ><code class="green"><</code>script<code class="green">></code></span
+      >
+    <b class="purple">const</b> obj = {<name:b class="green">"John"</name:b> , age: <b class="blue">30</b>, city:<b class="green">"New York"</b> };
+    const myJSON = JSON.stringify(obj);
+    document.getElementById("demo").innerHTML = myJSON;
+    <span class="red"
+    ><code class="green"><</code>/script<code class="green">></code></span
+  >
+</pre>
+<span class="red">Answer:</span><span id="demo"></span>
+<pre>You will learn how to send JSON to a server in the next chapters.</pre>
+</details>
+    </fieldset>
+    <script>
+        const obj = {name: "John", age: 30, city: "New York"};
+        const myJSON = JSON.stringify(obj);
+        document.getElementById("demo").innerHTML = myJSON;
+    </script>
+    <br>
+    <h1>Stringify a JavaScript Array</h1>
+    <fieldset>
+        <legend>Stringify a JavaScript Array</legend>
+    <pre>
+    It is also possible to stringify JavaScript arrays:
+    Imagine we have this array in JavaScript:
+    <b class="purple">const</b> arr = [<b class="green">"John"</b>,<b class="green">"Peter"</b>,<b class="green">"Sally"</b> ,<b class="green">"Jane"</b> ];
+    Use the JavaScript function <b class="red">JSON.stringify()</b> to convert it into a string.
+    <b class="purple">const</b> myJSON = JSON.stringify(arr);
+    <span class="yellow">The result will be a string following the JSON notation.</span>
+    <b class="red">myJSON</b> is now a string, and ready to be sent to a server:
+</pre>
+Example:
+<details><summary>Create a JSON string from a JavaScript array.</summary>
+<pre>
+Create a JSON string from a JavaScript object.
+    <span class="red"
+    ><code class="green"><</code>p id=<b class="red">"demo"</b><code class="green">></code></span<span class="red"
+    ><code class="green"><</code>/p<code class="green">></code></span>
+
+<span class="red"><code class="green"><</code>script<code class="green">></code></span>
+    <b class="purple">const</b> obj = [<b class="green">"John"</b> , <b class="blue">"Peter"</b>, <b class="green">"Sally"</b>,<b class="green">"Jane"</b> ];
+    <b class="purple">const</b> myJSON = JSON.stringify(arr);
+    document.getElementById(<b class="green">"demo"</b>).innerHTML = myJSON;
+<span class="red"
+    ><code class="green"><</code>/script<code class="green">></code></span
+  >
+</pre>
+<span class="red">Answer:</span><span id="demo1"></span>
+</pre></details>
+<pre>You will learn how to send a JSON string to a server in the next chapters.</pre>
+    </fieldset>
+    <script>
+        const arr = ["John", "Peter", "Sally", "Jane"];
+        const myJSON1 = JSON.stringify(arr);
+        document.getElementById("demo1").innerHTML = myJSON1;
+        </script> 
+        
+<br>
+<h1>Storing Data</h1>
+<fieldset><legend>Storing Data</legend>
+<pre>
+When storing data, the data has to be a certain format, and regardless of where you choose to store it, text is always one of the legal formats.
+
+JSON makes it possible to store JavaScript objects as text.
+</pre>
+Example:
+<details>
+    <summary>Storing data in local storage</summary>
+    <pre>
+Store and retrieve data from local storage.
+<span class="red"
+><code class="green"><</code>p id=<b class="red">"demo"</b><code class="green">></code></span<span class="red"
+><code class="green"><</code>/p<code class="green">></code></span>
+<span class="red"><code class="green"><</code>script<code class="green">></code></span>
+    // Storing data:
+    <b class="red">const</b> myObj = { name: <b class="green"> "John"</b>, age: <b class="blue">31</b>, city:<b class="green">"New York"</b>  };
+    <b class="red">const</b> myJSON = JSON.stringify(myObj);
+    localStorage.setItem(<b class="gren">"testJSON"</b>, myJSON);
+            
+    // Retrieving data:
+    <b class="purple">let</b> text = localStorage.getItem(<b class="green">"testJSON"</b>);
+    <b class="purple">let</b> obj = JSON.parse(text);
+    document.getElementById(<b class="green">"demo"</b> ).innerHTML = obj.name;
+<span class="red"><code class="green"><</code>/script<code class="green">></code></span>
+    </pre>
+    <span class="red">Answer:</span><span id="demo2"></span>
+</details>
+<pre>You can convert the string back into a date object at the receiver.</pre>
+</fieldset>
+  </body>
+  <script>
+    // Storing data:
+    const myObj2 = { name: "John", age: 31, city: "New York" };
+    const myJSON2 = JSON.stringify(myObj2);
+    localStorage.setItem("testJSON", myJSON2);
+    
+    // Retrieving data:
+    let text = localStorage.getItem("testJSON");
+    let obj2 = JSON.parse(text);
+    document.getElementById("demo2").innerHTML = obj2.name;
+    </script>
+
+    <h1>Exceptions</h1>
+    <fieldset><legend>Stringify Dates</legend>
+    <pre>
+    Date objects are not allowed in JSON.
+
+    If you need to include a date, write it as a string.
+      
+    You can convert it back into a date object later:
+    </pre>
+    Example:
+    Convert a string into a date:
+    <details><summary>Stringify Dates</summary>
+    <pre>
+  <span class="red"
+      ><code class="green"><</code>p id=<b class="red">"demo"</b><code class="green">></code></span<span class="red"
+      ><code class="green"><</code>/p<code class="green">></code></span>
+  <span class="red"><code class="green"><</code>script<code class="green">></code></span>
+      <b class="red">const</b> text =<b class="green">'{"name":"John", "birth":"1986-12-14", "city":"New York"}'</b> ;
+      <b class="red">const</b> obj = JSON.parse(text);
+      obj.birth = new Date(obj.birth);
+      document.getElementById(<b class="green">"demo"</b>).innerHTML = obj.name + ", " + obj.birth; 
+  <span class="red"><code class="green"><</code>/script<code class="green">></code></span>
+            
+    </pre>
+    <span class="red">Answer:</span><span id="demo3"></span>
+    </details>
+    <pre>
+    Or, you can use the second parameter, of the <b class="red">JSON.parse()</b>  function, called reviver.
+
+    The reviver parameter is a function that checks each property, before returning the value.
+    </pre>
+Example:
+Convert a string into a date, using the reviver function:
+<details><summary>Reviver function</summary>
+<pre>
+<span class="red"
+      ><code class="green"><</code>p id=<b class="red">"demo"</b><code class="green">></code></span<span class="red"
+      ><code class="green"><</code>/p<code class="green">></code></span>
+<span class="red"><code class="green"><</code>script<code class="green">></code></span>
+    <b class="red">const</b> text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+    <b class="red">const</b> obj = JSON.parse(text, function (key, value) {
+      if (key ==<b class="green">"birth"</b> ) {
+        <b class="purple">return</b> new Date(value);
+      } <b class="purple">else</b> {
+        <b class="purple">return</b> value;
+      }
+    });
+    document.getElementById(<b class="green">"demo"</b>).innerHTML = obj.name + ", " + obj.birth; 
+<span class="red"><code class="green"><</code>/script<code class="green">></code></span>
+
+</pre>
+<span class="red">Answer:</span><span id="demo4"></span>
+</details>
+</fieldset>
+
+<script>
+  const text3 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+  const obj3 = JSON.parse(text3, function (key, value) {
+    if (key == "birth") {
+      return new Date(value);
+    } else {
+      return value;
+    }
+  });
+  document.getElementById("demo3").innerHTML = obj3.name + ", " + obj3.birth; 
+  </script>
+  <script>
+    const text4 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+    const obj4 = JSON.parse(text4, function (key, value) {
+      if (key == "birth") {
+        return new Date(value);
+      } else {
+        return value;
+      }
+    });
+    document.getElementById("demo4").innerHTML = obj3.name + ", " + obj3.birth; 
+    </script>
+
+
+<fieldset><legend>Parsing Functions</legend>
+<pre>
+Functions are not allowed in JSON.
+
+If you need to include a function, write it as a string.
+  
+You can convert it back into a function later:</pre>
+
+<details><summary>Parsing Functions</summary>
+<pre>
+<span class="red"
+      ><code class="green"><</code>p id=<b class="red">"demo"</b><code class="green">></code></span<span class="red"
+      ><code class="green"><</code>/p<code class="green">></code></span>
+<span class="red"><code class="green"><</code>script<code class="green">></code></span>
+  <b class="red">const</b> text = <b class="green"> '{"name":"John", "age":"function() {return 30;}", "city":"New York"}'</b>;
+  <b class="red">const</b> obj = JSON.parse(text);
+    obj.age = eval("(" + obj.age + ")");
+    document.getElementById(<b class="green">"demo"</b>).innerHTML = obj.name + ", " + obj.age(); 
+<span class="red"><code class="green"><</code>/script<code class="green">></code></span></pre>
+
+<span class="red">Answer:</span><span id="demo5"></span>
+</details>
+<pre style="background-color:pink">You should avoid using functions in JSON, the functions will lose their scope, 
+and you would have to use <b class="red">eval()</b> to convert them back into functions.</pre>
+</fieldset>
+
+<script>
+  const text5 = '{"name":"John", "age":"function() {return 30;}", "city":"New York"}';
+  const obj5 = JSON.parse(text5);
+  obj5.age = eval("(" + obj5.age + ")");
+  document.getElementById("demo5").innerHTML = obj5.name + ", " + obj5.age(); 
+  </script>
+
+</body>
+</html>
+<span class="red"
+      ><code class="green"><</code>p<code class="green">></code></span
+    >

@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Server</title>
+    <style>
+      .green {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .purple {
+        color: purple;
+      }
+      h1 {
+        text-align: center;
+      }
+      pre {
+        background-color: bisque;
+        font-size: large;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>JSON Server</h1>
+    </header>
+    <fieldset>
+      <legend>JSON Server</legend>
+      <pre>
+    A common use of JSON is to exchange data to/from a web server.
+
+    When receiving data from a web server, the data is always a string.
+        
+    Parse the data with <b class="red">JSON.parse()</b>, and the data becomes a JavaScript object. 
+    </pre>
+    </fieldset>
+    <br />
+    <h1>Sending Data</h1>
+    <fieldset>
+      <legend>Sending Data</legend>
+      <pre>
+    If you have data stored in a JavaScript object, you can convert the object into JSON, and send it to a server:
+    </pre
+      >
+      Example:
+
+      <details>
+        <summary>Sending Data</summary>
+        <b class="green"
+          >//Convert a JavaScript object into a JSON string, and send it to the
+          server.</b
+        >
+        <pre>
+    <span class="red"><code class="green"><</code>script <code class="green">></code></span>
+        <b class="purple">const</b> myObj = { name:<b class="green">"John"</b> , age: <b class="blue">31</b> , city:<b class="green">"New York"</b>  };
+        <b class="purple">const</b> myJSON = JSON.stringify(myObj);
+        window.location = "demo_json. php?x=" + myJSON;
+    <span class="red"><code class="green"><</code>script <code class="green">></code></span>
+            
+    </pre>
+        <span class="red">Answer:</span><span id="demo"></span>
+      </details>
+    </fieldset>
+
+    <!--first Script -->
+    <script>
+      //const myObj = { name: "John", age: 31, city: "New York" };
+      //const myJSON = JSON.stringify(myObj);
+      //window.location = "demo_json.php?x=" + myJSON; /* =  bunu myJSON'dan sonra geliyor */
+      document.getElementById("demo").innerHTML = "John from New York is 31";
+    </script>
+    <!--first Script -->
+
+    <br />
+    <h1>Receiving Data</h1>
+    <fieldset>
+      <legend>Receiving Data</legend>
+      <pre>
+If you receive data in JSON format, you can easily convert it into a JavaScript object:</pre
+      >
+
+      <details>
+        <summary>Convert a JSON string into a JavaScript object</summary>
+        <pre>
+    <span class="red"><code class="green"><</code>p id=<b class="green">demo</b><code class="green">></code></span><span class="red"><code class="green"><</code>/p<code class="green">></code></span>
+    <span class="red"><code class="green"><</code>script <code class="green">></code></span>
+        <b class="purple">const</b> myJSON =<b class="green">'{"name":"John", "age":31, "city":"New York"}'</b> ;
+        <b class="purple">const</b> myObj = JSON.parse(myJSON);
+        document.getElementById(<b class="green">"demo"</b> ).innerHTML = myObj.name;
+    <span class="red"><code class="green"><</code>/script<code class="green">></code></span>
+    </pre>
+        <span class="red">Answer:</span><span id="demo1"></span>
+      </details>
+    </fieldset>
+
+    <!--second Script -->
+    <script>
+      const myJSON1 = '{"name":"John", "age":31, "city":"New York"}';
+      const myObj1 = JSON.parse(myJSON1);
+      document.getElementById("demo1").innerHTML = myObj1.name;
+    </script>
+    <!--second Script -->
+    <br />
+    <h1>JSON From a Server</h1>
+    <fieldset>
+      <legend>JSON From a Server</legend>
+      <pre>
+You can request JSON from the server by using an AJAX request
+
+As long as the response from the server is written in JSON format, you can parse the string into a JavaScript object.
+</pre
+      >
+      Example Use the XMLHttpRequest to get data from the server:
+      <details>
+        <summary>Fetch a JSON file with XMLHttpRequest</summary>
+        <pre><span class="red"><code class="green"><</code>p id=<b class="green">demo</b><code class="green">></code></span><span class="red"><code class="green"><</code>/p<code class="green">></code></span>
+<span class="red"><code class="green"><</code>script <code class="green">></code></span>
+    <b class="purple">const</b> xmlhttp =<b class="purple">new</b>  XMLHttpRequest();
+    xmlhttp.onload =<b class="purple">function()</b>  {
+    <b class="purple">const</b> myObj = JSON.parse(<b class="purple">this</b>.responseText);
+    document.getElementById(<b class="green">"demo"</b>).innerHTML = myObj.name;
+    }
+    xmlhttp.open(<b class="green">"GET", "json_demo.txt"</b>);
+    xmlhttp.send();
+<span class="red"><code class="green"><</code>script <code class="green">></code></span>
+
+</pre>
+        <span class="red">Answer:</span><span id="demo2"></span>
+      </details>
+    </fieldset>
+
+    <!--third Script -->
+    <script>
+      const xmlhttp = new XMLHttpRequest();
+      xmlhttp.onload = function () {
+        const myObj = JSON.parse(this.responseText);
+        document.getElementById("demo2").innerHTML = myObj.name;
+      };
+      xmlhttp.open("GET", "json_demo.txt");
+      xmlhttp.send();
+    </script>
+    <!--third Script -->
+
+    <br />
+    <h1>Array as JSON</h1>
+    <fieldset>
+      <legend>Array as JSON</legend>
+      <pre>
+    When using the JSON.parse() on JSON derived from an array, the method will return a JavaScript array, instead of a JavaScript object.
+    </pre
+      >
+      Example JSON returned from a server as an array:
+      <details>
+        <summary>Fetch a JSON file with XMLHttpRequest</summary>
+        <b class="green"
+          >//Content written as an JSON array will be converted into a
+          JavaScript array.</b
+        >
+        <pre>
+<span class="red"><code class="green"><</code>p id=<b class="green">demo</b><code class="green">></code></span><span class="red"><code class="green"><</code>/p<code class="green">></code></span>
+<span class="red"><code class="green"><</code>script <code class="green">></code></span>
+    <b class="purple">const</b> xmlhttp =<b class="purple">new</b>  XMLHttpRequest();
+    xmlhttp.onload =<b class="purple">function()</b>  {
+    <b class="purple">const</b> myArr = JSON.parse(<b class="purple">this</b>.responseText);
+    document.getElementById(<b class="green">"demo"</b>).innerHTML = myArr[<b class="blue">0</b>]; 
+    }
+    xmlhttp.open(<b class="green">"GET", "json_demo_array.txt", true</b>);
+    xmlhttp.send();
+<span class="red"><code class="green"><</code>script <code class="green">></code></span>
+    
+    </pre>
+        <span class="red">Answer:</span><span id="demo4"></span>
+      </details>
+    </fieldset>
+
+    <script>
+      const xmlhttp1 = new XMLHttpRequest();
+      xmlhttp1.onload = function () {
+        const myArr1 = JSON.parse(this.responseText);
+        document.getElementById("demo4").innerHTML = myArr1[0];
+      };
+      xmlhttp1.open("GET", "json_demo_array.txt", true);
+      xmlhttp1.send();
+    </script>
+  </body>
+</html>

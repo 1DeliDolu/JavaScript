@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON.parse()</title>
+    <style>
+      /*button begins*/
+      #myBtn {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 30px;
+        z-index: 99;
+        font-size: 18px;
+        border: none;
+        outline: none;
+        background-color: red;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 4px;
+      }
+
+      #myBtn:hover {
+        background-color: #555;
+      }
+      /*button ends*/
+      .green {
+        color: green;
+      }
+      .red {
+        color: red;
+      }
+      .blue {
+        color: blue;
+      }
+      .yellow {
+        background-color: yellow;
+      }
+      .purple {
+        color: purple;
+      }
+      h1 {
+        text-align: center;
+      }
+      pre {
+        background-color: bisque;
+        font-size: large;
+      }
+      .pink {
+        background-color: pink;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>JSON.parse()</h1></header>
+    <fieldset>
+      <legend>JSON.parse()</legend>
+      <pre>
+A common use of JSON is to exchange data to/from a web server.
+
+When receiving data from a web server, the data is always a string.
+
+Parse the data with <b class="red">JSON.parse()</b> , and the data becomes a JavaScript object.
+        </pre>
+    </fieldset>
+    <br />
+
+    <h1>Example - Parsing JSON</h1>
+
+    <fieldset>
+      <legend>Example - Parsing JSON</legend>
+
+      <pre>
+Imagine we received this text from a web server:
+
+<b class="green">'{"name":"John", "age":30, "city":"New York"}'</b>
+
+Use the JavaScript function JSON.parse() to convert text into a JavaScript object:
+<b class="purple">const</b>  obj = JSON.parse(<b class="green">'{"name":"John", "age":30, "city":"New York"}'</b>);
+<b class="yellow">Make sure the text is in JSON format, or else you will get a syntax error.</b>        
+Use the JavaScript object in your page:
+
+</pre>
+      Example:
+
+      <details>
+        <summary>Creating an Object from a JSON String</summary>
+
+        <pre>
+<span class="red"><code class="green"><</code>script<code class="green">></code></span>
+    <b class="purple">const</b>  txt = <b class="green">'{"name":"John", "age":30, "city":"New York"}'</b>
+    <b class="purple">const</b> obj = JSON.parse(txt);
+    document.getElementById( <b class="green">"demo"</b>).innerHTML = obj.name + <b class="green">", "</b> + obj.age;
+    <span class="red"><code class="green"><</code>/script<code class="green">></code></span>
+    <span><code><</code>p <b class="purple">id</b>=<b class="green">"demo"</b><code>></code></span><span><code><</code>/p<code>></code></span>
+    </pre>
+        <span><b class="red">Answer:</b></span> <span id="demo"></span>
+      </details>
+    </fieldset>
+
+    <script>
+      const txt = '{"name":"John", "age":30, "city":"New York"}';
+      const obj = JSON.parse(txt);
+      document.getElementById("demo").innerHTML = obj.name + ", " + obj.age;
+    </script>
+    <br />
+
+    <h1>Array as JSON</h1>
+
+    <fieldset>
+      <legend>Array as JSON</legend>
+      <pre>When using the <b class="red">JSON.parse()</b>  on a JSON derived from an array,
+the method will return a JavaScript array, instead of a JavaScript object.
+
+</pre>
+      <details>
+        <summary>JSON.parse()</summary>
+
+        <pre>
+<p>Data written as an JSON array will be parsed into a JavaScript array.</p>
+<span class="red"
+      ><code class="green"><</code>script<code class="green">></code></span
+    >
+    <b class="purple">const</b>  text =<b class="green">'[ "Ford", "BMW", "Audi", "Fiat" ]'</b> ;
+    <b class="purple">const</b> myArr = JSON.parse(text);
+    document.getElementById(<b class="green">"demo"</b> ).innerHTML = myArr[<b class="blue">0</b>];
+<span class="red"
+      ><code class="green"><</code>/script<code class="green">></code></span
+    >
+    <span class="red"><code><</code>p <b class="purple">id</b>=<b class="green">"demo"</b><code>></code><code><</code>/p<code>></code></span>  
+    
+
+    </pre>
+        <span><b class="red">Answer:</b></span> <span id="dem"></span>
+      </details>
+    </fieldset>
+
+    <script>
+      const text = '[ "Ford", "BMW", "Audi", "Fiat" ]';
+      const myArr = JSON.parse(text);
+      document.getElementById("dem").innerHTML = myArr[0];
+    </script>
+
+    <br />
+
+    <h1>Exceptions</h1>
+    <h2>Parsing Dates</h2>
+    <fieldset>
+      <legend>Exceptions</legend>
+      <pre>
+Date objects are not allowed in JSON.
+
+If you need to include a date, write it as a string.
+            
+You can convert it back into a date object later:
+</pre
+      >
+
+      Example:
+
+      <details>
+        <summary>Convert a string into a date object.</summary>
+        <pre>
+<span class="red"
+      ><code class="green"><</code>script<code class="green">></code></span
+    >
+    <b class="purple">const</b> text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+    <b class="purple">const</b> obj = JSON.parse(text);
+    obj.birth = <b class="purple">new</b> Date(obj.birth);
+    document.getElementById("demo").innerHTML = obj.name +<b class="greev">", "</b>  + obj.birth; 
+<span class="red"
+        ><code class="green"><</code>/script<code class="green">></code></span
+      >
+<span class="red"><code><</code>p <b class="purple">id</b>=<b class="green">"demo"</b><code>></code><code><</code>/p<code>></code></span>  
+</pre>
+        <span><b class="red">Answer:</b></span> <span id="dmo"></span>
+      </details>
+
+      <pre>
+Or, you can use the second parameter, of the <b class="red">JSON.parse()</b> function, called reviver.
+
+The <i>reviver</i>  parameter is a function that checks each property, before returning the value.
+      </pre>
+      Example:
+      <details>
+        <summary>reviver function</summary>
+        <p>Convert a string into a date object.</p>
+        <pre>
+<span class="red"
+        ><code class="green"><</code>script<code class="green">></code></span
+      >
+    <b class="purple">const</b> text = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+    <b class="purple">const</b> obj = JSON.parse(text, function (key, value) {
+        <b class="purple">if</b> (key == "birth") {
+            <b class="purple">return</b>return new Date(value);
+            }   <b class="purple">else</b> {
+                <b class="purple">return</b> value;
+            }
+            });
+            document.getElementById(<b class="green">"demo"</b>).innerHTML = obj.name + ", " + obj.birth; 
+<span class="red"
+      ><code class="green"><</code>/script<code class="green">></code></span
+    >
+<span class="red"><code><</code>p <b class="purple">id</b>=<b class="green">"demo"</b><code>></code><code><</code>/p<code>></code></span>  
+          
+    </pre>
+
+        <span><b class="red">Answer:</b></span> <span id="dm"></span>
+      </details>
+    </fieldset>
+
+    <script>
+      const text1 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+      const obj1 = JSON.parse(text1);
+      obj1.birth = new Date(obj1.birth);
+      document.getElementById("dmo").innerHTML = obj1.name + ", " + obj1.birth;
+    </script>
+
+    <script>
+      const text2 = '{"name":"John", "birth":"1986-12-14", "city":"New York"}';
+      const obj2 = JSON.parse(text2, function (key, value) {
+        if (key == "birth") {
+          return new Date(value);
+        } else {
+          return value;
+        }
+      });
+      document.getElementById("dm").innerHTML = obj2.name + ", " + obj2.birth;
+    </script>
+    <br />
+    <h1>Parsing Functions</h1>
+    <fieldset>
+      <legend>Parsing Functions</legend>
+      <pre>
+Functions are not allowed in JSON.
+
+If you need to include a function, write it as a string.
+            
+You can convert it back into a function later:
+        </pre
+      >
+      Example:
+      <details>
+        <summary>Convert a string into a function:</summary>
+
+        <pre>
+<span class="red"
+            ><code class="green"><</code>script<code class="green">></code></span
+          >
+    <b class="purple">const</b> text = '{"name":"John", "age":"function() {return 30;}", "city":"New York"}';
+    <b class="purple">const</b> obj = JSON.parse(text);
+    obj.age = eval("(" + obj.age + ")");
+    document.getElementById(<b class="green">demo</b>).innerHTML = obj.name + ", " + obj.age(); 
+<span class="red"
+    ><code class="green"><</code>/script<code class="green">></code></span
+  >         
+<span class="red"><code><</code>p <b class="purple">id</b>=<b class="green">"demo"</b><code>></code><code><</code>/p<code>></code></span>    
+        </pre>
+        <span><b class="red">Answer:</b></span> <span id="demo1"></span>
+      </details>
+      <pre>
+<span class="pink">You should avoid using functions in JSON, the functions will lose their scope, and you would have to use 
+<b class="red">eval()</b> to convert them back into functions.</span>
+</pre>
+    </fieldset>
+    <script>
+      const text3 =
+        '{"name":"John", "age":"function() {return 30;}", "city":"New York"}';
+      const obj3 = JSON.parse(text3);
+      obj3.age = eval("(" + obj3.age + ")");
+      document.getElementById("demo1").innerHTML =
+        obj3.name + ", " + obj3.age();
+    </script>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <script>
+      // Get the button
+      let mybutton = document.getElementById("myBtn");
+
+      // When the user scrolls down 20px from the top of the document, show the button
+      window.onscroll = function () {
+        scrollFunction();
+      };
+
+      function scrollFunction() {
+        if (
+          document.body.scrollTop > 20 ||
+          document.documentElement.scrollTop > 20
+        ) {
+          mybutton.style.display = "block";
+        } else {
+          mybutton.style.display = "none";
+        }
+      }
+
+      // When the user clicks on the button, scroll to the top of the document
+      function topFunction() {
+        document.body.scrollTop = 0;
+        document.documentElement.scrollTop = 0;
+      }
+    </script>
+
+    <span class="red"
+      ><code class="green"><</code>p<code class="green">></code></span
+    >
+    <span class="red"
+      ><code class="green"><</code>/p<code class="green">></code></span
+    >
+  </body>
+</html>

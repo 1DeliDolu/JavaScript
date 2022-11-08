@@ -19,7 +19,7 @@
         -webkit-animation: spin 2s linear infinite;
         animation: spin 3s linear infinite;
       }
-      .loader:hover{
+      .loader:hover {
         animation: spin 0.5s linear infinite;
       }
 
@@ -51,7 +51,6 @@
         background-color: grey;
         width: 25%;
         float: left;
-        
       }
       .clearfix::after {
         content: "";
@@ -60,11 +59,12 @@
       }
       a {
         display: inline-block;
-        text-decoration: none;
+        text-decoration-color: red ;
+        text-decoration-line: 3px dashed;
         width: 95%;
         margin-top: 10px;
         margin-bottom: 10px;
-        border-bottom: 3px red solid;
+      
         color: black;
       }
       span {
@@ -77,8 +77,9 @@
   </head>
   <body>
     <header>
-      <h1 style="text-align: center;">JSON Syntax</h1>
+      <h1 style="text-align: center">JSON Syntax</h1>
     </header>
+    <a style="text-decoration: none;" href="/index.html"><span style='font-size:100px;'>&#127377;</span></a>
     <div class="clearfix">
       <aside>
         <a href="#syntax">Syntax Rules</a>
@@ -91,6 +92,7 @@
         <img class="loader" src="img_json.jpg" alt="loader" />
       </aside>
       <p>The JSON syntax is a subset of the JavaScript syntax.</p>
+      
       <main>
         <fieldset>
           <legend>JSON Syntax Rules</legend>

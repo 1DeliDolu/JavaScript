@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JSON Data Types</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
+    <style>
+      /*button begins*/
+      #myBtn {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 30px;
+      z-index: 99;
+      font-size: 18px;
+      border: none;
+      outline: none;
+      background-color: red;
+      color: white;
+      cursor: pointer;
+      padding: 15px;
+      border-radius: 4px;
+}
+
+#myBtn:hover {
+  background-color: #555;
+}
+        /*button ends*/
+        /* loader begin*/
+      .loader {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        -webkit-animation: spin 2s linear infinite;
+        animation: spin 3s linear infinite;
+      }
+      .loader:hover{
+        animation: spin 0.5s linear infinite;
+      }
+      .loader1 {
+        border-radius: 50%;
+        width: 120px;
+        height: 120px;
+        display: flex;
+        justify-content: center;
+        -webkit-animation: unspin 8s linear infinite;
+        animation: unspin 8s linear infinite;
+      }
+      .loader:hover{
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid blue;
+        border-bottom: 16px solid red;
+        border-right: yellow;
+        border-left: green;
+        animation: spin 0.5s linear infinite;
+      }
+      .loader1:hover{
+        border: 16px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 16px solid blue;
+        border-bottom: 16px solid red;
+        border-right: turquoise;
+        border-left:orange;
+        animation: unspin 0.5s linear infinite;
+      }
+      @-webkit-keyframes spin {
+        0% {
+          -webkit-transform: rotate(0deg);
+        }
+        100% {
+          -webkit-transform: rotate(360deg);
+        }
+      }
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      @-webkit-keyframes unspin {
+        0% {
+          -webkit-transform: rotate(360deg);
+        }
+        25% {
+          -webkit-transform: rotate(270deg);
+        }
+        50% {
+          -webkit-transform: rotate(180deg);
+        }
+        75% {
+          -webkit-transform: rotate(90deg);
+        }
+        100% {
+          -webkit-transform: rotate(0deg);
+        }
+      }
+
+      @keyframes unspin {
+        0% {
+          transform: rotate(360deg);
+        }
+        25% {
+          transform: rotate(270deg);
+        }
+        50% {
+          transform: rotate(180deg);
+        }
+        75% {
+          transform: rotate(90deg);
+        }
+        100% {
+          transform: rotate(0deg);
+        }
+      
+      }
+      /*loader end*/
+      .span {
+        background-color: pink;
+        display: inline-block;
+      }
+      fieldset {
+        background-color: bisque;
+      }
+      .green {
+        color: green;
+      }
+      .blue {
+        color: blue;
+      }
+      ul.topnav {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+        }
+
+        ul.topnav li {float: left;}
+
+        ul.topnav li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+}
+h1{
+    text-align: center;
+    color: blue;
+}
+.row {  
+  display: flex;
+  justify-content: center;
+  margin: auto;
+}
+.purple{
+    color: purple;
+}
+    </style>
+  </head>
+  <body>
+    <header><h1>JSON Data Types</h1></header>
+    <nav class=>
+      <ul class="topnav row">
+        <li><a href="#type">Valid Data Types</a></li>
+        <li><a href="#string">Numbers</a></li>
+        <li><a href="#number">Numbers</a></li>
+        <li><a href="#object">Objects</a></li>
+        <li><a href="#array">Arrays</a></li>
+        <li><a href="#boolen">Booleans</a></li>
+        <li><a href="#null">null</a></li>
+      </ul>
+    </nav>
+    <div class="row">
+    <img  class="loader1" src="OIP.jpg" alt="JSON">
+    <img class="loader" src="img_json.jpg" alt="JSON" title="JSON">
+    <img class="loader" src="img_json.jpg" alt="JSON" title="JSON">
+    <img  class="loader1" src="OIP.jpg" alt="JSON">
+</div>
+    <fieldset>
+      <legend>JSON Data Types</legend>
+      <pre>
+<h1 id="type">Valid Data Types</h1>
+In JSON, values must be one of the following data types:
+
+    *a string
+    *a number
+    *an object (JSON object)
+    *an array
+    *a boolean
+    *null
+<span class="span">
+JSON values cannot be one of the following data types:
+
+    *a function
+    *a date
+    *undefined
+</span>
+        </pre>
+    </fieldset>
+    <fieldset>
+      <legend>JSON Strings</legend>
+      <h1 id="string">JSON Strings</h1>
+      <pre>
+Strings in JSON must be written in double quotes.
+    Example
+        {<b class="green">"name":"John"</b>}
+        </pre>
+    </fieldset>
+    <fieldset>
+      <legend>JSON Numbers</legend>
+      <pre>
+<h1 id="number">JSON Numbers</h1>
+Numbers in JSON must be an integer or a floating point.
+    Example
+         {<b class="green">"age"</b>:<b class="blue">30</b>}
+        </pre>
+    </fieldset>
+    <fieldset>
+      <legend>JSON Objects</legend>
+      <pre>
+<h1 id="object">JSON Objects</h1>
+Values in JSON can be objects.
+
+Example
+{<b class="green">"employee"</b>
+    :{<b class="green">"name":"John", "age":30, "city":"New York"</b>}
+}
+Objects as values in JSON must follow the JSON syntax.
+        </pre>
+    </fieldset>
+
+    <fieldset>
+        <legend>JSON Arrays</legend>
+        <pre>
+            <h1 id="array">JSON Arrays</h1>
+Values in JSON can be arrays.
+
+    Example
+    {<b class="green"> "employees":</b>[<b class="green">"John", "Anna", "Peter" </b>]
+}
+        </pre>
+    </fieldset>
+
+    <br>
+    <fieldset>
+        <legend>
+            JSON Booleans
+        </legend>
+        <h1 id="boolen">
+            JSON Booleans
+        </h1>
+        <pre>
+Values in JSON can be true/false.
+    Example
+        {<b class="green">"sale" </b>:<b class="purple">true</b> }            
+        </pre>
+    </fieldset>
+<br>
+<fieldset>
+    <legend>JSON null</legend>
+    <pre>
+<h1 id="null">JSON null</h1>
+Values in JSON can be null.
+    Example
+        {<b class="green">"middlename"</b>:<b class="purple">null</b>}</pre>
+</fieldset>
+<br>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
+    <br>
+      <div class="container" style="background-color: bisque;">
+        <h1>Colored Spinners</h1>
+        <p>Use any <strong>text color utilites</strong> to add a color to the spinner:</p>
+                                              
+        <div class="spinner-border text-muted"></div>
+        <div class="spinner-border text-primary"></div>
+        <div class="spinner-border text-success"></div>
+        <div class="spinner-border text-info"></div>
+        <div class="spinner-border text-warning"></div>
+        <div class="spinner-border text-danger"></div>
+        <div class="spinner-border text-secondary"></div>
+        <div class="spinner-border text-dark"></div>
+        <div class="spinner-border text-light"></div>
+      </div>
+      
+      <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+        
+  </body>
+</html>

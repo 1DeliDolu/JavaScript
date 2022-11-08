@@ -9,19 +9,42 @@
       span {
         background-color: yellow;
       }
-      p{
-        background-color: bisque;
+      p {
+        background-color: azure;
         position: relative;
+      }
+      #borderimg2 {
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: url(border.png) 30 stretch;
+      }
+      #borderimg1 {
+        border: 10px solid transparent;
+        padding: 15px;
+        border-image: url(border.png) 30 round;
       }
     </style>
   </head>
   <body>
-    <style contenteditable="true" style="display: block; background-color: aqua; font-family: 'Times New Roman', Times, serif; font-size: 20px;">
+    <style
+      contenteditable="true"
+      style="
+        display: block;
+        background-color: aqua;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 20px;
+      "
+    >
       .img2 {
         float: right;
         width: 200px;
         border-radius: 50%;
-                
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid blue;
+        border-bottom: 16px solid red;
+        border-right: yellow;
+        border-left: green;
+        /* you can change  css*/
       }
       .clearfix::after {
         content: "";
@@ -32,10 +55,10 @@
     <header>
       <h1>JSON - Introduction</h1>
     </header>
-    <fieldset>
+    <fieldset id="borderimg1">
       <legend>JSON - Introduction</legend>
       <pre>
-<p style="border: 1px black solid; " class="clearfix">
+<p id="borderimg2" class="clearfix">
 <img class="img2 " src="img_json.jpg" alt="JSON img">
 JSON stands for JavaScript Object Notation
 JSON is a text format for storing and transporting data
@@ -65,7 +88,7 @@ What is JSON?
 The JSON syntax is derived from JavaScript object notation, but the JSON format is text only.
 Code for reading and generating JSON exists in many programming languages.</span>          
         </pre>
-<pre>
+      <pre>
 Why Use JSON?
     #The JSON format is syntactically similar to the code for creating JavaScript objects. Because of this, a JavaScript program can easily convert JSON data into JavaScript objects.
     #Since the format is text only, JSON data can easily be sent between computers, and used by any programming language.         
