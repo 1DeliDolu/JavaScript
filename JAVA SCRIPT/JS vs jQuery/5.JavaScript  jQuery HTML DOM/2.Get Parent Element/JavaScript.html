@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Get Parent HTML Element</h2>
+    <p id="01">Hello World!</p>
+    <p id="02">Hello Sweden!</p>
+
+    <p id="demo"></p>
+
+    <script>
+      document.getElementById("demo").innerHTML =
+        document.getElementById("02").parentNode.nodeName;
+    </script>
+  </body>
+</html>
