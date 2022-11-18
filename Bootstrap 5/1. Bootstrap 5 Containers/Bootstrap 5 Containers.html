@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap 5 Containers
+    </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Bootstrap 5 Containers</h1>
+    </header>
+    <h2>Bootstrap 5 Containers</h2>
+    <pre>
+You learned from the previous chapter that Bootstrap requires a containing element to wrap site contents.
+
+Containers are used to pad the content inside of them, and there are two container classes available:
+
+The <b>.container</b> class provides a responsive fixed width container
+The <b>.container-fluid</b> class provides a full width container, spanning the entire width of the viewport
+    </pre>
+    <h1>Fixed Container</h1>
+    <pre>
+    Use the <b>.container</b> class to create a responsive, fixed-width container.
+
+Note that its width (<b>max-width</b>) will change on different screen sizes:
+    </pre>
+    <pre>Open the example below and resize the browser window to see that the container width will change at different breakpoints:</pre>
+    <div class="container">
+        <h1>My First Bootstrap Page</h1>
+        <p>This part is inside a .container class.</p>
+        <p>The .container class provides a responsive fixed width container.</p>
+        <p>Resize the browser window to see that the container width will change at different breakpoints.</p>
+      </div>
+      <pre style="background-color: yellow;">The XXL breakpoint (≥1400px) is new in Bootstrap 5, while the largest breakpoint in Bootstrap 4 is Extra large (≥1200px).</pre>
+<h1>Fluid Container</h1>
+<pre>
+Use the <b>.container-fluid</b> class to create a full width container, that will always span the entire width of the screen (<b>width</b> is always 100%):
+</pre>
+<div class="container-fluid">
+    <h1>My First Bootstrap Page</h1>
+    <p>This part is inside a .container-fluid class.</p>
+    <p>The .container-fluid class provides a full width container, spanning the entire width of the viewport.</p>     
+  </div>
+  <h1>Container Padding</h1>
+  <pre>
+    By default, containers have left and right padding, with no top or bottom padding. Therefore, we often use spacing utilities, such as extra padding and margins to make them look even better. For example, <b>.pt-5</b> means "add a large top padding":
+  </pre>
+  <div class="container pt-5">
+    <h1>My First Bootstrap Page</h1>
+    <p>This container has an extra top padding.</p>
+    <p>Try to remove the .pt-5 class to see the difference.</p>
+    <h1>Container Border and Color</h1>
+    <pre>Other utilities, such as borders and colors, are also often used together with containers:</pre>
+  </div>
+  <div class="container p-5 my-5 border">
+    <h1>My First Bootstrap Page</h1>
+    <p>This container has a border and some extra padding and margins.</p>
+  </div>
+  
+  <div class="container p-5 my-5 bg-dark text-white">
+    <h1>My First Bootstrap Page</h1>
+    <p>This container has a dark background color and a white text, and some extra padding and margins.</p>
+  </div>
+  
+  <div class="container p-5 my-5 bg-primary text-white">
+    <h1>My First Bootstrap Page</h1>
+    <p>This container has a blue background color and a white text, and some extra padding and margins.</p>
+  </div>
+  <p style="background-color: yellow;">You will learn much more about colors and border utilities in a later chapter.</p>
+    <h1>Responsive Containers</h1>
+    <pre>
+You can also use the <b>.container-sm|md|lg|xl</b> classes to determine when the container should be responsive.
+
+The <b>max-width</b> of the container will change on different screen sizes/viewports:
+    </pre>
+    <table>
+        <tr>
+            <th>Class</th>
+            <th>Extra small <code><</code>576px</th>
+            <th>Small
+                ≥576px </th>
+            <th>Medium
+                ≥768px</th>
+            <th>Large
+                ≥992px</th>
+            <th>Extra large
+                ≥1200px</th>
+                <th>XXL
+                    ≥1400px</th>
+        </tr>
+        <tr>
+            <td style="color: red;">.container-sm</td>
+            <td>100%</td>
+            <td>540px</td>
+            <td>720px</td>
+            <td>960px</td>
+            <td>1140px</td>
+            <td>1320px</td>
+        </tr>
+        <tr>
+            <td>.container-md</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>720px</td>
+            <td>960px</td>
+            <td>	1140px</td>
+            <td>1320px</td>
+        </tr>
+        <tr>
+            <td>.container-lg</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>960px</td>
+            <td>1140px</td>
+            <td>1320px</td>
+        </tr>
+        <tr>
+            <td>.container-xl</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>1140px</td>
+            <td>1320px</td>
+        </tr>
+        <tr>
+            <td>.container-xxl</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>100%</td>
+            <td>1140px</td>
+            <td>1320px</td>
+        </tr>
+    </table>
+    <div class="container pt-3">
+        <h1>Responsive Containers</h1>
+        <p>Resize the browser window to see the effect.</p>
+      </div>
+      
+      <div class="container-sm border">.container-sm</div>
+      <div class="container-md mt-3 border">.container-md</div>
+      <div class="container-lg mt-3 border">.container-lg</div>
+      <div class="container-xl mt-3 border">.container-xl</div>
+      <div class="container-xxl mt-3 border">.container-xxl</div>
+      
+      </body>
+      </html>
+</body>
+</html>
