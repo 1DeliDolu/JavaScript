@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Storage removeItem() Method</h1>
+
+    <p>
+      This example demonstrates how to use the removeItem() method to delete a
+      specified local storage item.
+    </p>
+
+    <h2>Missing localStorage item?</h2>
+
+    <p>
+      Since you might not have the specified item stored in your local storage,
+      we have added a script that creates it for you.
+    </p>
+
+    <button onclick="createItem()">Create local storage item</button>
+
+    <h2>Remove Item</h2>
+
+    <p>Click the button to delete the item:</p>
+
+    <button onclick="deleteItem()">Delete item</button>
+
+    <h2>Display Item</h2>
+
+    <p>Click the button to display the items's value:</p>
+
+    <button onclick="displayItem()">Display item</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function createItem() {
+        localStorage.mytime = Date.now();
+      }
+
+      function deleteItem() {
+        localStorage.removeItem("mytime");
+      }
+
+      function displayItem() {
+        var x = localStorage.getItem("mytime");
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </body>
+</html>
