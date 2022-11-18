@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web Storage API</title>
+    <style>
+      th,
+      td,
+      tr ,
+      table{
+        border: 1px black
+        solid;
+        border-collapse: collapse;
+      }
+    </style>
+  </head>
+  <body>
+    <header><h1>Web Storage API</h1></header>
+    <p>
+      The Web Storage API is a simple syntax for storing and retrieving data in
+      the browser. It is very easy to use:
+    </p>
+    <fieldset>
+      <legend>Web Storage API</legend>
+      <pre>
+<code><</code>p id="demo"><code><</code>/p<code>></code>
+
+<code><</code>script<code>></code>
+localStorage.setItem("name","John Doe");
+document.getElementById("demo").innerHTML = localStorage.getItem("name");
+<code><</code>/script<code>></code>
+        </pre>
+      Display: John Doe
+    </fieldset>
+    <p>The Web Storage API is supported in all browsers:</p>
+
+    <h1>The localStorage Object</h1>
+    <pre>
+The localStorage object provides access to a local storage for a particular Web Site. It allows you to store, read, add, modify, and delete data items for that domain.
+
+The data is stored with no expiration date, and will not be deleted when the browser is closed.
+
+The data will be available for days, weeks, and years.
+    </pre>
+    <h1>The setItem() Method</h1>
+    <pre>
+The localStorage.setItem() method stores a data item in a storage.
+
+It takes a name and a value as parameters:</pre
+    >
+    <p>Example</p>
+    <p>localStorage.setItem("name", "John Doe");</p>
+    <br />
+    <h1>The sessionStorage Object</h1>
+    <pre>
+The sessionStorage object is identical to the localStorage object.
+
+The difference is that the sessionStorage object stores data for one session.
+    
+The data is deleted when the browser is closed.</pre
+    >
+    <p>Example:</p>
+    <fieldset>
+      <legend>The sessionStorage Object</legend>
+      <pre>
+    <code><</code>p id="demo"><code><</code>/p<code>></code>
+
+    <code><</code>script<code>></code>
+        sessionStorage.setItem("name","John Doe");
+        document.getElementById("demo").innerHTML = sessionStorage.getItem("name");
+    <code><</code>/script<code>></code>
+    </pre
+      >
+    </fieldset>
+    <br />
+    <h1>The setItem() Method</h1>
+    <pre>
+The sessionStorage.setItem() method stores a data item in a storage.
+
+It takes a name and a value as parameters:    
+Example:
+sessionStorage.setItem("name", "John Doe");
+</pre
+    >
+    <br />
+    <h1>Storage Object Properties and Methods</h1>
+    <table>
+      <tr>
+        <th>Property/Method</th>
+        <th>Description</th>
+      </tr>
+      
+      <tr>
+        <td>key(n)</td>
+        <td>Returns the name of the nth key in the storage</td>
+      </tr>
+      <tr>
+        <td>length</td>
+        <td>Returns the number of data items stored in the Storage object</td>
+      </tr>
+      <tr>
+        <td>getItem(keyname)</td>
+        <td>Returns the value of the specified key name</td>
+      </tr>
+      <tr>
+        <td>setItem(keyname, value)</td>
+        <td>
+          Adds a key to the storage, or updates a key value (if it already
+          exists)
+        </td>
+      </tr>
+      <tr>
+        <td>setItem(keyname, value)</td>
+        <td>
+          Adds a key to the storage, or updates a key value (if it already
+          exists)
+        </td>
+      </tr>
+      <tr>
+        <td>removeItem(keyname)</td>
+        <td>Removes that key from the storage</td>
+      </tr>
+      <tr>
+        <td>clear()</td>
+        <td>Empty all key out of the storage</td>
+      </tr>
+    </table>
+    <h1 id="key">The Storage key() Method</h1>
+    <fieldset>
+        <legend>The Storage key() Method</legend>
+<pre>
+This example demonstrates how to use the key() method to get the name of a local storage item.    
+<code><</code>button onclick="myFunction()"<code>></code>Get the name of the first local storage item <code><</code>/button<code>></code>
+
+<code><</code>p id="demo"></p<code>></code>
+
+<code><</code>script<code>></code>
+
+    function myFunction() {
+     var x = localStorage.key(0);
+    document.getElementById("demo").innerHTML = x;
+    }
+
+<code><</code>/script<code>></code>
+</pre>
+<p>This example demonstrates how to use the key() method to get the name of a session storage item.</p>
+
+<h2>Missing sessionStorage items?</h2>
+<p>Since you might not have any items stored in your session storage, we have added a script that creates some for you.</p>
+<pre>
+<code><</code>button onclick="createItems()"<code>></code>Create session storage items <code><</code>/button<code>></code>
+</pre>
+<h2>Get the name of sessionStorage Item</h2>
+<p>Click the button to get the name of the first session storage item:</p>
+<pre>
+<code><</code>button onclick="myFunction()"<code>></code>Get item name<code><</code>/button<code>></code>
+
+<code><</code>p id="demo"<code>></code><code><</code>/p<code>></code>
+    
+<code><</code>script<code>></code>
+    
+    function createItems() {
+      sessionStorage.test1 = "hello";
+      sessionStorage.test2 = "Jim";
+      sessionStorage.test3 = 358;
+    }
+    
+    function myFunction() {
+      var x = sessionStorage.key(0);
+      document.getElementById("demo").innerHTML = x;
+    }
+    
+<code><</code>/script<code>></code></pre>    
+Display:test2
+
+
+</fieldset>
+<h1>The Storage Object</h1>
+
+<p>This example demonstrates how to loop through all the local storage items for this domain.</p>
+
+<h2>Missing localStorage items?</h2>
+
+<p>Since you might not have any items stored in your local storage, we have added a script that creates some for you.</p>
+<fieldset>
+<legend>The Storage Object</legend>
+<pre>
+<code><</code>button onclick="createItems()">Create local storage items<code><</code>/button<code>></code>
+
+<h2>Display Items</h2>
+
+<p>Click the button to display all items:</p>
+
+<code><</code>button onclick="displayItems()"<code>></code>Display items<code><</code>/button<code>></code>
+
+<code><</code>p id="demo"<code>></code><code><</code>/p<code>></code>
+
+<code><</code>script<code>></code>
+    function createItems() {
+    localStorage.setItem("mytime", Date.now());
+    localStorage.setItem("myname", "John");
+     localStorage.setItem("myage", 36);
+    }
+
+    function displayItems() {
+    var l, i;
+    document.getElementById("demo").innerHTML = "";
+    for (i = 0; i < localStorage.length; i++) {
+    x = localStorage.key(i);
+    document.getElementById("demo").innerHTML += x + "<code><</code>br>";
+    }
+    }
+<code><</code>/script<code>></code>
+</pre>
+</fieldset>
+  </body>
+</html>
