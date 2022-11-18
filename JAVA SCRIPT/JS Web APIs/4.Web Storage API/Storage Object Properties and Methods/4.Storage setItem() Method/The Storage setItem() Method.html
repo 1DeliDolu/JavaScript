@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Storage setItem() Method</h1>
+
+    <p>
+      This example demonstrates how to use the setItem() method to set the value
+      of a specified local storage item.
+    </p>
+
+    <button onclick="createItem()">Set local storage item</button>
+
+    <h2>Get the value</h2>
+
+    <p>Click the button to get the item value:</p>
+
+    <button onclick="readValue()">Get the item value</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function createItem() {
+        localStorage.setItem("mytime", Date.now());
+      }
+
+      function readValue() {
+        var x = localStorage.getItem("mytime");
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </body>
+</html>
