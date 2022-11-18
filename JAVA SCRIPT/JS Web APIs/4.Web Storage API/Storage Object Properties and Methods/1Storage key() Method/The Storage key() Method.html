@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>The Storage key() Method</h1>
+
+<p>This example demonstrates how to use the key() method to get the name of a session storage item.</p>
+
+<h2>Missing sessionStorage items?</h2>
+
+<p>Since you might not have any items stored in your session storage, we have added a script that creates some for you.</p>
+
+<button onclick="createItems()">Create session storage items</button>
+
+<h2>Get the name of sessionStorage Item</h2>
+
+<p>Click the button to get the name of the first session storage item:</p>
+
+<button onclick="myFunction()">Get item name</button>
+
+<p id="demo"></p>
+
+<script>
+
+function createItems() {
+  sessionStorage.test1 = "hello";
+  sessionStorage.test2 = "Jim";
+  sessionStorage.test3 = 358;
+}
+
+function myFunction() {
+  var x = sessionStorage.key(0);
+  document.getElementById("demo").innerHTML = x;
+}
+
+</script>
+</body>
+</html>
