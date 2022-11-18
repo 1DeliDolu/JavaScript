@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>The Storage length Property</h1>
+
+    <p>
+      This example demonstrates how to use the length property to get the number
+      of items stored in the local storage object.
+    </p>
+
+    <button onclick="myFunction()">Get the number of stored items</button>
+
+    <p id="demo"></p>
+
+    <script>
+      function myFunction() {
+        var x = localStorage.length;
+        document.getElementById("demo").innerHTML = x;
+      }
+    </script>
+  </body>
+</html>
