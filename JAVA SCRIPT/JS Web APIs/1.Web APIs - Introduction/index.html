@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Web APIs - Introduction</title>
+    <style>
+      ul {
+        display: flex;
+        justify-content: center;
+        background-color: darkgray;
+      }
+      li {
+        float: left;
+        list-style-type: none;
+
+        border-right: 3px red solid;
+        border-left: 3px red solid;
+        margin: auto;
+        padding: 5px;
+        background-color: darkgray;
+      }
+      li:first-child {
+        border-left: 3px red solid;
+      }
+       
+    li:hover a{
+        color:black;
+
+    }
+    a{
+        color: aqua;
+        text-decoration: none;
+    }
+      
+      h1 {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>Web APIs - Introduction</h1>
+    </header>
+    <nav>
+      <ul>
+        <li ><a class="hover" href="#api">Web API</a></li>
+        <li ><a class="hover" href="#browser">Browser APIs</a></li>
+        <li ><a class="hover" href="#thirdparty">Third Party APIs</a></li>
+      </ul>
+      <br />
+    </nav>
+    <h1>Introduction</h1>
+    <fieldset>
+      <legend>Web APIs - Introduction</legend>
+      <pre>
+A Web API is a developer's dream.
+
+    <span style='font-size:10px;'>&#9210;</span>It can extend the functionality of the browser
+    <span style='font-size:10px;'>&#9210;</span>It can greatly simplify complex functions
+    <span style='font-size:10px;'>&#9210;</span>It can provide easy syntax to complex code
+        </pre>
+    </fieldset>
+    <br />
+    <h1>What is Web API?</h1>
+    <fieldset>
+      <legend>What is Web API?</legend>
+      <pre>
+API stands for Application Programming Interface.
+
+    <span style='font-size:10px;'>&#9210;</span>A Web API is an application programming interface for the Web.
+
+    <span style='font-size:10px;'>&#9210;</span>A Browser API can extend the functionality of a web browser.
+
+    <span style='font-size:10px;'>&#9210;</span>A Server API can extend the functionality of a web server.
+        </pre>
+    </fieldset>
+    <br />
+    <h1>Browser APIs</h1>
+    <fieldset>
+      <legend>JavaScript Geolocation</legend>
+      <pre>
+All browsers have a set of built-in Web APIs to support complex operations, and to help accessing data.
+
+For example, the Geolocation API can return the coordinates of where the browser is located.
+        </pre
+      >
+      <details>
+        <summary>JavaScript Geolocation</summary>
+        <pre>
+<span class="red"><code class="green"><</code>p<code class="green">></code></span> Click the button to get your coordinates.<span><code class="green"><</code>/p<code class="green">></code></span>               
+<code><</code>button onclick="getLocation()">Try It <code><</code>/button<code>></code>
+<span><code class="green"><</code>p id="demo"<code class="green">></code></span>            
+
+<code><</code>script<code>></code>
+    const x = document.getElementById("demo");
+    
+    function getLocation() {
+      try {
+        navigator.geolocation.getCurrentPosition(showPosition);
+      } catch {
+        x.innerHTML = err;
+      }
+    }
+    
+    function showPosition(position) {
+      x.innerHTML = "Latitude: " + position.coords.latitude + 
+      " <br> Longitude: " + position.coords.longitude;
+    }
+    <code><</code>/script<code>></code>
+    
+</pre>
+        <span class="red">Answer:</span><span id="demo"></span>
+      </details>
+    </fieldset>
+
+    <script>
+      const x = document.getElementById("demo");
+
+      function getLocation() {
+        try {
+          navigator.geolocation.getCurrentPosition(showPosition);
+        } catch {
+          x.innerHTML = err;
+        }
+      }
+
+      function showPosition(position) {
+        x.innerHTML =
+          "Latitude: " +
+          position.coords.latitude +
+          "<br>Longitude: " +
+          position.coords.longitude;
+      }
+    </script>
+    <h1>Third Party APIs</h1>
+    <fieldset>
+      <legend>Third Party APIs</legend>
+      <pre>
+Third party APIs are not built into your browser.
+
+To use these APIs, you will have to download the code from the Web.
+
+Examples:
+
+    <span style='font-size:10px;'>&#9210;</span>YouTube API - Allows you to display videos on a web site.
+    <span style='font-size:10px;'>&#9210;</span>Twitter API - Allows you to display Tweets on a web site.
+    <span style='font-size:10px;'>&#9210;</span>Facebook API - Allows you to display Facebook info on a web site.
+            </pre>
+    </fieldset>
+  </body>
+</html>
